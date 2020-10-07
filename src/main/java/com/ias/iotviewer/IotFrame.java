@@ -279,9 +279,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Pin #1");
 
+        txtPin1.setEditable(false);
+
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("R");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("W");
@@ -293,9 +300,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Pin #2");
 
+        txtPin2.setEditable(false);
+
         buttonGroup2.add(jRadioButton3);
         jRadioButton3.setSelected(true);
         jRadioButton3.setText("R");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
 
         buttonGroup2.add(jRadioButton4);
         jRadioButton4.setText("W");
@@ -307,9 +321,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Pin #3");
 
+        txtPin3.setEditable(false);
+
         buttonGroup3.add(jRadioButton5);
         jRadioButton5.setSelected(true);
         jRadioButton5.setText("R");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
 
         buttonGroup3.add(jRadioButton6);
         jRadioButton6.setText("W");
@@ -321,9 +342,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel7.setText("Pin #4");
 
+        txtPin4.setEditable(false);
+
         buttonGroup4.add(jRadioButton7);
         jRadioButton7.setSelected(true);
         jRadioButton7.setText("R");
+        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton7ActionPerformed(evt);
+            }
+        });
 
         buttonGroup4.add(jRadioButton8);
         jRadioButton8.setText("W");
@@ -335,9 +363,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Pin #5");
 
+        txtPin5.setEditable(false);
+
         buttonGroup5.add(jRadioButton9);
         jRadioButton9.setSelected(true);
         jRadioButton9.setText("R");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton9ActionPerformed(evt);
+            }
+        });
 
         buttonGroup5.add(jRadioButton10);
         jRadioButton10.setText("W");
@@ -349,9 +384,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel9.setText("Pin #6");
 
+        txtPin6.setEditable(false);
+
         buttonGroup6.add(jRadioButton11);
         jRadioButton11.setSelected(true);
         jRadioButton11.setText("R");
+        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton11ActionPerformed(evt);
+            }
+        });
 
         buttonGroup6.add(jRadioButton12);
         jRadioButton12.setText("W");
@@ -363,9 +405,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel10.setText("Pin #7");
 
+        txtPin7.setEditable(false);
+
         buttonGroup7.add(jRadioButton13);
         jRadioButton13.setSelected(true);
         jRadioButton13.setText("R");
+        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton13ActionPerformed(evt);
+            }
+        });
 
         buttonGroup7.add(jRadioButton14);
         jRadioButton14.setText("W");
@@ -377,9 +426,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Pin #8");
 
+        txtPin8.setEditable(false);
+
         buttonGroup8.add(jRadioButton15);
         jRadioButton15.setSelected(true);
         jRadioButton15.setText("R");
+        jRadioButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton15ActionPerformed(evt);
+            }
+        });
 
         buttonGroup8.add(jRadioButton16);
         jRadioButton16.setText("W");
@@ -391,9 +447,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel12.setText("Pin #9");
 
+        txtPin9.setEditable(false);
+
         buttonGroup9.add(jRadioButton17);
         jRadioButton17.setSelected(true);
         jRadioButton17.setText("R");
+        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton17ActionPerformed(evt);
+            }
+        });
 
         buttonGroup9.add(jRadioButton18);
         jRadioButton18.setText("W");
@@ -406,6 +469,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup10.add(jRadioButton19);
         jRadioButton19.setSelected(true);
         jRadioButton19.setText("R");
+        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton19ActionPerformed(evt);
+            }
+        });
+
+        txtPin10.setEditable(false);
 
         jLabel13.setText("Pin #10");
 
@@ -419,9 +489,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel14.setText("Pin #11");
 
+        txtPin11.setEditable(false);
+
         buttonGroup11.add(jRadioButton21);
         jRadioButton21.setSelected(true);
         jRadioButton21.setText("R");
+        jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton21ActionPerformed(evt);
+            }
+        });
 
         buttonGroup11.add(jRadioButton22);
         jRadioButton22.setText("W");
@@ -433,9 +510,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel15.setText("Pin #12");
 
+        txtPin12.setEditable(false);
+
         buttonGroup12.add(jRadioButton23);
         jRadioButton23.setSelected(true);
         jRadioButton23.setText("R");
+        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton23ActionPerformed(evt);
+            }
+        });
 
         buttonGroup12.add(jRadioButton24);
         jRadioButton24.setText("W");
@@ -447,9 +531,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel16.setText("Pin #13");
 
+        txtPin13.setEditable(false);
+
         buttonGroup13.add(jRadioButton25);
         jRadioButton25.setSelected(true);
         jRadioButton25.setText("R");
+        jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton25ActionPerformed(evt);
+            }
+        });
 
         buttonGroup13.add(jRadioButton26);
         jRadioButton26.setText("W");
@@ -461,9 +552,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel17.setText("Pin #14");
 
+        txtPin14.setEditable(false);
+
         buttonGroup14.add(jRadioButton27);
         jRadioButton27.setSelected(true);
         jRadioButton27.setText("R");
+        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton27ActionPerformed(evt);
+            }
+        });
 
         buttonGroup14.add(jRadioButton28);
         jRadioButton28.setText("W");
@@ -475,9 +573,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel18.setText("Pin #15");
 
+        txtPin15.setEditable(false);
+
         buttonGroup15.add(jRadioButton29);
         jRadioButton29.setSelected(true);
         jRadioButton29.setText("R");
+        jRadioButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton29ActionPerformed(evt);
+            }
+        });
 
         buttonGroup15.add(jRadioButton30);
         jRadioButton30.setText("W");
@@ -490,9 +595,16 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel19.setText("Pin #16");
         jLabel19.setToolTipText("");
 
+        txtPin16.setEditable(false);
+
         buttonGroup16.add(jRadioButton31);
         jRadioButton31.setSelected(true);
         jRadioButton31.setText("R");
+        jRadioButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton31ActionPerformed(evt);
+            }
+        });
 
         buttonGroup16.add(jRadioButton32);
         jRadioButton32.setText("W");
@@ -504,9 +616,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel20.setText("Pin #17");
 
+        txtPin17.setEditable(false);
+
         buttonGroup17.add(jRadioButton33);
         jRadioButton33.setSelected(true);
         jRadioButton33.setText("R");
+        jRadioButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton33ActionPerformed(evt);
+            }
+        });
 
         buttonGroup17.add(jRadioButton34);
         jRadioButton34.setText("W");
@@ -518,9 +637,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel21.setText("Pin #18");
 
+        txtPin18.setEditable(false);
+
         buttonGroup18.add(jRadioButton35);
         jRadioButton35.setSelected(true);
         jRadioButton35.setText("R");
+        jRadioButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton35ActionPerformed(evt);
+            }
+        });
 
         buttonGroup18.add(jRadioButton36);
         jRadioButton36.setText("W");
@@ -532,9 +658,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel22.setText("Pin #19");
 
+        txtPin19.setEditable(false);
+
         buttonGroup19.add(jRadioButton37);
         jRadioButton37.setSelected(true);
         jRadioButton37.setText("R");
+        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton37ActionPerformed(evt);
+            }
+        });
 
         buttonGroup19.add(jRadioButton38);
         jRadioButton38.setText("W");
@@ -546,9 +679,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel23.setText("Pin #20");
 
+        txtPin20.setEditable(false);
+
         buttonGroup20.add(jRadioButton39);
         jRadioButton39.setSelected(true);
         jRadioButton39.setText("R");
+        jRadioButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton39ActionPerformed(evt);
+            }
+        });
 
         buttonGroup20.add(jRadioButton40);
         jRadioButton40.setText("W");
@@ -561,6 +701,11 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup21.add(jRadioButton49);
         jRadioButton49.setSelected(true);
         jRadioButton49.setText("R");
+        jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton49ActionPerformed(evt);
+            }
+        });
 
         buttonGroup21.add(jRadioButton50);
         jRadioButton50.setText("W");
@@ -573,6 +718,11 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup30.add(jRadioButton51);
         jRadioButton51.setSelected(true);
         jRadioButton51.setText("R");
+        jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton51ActionPerformed(evt);
+            }
+        });
 
         buttonGroup30.add(jRadioButton52);
         jRadioButton52.setText("W");
@@ -586,13 +736,27 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel29.setText("Pin #22");
 
+        txtPin38.setEditable(false);
+
+        txtPin22.setEditable(false);
+
         buttonGroup33.add(jRadioButton71);
         jRadioButton71.setSelected(true);
         jRadioButton71.setText("R");
+        jRadioButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton71ActionPerformed(evt);
+            }
+        });
 
         buttonGroup22.add(jRadioButton53);
         jRadioButton53.setSelected(true);
         jRadioButton53.setText("R");
+        jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton53ActionPerformed(evt);
+            }
+        });
 
         buttonGroup33.add(jRadioButton72);
         jRadioButton72.setText("W");
@@ -617,6 +781,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup38.add(jRadioButton73);
         jRadioButton73.setSelected(true);
         jRadioButton73.setText("R");
+        jRadioButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton73ActionPerformed(evt);
+            }
+        });
+
+        txtPin23.setEditable(false);
 
         buttonGroup38.add(jRadioButton74);
         jRadioButton74.setText("W");
@@ -626,15 +797,27 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin34.setEditable(false);
+
         jLabel40.setText("Pin #39");
 
         buttonGroup34.add(jRadioButton75);
         jRadioButton75.setSelected(true);
         jRadioButton75.setText("R");
+        jRadioButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton75ActionPerformed(evt);
+            }
+        });
 
         buttonGroup23.add(jRadioButton55);
         jRadioButton55.setSelected(true);
         jRadioButton55.setText("R");
+        jRadioButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton55ActionPerformed(evt);
+            }
+        });
 
         buttonGroup23.add(jRadioButton56);
         jRadioButton56.setText("W");
@@ -645,6 +828,8 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel31.setText("Pin #24");
+
+        txtPin24.setEditable(false);
 
         buttonGroup34.add(jRadioButton76);
         jRadioButton76.setText("W");
@@ -657,6 +842,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup24.add(jRadioButton57);
         jRadioButton57.setSelected(true);
         jRadioButton57.setText("R");
+        jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton57ActionPerformed(evt);
+            }
+        });
+
+        txtPin39.setEditable(false);
 
         buttonGroup24.add(jRadioButton58);
         jRadioButton58.setText("W");
@@ -673,6 +865,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup39.add(jRadioButton77);
         jRadioButton77.setSelected(true);
         jRadioButton77.setText("R");
+        jRadioButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton77ActionPerformed(evt);
+            }
+        });
+
+        txtPin25.setEditable(false);
 
         buttonGroup39.add(jRadioButton78);
         jRadioButton78.setText("W");
@@ -685,6 +884,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup25.add(jRadioButton59);
         jRadioButton59.setSelected(true);
         jRadioButton59.setText("R");
+        jRadioButton59.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton59ActionPerformed(evt);
+            }
+        });
+
+        txtPin35.setEditable(false);
 
         buttonGroup25.add(jRadioButton60);
         jRadioButton60.setText("W");
@@ -697,6 +903,11 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup35.add(jRadioButton79);
         jRadioButton79.setSelected(true);
         jRadioButton79.setText("R");
+        jRadioButton79.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton79ActionPerformed(evt);
+            }
+        });
 
         jLabel42.setText("Pin #31");
 
@@ -713,9 +924,20 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel33.setText("Pin #26");
         jLabel33.setToolTipText("");
 
+        txtPin26.setEditable(false);
+
+        txtPin31.setEditable(false);
+
+        txtPin40.setEditable(false);
+
         buttonGroup26.add(jRadioButton41);
         jRadioButton41.setSelected(true);
         jRadioButton41.setText("R");
+        jRadioButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton41ActionPerformed(evt);
+            }
+        });
 
         buttonGroup26.add(jRadioButton42);
         jRadioButton42.setText("W");
@@ -727,12 +949,21 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel24.setText("Pin #27");
 
+        txtPin27.setEditable(false);
+
         jLabel34.setText("Pin #36");
         jLabel34.setToolTipText("");
 
         buttonGroup27.add(jRadioButton43);
         jRadioButton43.setSelected(true);
         jRadioButton43.setText("R");
+        jRadioButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton43ActionPerformed(evt);
+            }
+        });
+
+        txtPin36.setEditable(false);
 
         buttonGroup27.add(jRadioButton44);
         jRadioButton44.setText("W");
@@ -745,6 +976,11 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup31.add(jRadioButton61);
         jRadioButton61.setSelected(true);
         jRadioButton61.setText("R");
+        jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton61ActionPerformed(evt);
+            }
+        });
 
         jLabel25.setText("Pin #28");
 
@@ -756,9 +992,16 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin28.setEditable(false);
+
         buttonGroup40.add(jRadioButton63);
         jRadioButton63.setSelected(true);
         jRadioButton63.setText("R");
+        jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton63ActionPerformed(evt);
+            }
+        });
 
         buttonGroup40.add(jRadioButton64);
         jRadioButton64.setText("W");
@@ -771,12 +1014,22 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup36.add(jRadioButton65);
         jRadioButton65.setSelected(true);
         jRadioButton65.setText("R");
+        jRadioButton65.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton65ActionPerformed(evt);
+            }
+        });
 
         jLabel35.setText("Pin #32");
 
         buttonGroup28.add(jRadioButton45);
         jRadioButton45.setSelected(true);
         jRadioButton45.setText("R");
+        jRadioButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton45ActionPerformed(evt);
+            }
+        });
 
         buttonGroup28.add(jRadioButton46);
         jRadioButton46.setText("W");
@@ -787,6 +1040,8 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel26.setText("Pin #29");
+
+        txtPin29.setEditable(false);
 
         buttonGroup36.add(jRadioButton66);
         jRadioButton66.setText("W");
@@ -799,6 +1054,13 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup29.add(jRadioButton47);
         jRadioButton47.setSelected(true);
         jRadioButton47.setText("R");
+        jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton47ActionPerformed(evt);
+            }
+        });
+
+        txtPin32.setEditable(false);
 
         buttonGroup29.add(jRadioButton48);
         jRadioButton48.setText("W");
@@ -815,8 +1077,17 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup32.add(jRadioButton67);
         jRadioButton67.setSelected(true);
         jRadioButton67.setText("R");
+        jRadioButton67.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton67ActionPerformed(evt);
+            }
+        });
 
         jLabel28.setText("Pin #30");
+
+        txtPin37.setEditable(false);
+
+        txtPin21.setEditable(false);
 
         buttonGroup32.add(jRadioButton68);
         jRadioButton68.setText("W");
@@ -826,11 +1097,20 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin30.setEditable(false);
+
         jLabel37.setText("Pin #33");
 
         buttonGroup37.add(jRadioButton69);
         jRadioButton69.setSelected(true);
         jRadioButton69.setText("R");
+        jRadioButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton69ActionPerformed(evt);
+            }
+        });
+
+        txtPin33.setEditable(false);
 
         buttonGroup37.add(jRadioButton70);
         jRadioButton70.setText("W");
@@ -1539,164 +1819,324 @@ public class IotFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
+       txtPin1.setEditable(true);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
+txtPin2.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
+txtPin2.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
-        // TODO add your handling code here:
+txtPin4.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton8ActionPerformed
 
     private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-        // TODO add your handling code here:
+txtPin5.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton10ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-        // TODO add your handling code here:
+txtPin6.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton12ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        // TODO add your handling code here:
+txtPin7.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
     private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-        // TODO add your handling code here:
+txtPin8.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton16ActionPerformed
 
     private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-        // TODO add your handling code here:
+txtPin9.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton18ActionPerformed
 
     private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        // TODO add your handling code here:
+txtPin10.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton20ActionPerformed
 
     private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-        // TODO add your handling code here:
+txtPin11.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton22ActionPerformed
 
     private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
-        // TODO add your handling code here:
+txtPin12.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton24ActionPerformed
 
     private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
-        // TODO add your handling code here:
+txtPin13.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton26ActionPerformed
 
     private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-        // TODO add your handling code here:
+txtPin14.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton28ActionPerformed
 
     private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
-        // TODO add your handling code here:
+txtPin15.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton30ActionPerformed
 
     private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
-        // TODO add your handling code here:
+txtPin16.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton32ActionPerformed
 
     private void jRadioButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton34ActionPerformed
-        // TODO add your handling code here:
+txtPin17.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton34ActionPerformed
 
     private void jRadioButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton36ActionPerformed
-        // TODO add your handling code here:
+txtPin18.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton36ActionPerformed
 
     private void jRadioButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton38ActionPerformed
-        // TODO add your handling code here:
+txtPin19.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton38ActionPerformed
 
     private void jRadioButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton40ActionPerformed
-        // TODO add your handling code here:
+txtPin20.setEditable(true);          // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton40ActionPerformed
 
     private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
-        // TODO add your handling code here:
+txtPin26.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton42ActionPerformed
 
     private void jRadioButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton44ActionPerformed
-        // TODO add your handling code here:
+txtPin27.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton44ActionPerformed
 
     private void jRadioButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton46ActionPerformed
-        // TODO add your handling code here:
+txtPin28.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton46ActionPerformed
 
     private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
-        // TODO add your handling code here:
+txtPin29.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton48ActionPerformed
 
     private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
-        // TODO add your handling code here:
+txtPin21.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton50ActionPerformed
 
     private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
-        // TODO add your handling code here:
+txtPin30.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton52ActionPerformed
 
     private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
-        // TODO add your handling code here:
+txtPin22.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton54ActionPerformed
 
     private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
-        // TODO add your handling code here:
+txtPin23.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton56ActionPerformed
 
     private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
-        // TODO add your handling code here:
+txtPin24.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton58ActionPerformed
 
     private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
-        // TODO add your handling code here:
+txtPin25.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton60ActionPerformed
 
     private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
-        // TODO add your handling code here:
+txtPin31.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton62ActionPerformed
 
     private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
-        // TODO add your handling code here:
+txtPin40.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton64ActionPerformed
 
     private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
-        // TODO add your handling code here:
+txtPin36.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton66ActionPerformed
 
     private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
-        // TODO add your handling code here:
+txtPin32.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton68ActionPerformed
 
     private void jRadioButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton70ActionPerformed
-        // TODO add your handling code here:
+txtPin37.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton70ActionPerformed
 
     private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
-        // TODO add your handling code here:
+txtPin33.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton72ActionPerformed
 
     private void jRadioButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton74ActionPerformed
-        // TODO add your handling code here:
+txtPin38.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton74ActionPerformed
 
     private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
-        // TODO add your handling code here:
+txtPin34.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton76ActionPerformed
 
     private void jRadioButton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton78ActionPerformed
-        // TODO add your handling code here:
+txtPin39.setEditable(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton78ActionPerformed
 
     private void jRadioButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton80ActionPerformed
-        // TODO add your handling code here:
+txtPin35.setEditable(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton80ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+       txtPin1.setEditable(false);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+       txtPin2.setEditable(false);
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+txtPin3.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+txtPin4.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+txtPin5.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+txtPin6.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
+
+    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
+txtPin7.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton13ActionPerformed
+
+    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
+txtPin8.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton15ActionPerformed
+
+    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
+txtPin9.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton17ActionPerformed
+
+    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
+txtPin10.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton19ActionPerformed
+
+    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
+txtPin11.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton21ActionPerformed
+
+    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
+txtPin12.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton23ActionPerformed
+
+    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
+txtPin13.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton25ActionPerformed
+
+    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
+txtPin14.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton27ActionPerformed
+
+    private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
+txtPin15.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton29ActionPerformed
+
+    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
+txtPin16.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton31ActionPerformed
+
+    private void jRadioButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton33ActionPerformed
+txtPin17.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton33ActionPerformed
+
+    private void jRadioButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton35ActionPerformed
+txtPin18.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton35ActionPerformed
+
+    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
+txtPin19.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton37ActionPerformed
+
+    private void jRadioButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton39ActionPerformed
+txtPin20.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton39ActionPerformed
+
+    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
+txtPin21.setEditable(false);          // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton49ActionPerformed
+
+    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
+txtPin22.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton53ActionPerformed
+
+    private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
+txtPin23.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton55ActionPerformed
+
+    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
+txtPin24.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton57ActionPerformed
+
+    private void jRadioButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton59ActionPerformed
+txtPin25.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton59ActionPerformed
+
+    private void jRadioButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton41ActionPerformed
+txtPin26.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton41ActionPerformed
+
+    private void jRadioButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton43ActionPerformed
+txtPin27.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton43ActionPerformed
+
+    private void jRadioButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton45ActionPerformed
+txtPin28.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton45ActionPerformed
+
+    private void jRadioButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton47ActionPerformed
+txtPin29.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton47ActionPerformed
+
+    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
+txtPin30.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton51ActionPerformed
+
+    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
+txtPin31.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton61ActionPerformed
+
+    private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
+txtPin32.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton67ActionPerformed
+
+    private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
+txtPin33.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton71ActionPerformed
+
+    private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
+txtPin34.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton75ActionPerformed
+
+    private void jRadioButton79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton79ActionPerformed
+txtPin35.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton79ActionPerformed
+
+    private void jRadioButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton65ActionPerformed
+txtPin36.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton65ActionPerformed
+
+    private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
+txtPin37.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton69ActionPerformed
+
+    private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
+txtPin38.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton73ActionPerformed
+
+    private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
+txtPin39.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton77ActionPerformed
+
+    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
+txtPin40.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton63ActionPerformed
     
     private void readIotBoxPins()
     {
