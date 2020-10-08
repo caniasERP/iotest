@@ -1,0 +1,5 @@
+2020-10-08 12:10:57 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:12222222
+2020-10-08 12:12:31 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:13333333
+2020-10-08 12:17:05 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:22222222
+2020-10-08 12:17:21 ERROR IotFrame:1753 - Connection error java.net.ConnectException: Connection refused: connect
+2020-10-08 12:20:01 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:222222

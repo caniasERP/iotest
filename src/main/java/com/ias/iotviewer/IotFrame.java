@@ -15,13 +15,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  *
@@ -39,9 +39,12 @@ public class IotFrame extends javax.swing.JFrame {
     private UIHelper uiHelper;
     private Timer timer;
             
+    final static Logger logger = Logger.getLogger("IotFrame");
+    
     public IotFrame() {
         initComponents();
         jPanel1.setVisible(false);
+        PropertyConfigurator.configure("log4j.properties");
         
     }
 
@@ -1736,7 +1739,7 @@ public class IotFrame extends javax.swing.JFrame {
                            
                           //  uiHelper.sendAndReceive();
                           
-                          Logger.getLogger(IotFrame.class.getName()).log(Level.SEVERE, null, "test");
+                       
                           
                         }
                     });
@@ -1744,19 +1747,20 @@ public class IotFrame extends javax.swing.JFrame {
 
                 }
 
-            } catch (UnknownHostException ex) {
+            } catch (Exception ex) {
 
-                showErrorMsg("Server not found: " + ex.getMessage());
-
-            } catch (IOException ex) {
-
-                showErrorMsg("I/O error: " + ex.getMessage());
+                showErrorMsg(ex.toString());
+                logger.error("Connection error " + ex.toString());
+               
             }
         }
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if(uiHelper!=null)
+        {
         uiHelper.closeConnection();
+        }
     }//GEN-LAST:event_formWindowClosing
 
     private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed

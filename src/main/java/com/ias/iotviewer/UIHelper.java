@@ -16,8 +16,6 @@ import java.lang.reflect.Field;
 import java.net.Socket;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
@@ -40,6 +38,8 @@ public class UIHelper {
     private PrintWriter out;
     private BufferedReader in;
 
+    final static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger("UIHelper");
+
     public UIHelper(JFrame frame, JPanel panel, Socket socket) {
         this.frame = frame;
         this.panel = panel;
@@ -49,8 +49,8 @@ public class UIHelper {
         try {
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        } catch (IOException ex) {
-            Logger.getLogger(UIHelper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            logger.error(ex.toString());
         }
 
     }
@@ -110,7 +110,7 @@ public class UIHelper {
         JSONObject readReqJson = new JSONObject();
         JSONArray readReqJsonArr = new JSONArray();
         JSONObject readRespJson;
-        
+
         JSONObject writeReqJson = new JSONObject();
         JSONArray writeReqJsonArr = new JSONArray();
         JSONObject writeRespJson;
@@ -133,7 +133,7 @@ public class UIHelper {
 
         preReqJson.put("commands", preReqJsonArr);
 
-        System.out.println("sent json : " + preReqJson.toString());
+        logger.info("sent json : " + preReqJson.toString());
 
         try {
 
@@ -143,12 +143,11 @@ public class UIHelper {
                 String tcpResponse = in.readLine();
                 preRespJson = JSONObject.fromObject(tcpResponse);
 
-                System.out.println("received json : " + preRespJson.toString());
+                logger.info("received json : " + preRespJson.toString());
 
                 if (preRespJson.get("status").equals(0)) {
 
                     //reading pins
-                    
                     for (Integer c : readValues.keySet()) {
                         JSONObject reqItem = new JSONObject();
                         reqItem.put("cmd", "get");
@@ -158,8 +157,8 @@ public class UIHelper {
 
                     readReqJson.put("commands", readReqJsonArr);
 
-                    System.out.println("sent json (for read) : " + readReqJson.toString());
-                    
+                    logger.info("sent json (for read) : " + readReqJson.toString());
+
                     out.println(readReqJson.toString());
                     String tcpReadResponse = in.readLine();
 
@@ -180,21 +179,21 @@ public class UIHelper {
                     String tcpWriteResponse = in.readLine();
 
                     handleWriteResp(tcpWriteResponse);
-                    
+
                 } else {
                     JSONObject errJsonPre = preRespJson.getJSONObject("error");
-                    System.out.println(errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+                    logger.error(errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
                 }
             }
 
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            logger.error(ex.toString());
         }
 
     }
 
     private void handleReadResp(String resp) {
-        System.out.println("received json (for read) " + resp);
+        logger.info("received json (for read) " + resp);
 
         try {
             JSONObject readJson = JSONObject.fromObject(resp);
@@ -211,10 +210,10 @@ public class UIHelper {
                 }
             } else {
                 JSONObject errJson = readJson.getJSONObject("error");
-                System.out.println("read error " + errJson.get("detail") + "-" + errJson.get("message"));
+                logger.error("read error " + errJson.get("detail") + "-" + errJson.get("message"));
             }
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            logger.info(ex.toString());
         }
 
     }
@@ -226,37 +225,38 @@ public class UIHelper {
             JSONObject readJson = JSONObject.fromObject(resp);
 
             if (readJson.get("status").equals(0)) {
-                System.out.println("write ok");
+                logger.info("write ok");
             } else {
                 JSONObject errJson = readJson.getJSONObject("error");
-                System.out.println("write error " + errJson.get("detail") + "-" + errJson.get("message"));
+                logger.error("write error " + errJson.get("detail") + "-" + errJson.get("message"));
             }
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            logger.error(ex.toString());
         }
     }
 
     public void closeConnection() {
-        if (in != null) {
-            try {
-                in.close();
-            } catch (Exception ex) {
-                Logger.getLogger(UIHelper.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        if (out != null) {
-            try {
-                out.close();
-            } catch (Exception ex) {
-                Logger.getLogger(UIHelper.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
 
-        if (socket != null) {
+        if (socket != null && socket.isConnected()) {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (Exception ex) {
+                    logger.error(ex.toString());
+                }
+            }
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (Exception ex) {
+                    logger.error(ex.toString());
+                }
+            }
+
             try {
                 socket.close();
-            } catch (IOException ex) {
-                Logger.getLogger(IotFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                logger.error(ex.toString());
             }
         }
     }
