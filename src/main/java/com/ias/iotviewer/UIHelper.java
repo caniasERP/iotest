@@ -130,25 +130,23 @@ public class UIHelper {
 
         try {
 
+            out.println(ReqJson.toString());
+            String tcpResponse = in.readLine();
+            logger.info("checking pins state : received tcp response " + tcpResponse);
+            RespJson = JSONObject.fromObject(tcpResponse);
 
-                out.println(ReqJson.toString());
-                String tcpResponse = in.readLine();
-                logger.info("checking pins state : received tcp response "+tcpResponse);
-                RespJson = JSONObject.fromObject(tcpResponse);
+            logger.info("checking pins state : received json : " + RespJson.toString());
 
-                logger.info("checking pins state : received json : " + RespJson.toString());
-
-                if (RespJson.get("status").equals(0)) {
-                    JSONArray jarr = RespJson.getJSONArray("modes");
-                    for (int i = 0; i < jarr.size(); i++) {
-                        pinStates.put(i + 1, (Integer) jarr.get(i));
-                    }
-                    prepareScreen();
-                } else {
-                    JSONObject errJsonPre = RespJson.getJSONObject("error");
-                    logger.error("checking pins state error: " + errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+            if (RespJson.get("status").equals(0)) {
+                JSONArray jarr = RespJson.getJSONArray("modes");
+                for (int i = 0; i < jarr.size(); i++) {
+                    pinStates.put(i + 1, (Integer) jarr.get(i));
                 }
-            
+                prepareScreen();
+            } else {
+                JSONObject errJsonPre = RespJson.getJSONObject("error");
+                logger.error("checking pins state error: " + errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+            }
 
         } catch (Exception ex) {
             logger.error(ex.toString());
@@ -160,17 +158,17 @@ public class UIHelper {
         for (Integer c : pinStates.keySet()) {
 
             String compName = "txtPin" + c;
-            String rbName = "rb"+c;
+            String rbName = "rb" + c;
             JTextField txtFld = (JTextField) getComponentByName(frame, compName);
 
             if (pinStates.get(c) != 1) {
                 txtFld.setEnabled(false);
-                rbName = rbName+"R";
-            }else{
+                rbName = rbName + "R";
+            } else {
                 txtFld.setEnabled(true);
-                rbName = rbName+"W";
+                rbName = rbName + "W";
             }
-            
+
             JRadioButton rb = (JRadioButton) getComponentByName(frame, rbName);
             rb.setSelected(true);
 
@@ -191,19 +189,24 @@ public class UIHelper {
         JSONArray writeReqJsonArr = new JSONArray();
 
         for (Integer c : readValues.keySet()) {
-            JSONObject reqItem = new JSONObject();
-            reqItem.put("cmd", "mode");
-            reqItem.put("pin", c);
-            reqItem.put("value", 0);
-            preReqJsonArr.add(reqItem);
+
+            if (pinStates.get(c) == 1) {
+                JSONObject reqItem = new JSONObject();
+                reqItem.put("cmd", "mode");
+                reqItem.put("pin", c);
+                reqItem.put("value", 0);
+                preReqJsonArr.add(reqItem);
+            }
         }
 
         for (Integer c : writeValues.keySet()) {
+            if (pinStates.get(c) != 1) {
             JSONObject reqItem = new JSONObject();
             reqItem.put("cmd", "mode");
             reqItem.put("pin", c);
             reqItem.put("value", 1);
             preReqJsonArr.add(reqItem);
+            }
         }
 
         preReqJson.put("commands", preReqJsonArr);
@@ -212,54 +215,51 @@ public class UIHelper {
 
         try {
 
-         
+            out.println(preReqJson.toString());
+            String tcpResponse = in.readLine();
+            preRespJson = JSONObject.fromObject(tcpResponse);
 
-                out.println(preReqJson.toString());
-                String tcpResponse = in.readLine();
-                preRespJson = JSONObject.fromObject(tcpResponse);
+            logger.info("received json : " + preRespJson.toString());
 
-                logger.info("received json : " + preRespJson.toString());
+            if (preRespJson.get("status").equals(0)) {
 
-                if (preRespJson.get("status").equals(0)) {
-
-                    //reading pins
-                    for (Integer c : readValues.keySet()) {
-                        JSONObject reqItem = new JSONObject();
-                        reqItem.put("cmd", "get");
-                        reqItem.put("pin", c);
-                        readReqJsonArr.add(reqItem);
-                    }
-
-                    readReqJson.put("commands", readReqJsonArr);
-
-                    logger.info("sent json (for read) : " + readReqJson.toString());
-
-                    out.println(readReqJson.toString());
-                    String tcpReadResponse = in.readLine();
-
-                    handleReadResp(tcpReadResponse);
-
-                    //writing to pins
-                    for (Integer c : writeValues.keySet()) {
-                        JSONObject reqItem = new JSONObject();
-                        reqItem.put("cmd", "set");
-                        reqItem.put("pin", c);
-                        reqItem.put("value", writeValues.get(c));
-                        writeReqJsonArr.add(reqItem);
-                    }
-
-                    writeReqJson.put("commands", writeReqJsonArr);
-
-                    out.println(writeReqJson.toString());
-                    String tcpWriteResponse = in.readLine();
-
-                    handleWriteResp(tcpWriteResponse);
-
-                } else {
-                    JSONObject errJsonPre = preRespJson.getJSONObject("error");
-                    logger.error(errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+                //reading pins
+                for (Integer c : readValues.keySet()) {
+                    JSONObject reqItem = new JSONObject();
+                    reqItem.put("cmd", "get");
+                    reqItem.put("pin", c);
+                    readReqJsonArr.add(reqItem);
                 }
-            
+
+                readReqJson.put("commands", readReqJsonArr);
+
+                logger.info("sent json (for read) : " + readReqJson.toString());
+
+                out.println(readReqJson.toString());
+                String tcpReadResponse = in.readLine();
+
+                handleReadResp(tcpReadResponse);
+
+                //writing to pins
+                for (Integer c : writeValues.keySet()) {
+                    JSONObject reqItem = new JSONObject();
+                    reqItem.put("cmd", "set");
+                    reqItem.put("pin", c);
+                    reqItem.put("value", writeValues.get(c));
+                    writeReqJsonArr.add(reqItem);
+                }
+
+                writeReqJson.put("commands", writeReqJsonArr);
+
+                out.println(writeReqJson.toString());
+                String tcpWriteResponse = in.readLine();
+
+                handleWriteResp(tcpWriteResponse);
+
+            } else {
+                JSONObject errJsonPre = preRespJson.getJSONObject("error");
+                logger.error(errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+            }
 
         } catch (Exception ex) {
             logger.error(ex.toString());
