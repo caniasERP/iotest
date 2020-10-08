@@ -5,6 +5,7 @@
  */
 package com.ias.iotviewer;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -13,10 +14,12 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.TimerTask;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import net.sf.json.*;
 
 /**
  *
@@ -31,11 +34,13 @@ public class IotFrame extends javax.swing.JFrame {
     private int servicePort;
     private int period;
     private Socket socket;
-
+    private UIHelper uiHelper;
+    private Timer timer;
+            
     public IotFrame() {
         initComponents();
         jPanel1.setVisible(false);
-        UIHelper.checkReadPins(jPanel1);
+        uiHelper = new UIHelper(this,jPanel1);
     }
 
     /**
@@ -1720,6 +1725,16 @@ public class IotFrame extends javax.swing.JFrame {
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
 
+                    timer = new Timer(period, new ActionListener() {
+
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                           
+                            uiHelper.sendAndReceive();
+                        }
+                    });
+                    timer.start();
+
                 }
 
             } catch (UnknownHostException ex) {
@@ -1734,7 +1749,8 @@ public class IotFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        // TODO add your handling code here:
+        timer.stop();
+        timer=null;
     }//GEN-LAST:event_formWindowClosing
 
     private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed

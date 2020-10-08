@@ -7,19 +7,36 @@ package com.ias.iotviewer;
 
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Window;
 import java.lang.reflect.Field;
 import java.util.Enumeration;
+import java.util.Hashtable;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-
+import net.sf.json.*;
 /**
  *
  * @author METIN
  */
 public class UIHelper {
-
+   
+    private JFrame frame;
+    private JPanel panel;
+    private Hashtable<Integer,String> readValues;
+    private Hashtable<Integer,String> writeValues;
+    
+    public UIHelper(JFrame frame, JPanel panel) {
+        this.frame = frame;
+        this.panel = panel;
+        readValues = new Hashtable<Integer,String>();
+        writeValues = new Hashtable<Integer,String>();
+    }
+    
+    
     public String getSelectedButtonText(ButtonGroup buttonGroup) {
         for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
@@ -32,14 +49,76 @@ public class UIHelper {
         return null;
     }
 
-    public static void checkReadPins(JPanel panel) {
-        Component component = null; // Stores a Component
+    public void sendAndReceive() {
+        
         Component myCA[] = panel.getComponents();
-
+        
+        readValues.clear();
+        writeValues.clear();
+        
         for (int i = 0; i < myCA.length; i++) {
 
-            System.out.println(getComponentVariableName(myCA[i])+"-"+myCA[i].getClass().getName());
+            //System.out.println(getComponentVariableName(myCA[i])+"-"+myCA[i].getClass().getName());
+            
+            if(myCA[i] instanceof JRadioButton)
+            {
+                JRadioButton rb = (JRadioButton)myCA[i];
+                if(rb.isSelected())
+                {
+                    String vName = getComponentVariableName(rb);
+                    vName = vName.replace("rb", "");
+                    String lastChar = vName.substring(vName.length() - 1);
+                    int pinNo = Integer.parseInt(vName.replace(lastChar, ""));
+                    
+                    if(lastChar.equals("R"))
+                    {
+                        readValues.put(pinNo, "");
+                    }else
+                    {
+                        JTextField txtFld = (JTextField)getComponentByName(frame,"txtPin"+pinNo);
+                        writeValues.put(pinNo, txtFld.getText());
+                    }
+                    
+                }
+            }
+            
+           // JTextField c = (JTextField)getComponentByName(frame, "txtPin1");
+           // c.setText("test");
         }
+        
+        //System.out.println(writeValues.toString());
+        
+        sendToService();
+
+    }
+    
+    private void sendToService()
+    {
+        JSONObject preReqJson = new JSONObject();
+        JSONArray preReqJsonArr = new JSONArray();
+        
+        for(Integer c : readValues.keySet())
+        {
+            JSONObject reqItem = new JSONObject();
+            reqItem.put("cmd","mode");
+            reqItem.put("pin",c);
+            reqItem.put("value",0);
+            preReqJsonArr.add(reqItem);
+        }
+        
+        for(Integer c : writeValues.keySet())
+        {
+            JSONObject reqItem = new JSONObject();
+            reqItem.put("cmd","mode");
+            reqItem.put("pin",c);
+            reqItem.put("value",1);
+            preReqJsonArr.add(reqItem);
+        }
+        
+        preReqJson.put("commands", preReqJsonArr);
+        
+        System.out.println(preReqJson.toString());
+        
     }
     
     static public String getComponentVariableName(Object object) {
@@ -104,5 +183,36 @@ public class UIHelper {
             sourceComponent = sourceComponent.getParent();
         }
         return sourceComponent;
+    }
+    
+    static public <T extends Component> T getComponentByName(Window window, String name) {
+
+        // loop through all of the class fields on that form
+        for (Field field : window.getClass().getDeclaredFields()) {
+
+            try {
+                // let us look at private fields, please
+                field.setAccessible(true);
+
+                // compare the variable name to the name passed in
+                if (name.equals(field.getName())) {
+
+                    // get a potential match (assuming correct &lt;T&gt;ype)
+                    final Object potentialMatch = field.get(window);
+
+                    // cast and return the component
+                    return (T) potentialMatch;
+                }
+
+            } catch (SecurityException | IllegalArgumentException 
+                    | IllegalAccessException ex) {
+
+                // ignore exceptions
+            }
+
+        }
+
+        // no match found
+        return null;
     }
 }
