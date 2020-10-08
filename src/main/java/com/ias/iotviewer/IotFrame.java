@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -40,7 +42,7 @@ public class IotFrame extends javax.swing.JFrame {
     public IotFrame() {
         initComponents();
         jPanel1.setVisible(false);
-        uiHelper = new UIHelper(this,jPanel1);
+        
     }
 
     /**
@@ -1724,13 +1726,18 @@ public class IotFrame extends javax.swing.JFrame {
                     srvIP.setEnabled(false);
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
-
+                    
+                    uiHelper = new UIHelper(this,jPanel1,socket);
+                    
                     timer = new Timer(period, new ActionListener() {
 
                         @Override
                         public void actionPerformed(ActionEvent e) {
                            
-                            uiHelper.sendAndReceive();
+                          //  uiHelper.sendAndReceive();
+                          
+                          Logger.getLogger(IotFrame.class.getName()).log(Level.SEVERE, null, "test");
+                          
                         }
                     });
                     timer.start();
@@ -1749,11 +1756,7 @@ public class IotFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        if(timer!=null)
-        {
-        timer.stop();
-        timer=null;
-        }
+        uiHelper.closeConnection();
     }//GEN-LAST:event_formWindowClosing
 
     private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed
