@@ -231,7 +231,7 @@ public class UIHelper {
     }
 
     private void handleWriteResp(String resp) {
-        System.out.println("received json (for write) " + resp);
+        logger.info("received json (for write) " + resp);
 
         try {
             JSONObject readJson = JSONObject.fromObject(resp);
