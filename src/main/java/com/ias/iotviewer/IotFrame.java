@@ -1749,8 +1749,11 @@ public class IotFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if(timer!=null)
+        {
         timer.stop();
         timer=null;
+        }
     }//GEN-LAST:event_formWindowClosing
 
     private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed
