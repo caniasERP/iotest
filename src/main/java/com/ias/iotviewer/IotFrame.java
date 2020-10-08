@@ -17,6 +17,7 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import net.sf.json.*;
+
 /**
  *
  * @author METIN
@@ -30,10 +31,11 @@ public class IotFrame extends javax.swing.JFrame {
     private int servicePort;
     private int period;
     private Socket socket;
-    
+
     public IotFrame() {
         initComponents();
         jPanel1.setVisible(false);
+        UIHelper.checkReadPins(jPanel1);
     }
 
     /**
@@ -93,164 +95,164 @@ public class IotFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         txtPin1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rb1R = new javax.swing.JRadioButton();
+        rb1W = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         txtPin2 = new javax.swing.JTextField();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        rb2R = new javax.swing.JRadioButton();
+        rb2W = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         txtPin3 = new javax.swing.JTextField();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        rb3R = new javax.swing.JRadioButton();
+        rb3W = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         txtPin4 = new javax.swing.JTextField();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        rb4R = new javax.swing.JRadioButton();
+        rb4W = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
         txtPin5 = new javax.swing.JTextField();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        rb5R = new javax.swing.JRadioButton();
+        rb5W = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
         txtPin6 = new javax.swing.JTextField();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        rb6R = new javax.swing.JRadioButton();
+        rb6W = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         txtPin7 = new javax.swing.JTextField();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
+        rb7R = new javax.swing.JRadioButton();
+        rb7W = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
         txtPin8 = new javax.swing.JTextField();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
+        rb8R = new javax.swing.JRadioButton();
+        rb8W = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
         txtPin9 = new javax.swing.JTextField();
-        jRadioButton17 = new javax.swing.JRadioButton();
-        jRadioButton18 = new javax.swing.JRadioButton();
-        jRadioButton19 = new javax.swing.JRadioButton();
+        rb9R = new javax.swing.JRadioButton();
+        rb9W = new javax.swing.JRadioButton();
+        rb10R = new javax.swing.JRadioButton();
         txtPin10 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jRadioButton20 = new javax.swing.JRadioButton();
+        rb10W = new javax.swing.JRadioButton();
         jLabel14 = new javax.swing.JLabel();
         txtPin11 = new javax.swing.JTextField();
-        jRadioButton21 = new javax.swing.JRadioButton();
-        jRadioButton22 = new javax.swing.JRadioButton();
+        rb11R = new javax.swing.JRadioButton();
+        rb11W = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
         txtPin12 = new javax.swing.JTextField();
-        jRadioButton23 = new javax.swing.JRadioButton();
-        jRadioButton24 = new javax.swing.JRadioButton();
+        rb12R = new javax.swing.JRadioButton();
+        rb12W = new javax.swing.JRadioButton();
         jLabel16 = new javax.swing.JLabel();
         txtPin13 = new javax.swing.JTextField();
-        jRadioButton25 = new javax.swing.JRadioButton();
-        jRadioButton26 = new javax.swing.JRadioButton();
+        rb13R = new javax.swing.JRadioButton();
+        rb13W = new javax.swing.JRadioButton();
         jLabel17 = new javax.swing.JLabel();
         txtPin14 = new javax.swing.JTextField();
-        jRadioButton27 = new javax.swing.JRadioButton();
-        jRadioButton28 = new javax.swing.JRadioButton();
+        rb14R = new javax.swing.JRadioButton();
+        rb14W = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
         txtPin15 = new javax.swing.JTextField();
-        jRadioButton29 = new javax.swing.JRadioButton();
-        jRadioButton30 = new javax.swing.JRadioButton();
+        rb15R = new javax.swing.JRadioButton();
+        rb15W = new javax.swing.JRadioButton();
         jLabel19 = new javax.swing.JLabel();
         txtPin16 = new javax.swing.JTextField();
-        jRadioButton31 = new javax.swing.JRadioButton();
-        jRadioButton32 = new javax.swing.JRadioButton();
+        rb16R = new javax.swing.JRadioButton();
+        rb16W = new javax.swing.JRadioButton();
         jLabel20 = new javax.swing.JLabel();
         txtPin17 = new javax.swing.JTextField();
-        jRadioButton33 = new javax.swing.JRadioButton();
-        jRadioButton34 = new javax.swing.JRadioButton();
+        rb17R = new javax.swing.JRadioButton();
+        rb17W = new javax.swing.JRadioButton();
         jLabel21 = new javax.swing.JLabel();
         txtPin18 = new javax.swing.JTextField();
-        jRadioButton35 = new javax.swing.JRadioButton();
-        jRadioButton36 = new javax.swing.JRadioButton();
+        rb18R = new javax.swing.JRadioButton();
+        rb18W = new javax.swing.JRadioButton();
         jLabel22 = new javax.swing.JLabel();
         txtPin19 = new javax.swing.JTextField();
-        jRadioButton37 = new javax.swing.JRadioButton();
-        jRadioButton38 = new javax.swing.JRadioButton();
+        rb19R = new javax.swing.JRadioButton();
+        rb19W = new javax.swing.JRadioButton();
         jLabel23 = new javax.swing.JLabel();
         txtPin20 = new javax.swing.JTextField();
-        jRadioButton39 = new javax.swing.JRadioButton();
-        jRadioButton40 = new javax.swing.JRadioButton();
-        jRadioButton49 = new javax.swing.JRadioButton();
-        jRadioButton50 = new javax.swing.JRadioButton();
-        jRadioButton51 = new javax.swing.JRadioButton();
-        jRadioButton52 = new javax.swing.JRadioButton();
+        rb20R = new javax.swing.JRadioButton();
+        rb20W = new javax.swing.JRadioButton();
+        rb21R = new javax.swing.JRadioButton();
+        rb21W = new javax.swing.JRadioButton();
+        rb30R = new javax.swing.JRadioButton();
+        rb30W = new javax.swing.JRadioButton();
         jLabel38 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         txtPin38 = new javax.swing.JTextField();
         txtPin22 = new javax.swing.JTextField();
-        jRadioButton71 = new javax.swing.JRadioButton();
-        jRadioButton53 = new javax.swing.JRadioButton();
-        jRadioButton72 = new javax.swing.JRadioButton();
-        jRadioButton54 = new javax.swing.JRadioButton();
+        rb33R = new javax.swing.JRadioButton();
+        rb22R = new javax.swing.JRadioButton();
+        rb33W = new javax.swing.JRadioButton();
+        rb22W = new javax.swing.JRadioButton();
         jLabel39 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jRadioButton73 = new javax.swing.JRadioButton();
+        rb38R = new javax.swing.JRadioButton();
         txtPin23 = new javax.swing.JTextField();
-        jRadioButton74 = new javax.swing.JRadioButton();
+        rb38W = new javax.swing.JRadioButton();
         txtPin34 = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jRadioButton75 = new javax.swing.JRadioButton();
-        jRadioButton55 = new javax.swing.JRadioButton();
-        jRadioButton56 = new javax.swing.JRadioButton();
+        rb34R = new javax.swing.JRadioButton();
+        rb23R = new javax.swing.JRadioButton();
+        rb23W = new javax.swing.JRadioButton();
         jLabel31 = new javax.swing.JLabel();
         txtPin24 = new javax.swing.JTextField();
-        jRadioButton76 = new javax.swing.JRadioButton();
-        jRadioButton57 = new javax.swing.JRadioButton();
+        rb34W = new javax.swing.JRadioButton();
+        rb24R = new javax.swing.JRadioButton();
         txtPin39 = new javax.swing.JTextField();
-        jRadioButton58 = new javax.swing.JRadioButton();
+        rb24W = new javax.swing.JRadioButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jRadioButton77 = new javax.swing.JRadioButton();
+        rb39R = new javax.swing.JRadioButton();
         txtPin25 = new javax.swing.JTextField();
-        jRadioButton78 = new javax.swing.JRadioButton();
-        jRadioButton59 = new javax.swing.JRadioButton();
+        rb39W = new javax.swing.JRadioButton();
+        rb25R = new javax.swing.JRadioButton();
         txtPin35 = new javax.swing.JTextField();
-        jRadioButton60 = new javax.swing.JRadioButton();
-        jRadioButton79 = new javax.swing.JRadioButton();
+        rb25W = new javax.swing.JRadioButton();
+        rb35R = new javax.swing.JRadioButton();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jRadioButton80 = new javax.swing.JRadioButton();
+        rb35W = new javax.swing.JRadioButton();
         jLabel33 = new javax.swing.JLabel();
         txtPin26 = new javax.swing.JTextField();
         txtPin31 = new javax.swing.JTextField();
         txtPin40 = new javax.swing.JTextField();
-        jRadioButton41 = new javax.swing.JRadioButton();
-        jRadioButton42 = new javax.swing.JRadioButton();
+        rb26R = new javax.swing.JRadioButton();
+        rb26W = new javax.swing.JRadioButton();
         jLabel24 = new javax.swing.JLabel();
         txtPin27 = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jRadioButton43 = new javax.swing.JRadioButton();
+        rb27R = new javax.swing.JRadioButton();
         txtPin36 = new javax.swing.JTextField();
-        jRadioButton44 = new javax.swing.JRadioButton();
-        jRadioButton61 = new javax.swing.JRadioButton();
+        rb27W = new javax.swing.JRadioButton();
+        rb31R = new javax.swing.JRadioButton();
         jLabel25 = new javax.swing.JLabel();
-        jRadioButton62 = new javax.swing.JRadioButton();
+        rb31W = new javax.swing.JRadioButton();
         txtPin28 = new javax.swing.JTextField();
-        jRadioButton63 = new javax.swing.JRadioButton();
-        jRadioButton64 = new javax.swing.JRadioButton();
-        jRadioButton65 = new javax.swing.JRadioButton();
+        rb40R = new javax.swing.JRadioButton();
+        rb40W = new javax.swing.JRadioButton();
+        rb36R = new javax.swing.JRadioButton();
         jLabel35 = new javax.swing.JLabel();
-        jRadioButton45 = new javax.swing.JRadioButton();
-        jRadioButton46 = new javax.swing.JRadioButton();
+        rb28R = new javax.swing.JRadioButton();
+        rb28W = new javax.swing.JRadioButton();
         jLabel26 = new javax.swing.JLabel();
         txtPin29 = new javax.swing.JTextField();
-        jRadioButton66 = new javax.swing.JRadioButton();
-        jRadioButton47 = new javax.swing.JRadioButton();
+        rb36W = new javax.swing.JRadioButton();
+        rb29R = new javax.swing.JRadioButton();
         txtPin32 = new javax.swing.JTextField();
-        jRadioButton48 = new javax.swing.JRadioButton();
+        rb29W = new javax.swing.JRadioButton();
         jLabel36 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jRadioButton67 = new javax.swing.JRadioButton();
+        rb32R = new javax.swing.JRadioButton();
         jLabel28 = new javax.swing.JLabel();
         txtPin37 = new javax.swing.JTextField();
         txtPin21 = new javax.swing.JTextField();
-        jRadioButton68 = new javax.swing.JRadioButton();
+        rb32W = new javax.swing.JRadioButton();
         txtPin30 = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jRadioButton69 = new javax.swing.JRadioButton();
+        rb37R = new javax.swing.JRadioButton();
         txtPin33 = new javax.swing.JTextField();
-        jRadioButton70 = new javax.swing.JRadioButton();
+        rb37W = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
         txtPeriod = new javax.swing.JTextField();
 
@@ -281,20 +283,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin1.setEditable(false);
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("R");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rb1R);
+        rb1R.setSelected(true);
+        rb1R.setText("R");
+        rb1R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rb1RActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("W");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rb1W);
+        rb1W.setText("W");
+        rb1W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rb1WActionPerformed(evt);
             }
         });
 
@@ -302,20 +304,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin2.setEditable(false);
 
-        buttonGroup2.add(jRadioButton3);
-        jRadioButton3.setSelected(true);
-        jRadioButton3.setText("R");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(rb2R);
+        rb2R.setSelected(true);
+        rb2R.setText("R");
+        rb2R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rb2RActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton4);
-        jRadioButton4.setText("W");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(rb2W);
+        rb2W.setText("W");
+        rb2W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                rb2WActionPerformed(evt);
             }
         });
 
@@ -323,20 +325,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin3.setEditable(false);
 
-        buttonGroup3.add(jRadioButton5);
-        jRadioButton5.setSelected(true);
-        jRadioButton5.setText("R");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup3.add(rb3R);
+        rb3R.setSelected(true);
+        rb3R.setText("R");
+        rb3R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                rb3RActionPerformed(evt);
             }
         });
 
-        buttonGroup3.add(jRadioButton6);
-        jRadioButton6.setText("W");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup3.add(rb3W);
+        rb3W.setText("W");
+        rb3W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                rb3WActionPerformed(evt);
             }
         });
 
@@ -344,20 +346,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin4.setEditable(false);
 
-        buttonGroup4.add(jRadioButton7);
-        jRadioButton7.setSelected(true);
-        jRadioButton7.setText("R");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup4.add(rb4R);
+        rb4R.setSelected(true);
+        rb4R.setText("R");
+        rb4R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                rb4RActionPerformed(evt);
             }
         });
 
-        buttonGroup4.add(jRadioButton8);
-        jRadioButton8.setText("W");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup4.add(rb4W);
+        rb4W.setText("W");
+        rb4W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
+                rb4WActionPerformed(evt);
             }
         });
 
@@ -365,20 +367,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin5.setEditable(false);
 
-        buttonGroup5.add(jRadioButton9);
-        jRadioButton9.setSelected(true);
-        jRadioButton9.setText("R");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup5.add(rb5R);
+        rb5R.setSelected(true);
+        rb5R.setText("R");
+        rb5R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
+                rb5RActionPerformed(evt);
             }
         });
 
-        buttonGroup5.add(jRadioButton10);
-        jRadioButton10.setText("W");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup5.add(rb5W);
+        rb5W.setText("W");
+        rb5W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                rb5WActionPerformed(evt);
             }
         });
 
@@ -386,20 +388,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin6.setEditable(false);
 
-        buttonGroup6.add(jRadioButton11);
-        jRadioButton11.setSelected(true);
-        jRadioButton11.setText("R");
-        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup6.add(rb6R);
+        rb6R.setSelected(true);
+        rb6R.setText("R");
+        rb6R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton11ActionPerformed(evt);
+                rb6RActionPerformed(evt);
             }
         });
 
-        buttonGroup6.add(jRadioButton12);
-        jRadioButton12.setText("W");
-        jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup6.add(rb6W);
+        rb6W.setText("W");
+        rb6W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton12ActionPerformed(evt);
+                rb6WActionPerformed(evt);
             }
         });
 
@@ -407,20 +409,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin7.setEditable(false);
 
-        buttonGroup7.add(jRadioButton13);
-        jRadioButton13.setSelected(true);
-        jRadioButton13.setText("R");
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup7.add(rb7R);
+        rb7R.setSelected(true);
+        rb7R.setText("R");
+        rb7R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
+                rb7RActionPerformed(evt);
             }
         });
 
-        buttonGroup7.add(jRadioButton14);
-        jRadioButton14.setText("W");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup7.add(rb7W);
+        rb7W.setText("W");
+        rb7W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
+                rb7WActionPerformed(evt);
             }
         });
 
@@ -428,20 +430,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin8.setEditable(false);
 
-        buttonGroup8.add(jRadioButton15);
-        jRadioButton15.setSelected(true);
-        jRadioButton15.setText("R");
-        jRadioButton15.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup8.add(rb8R);
+        rb8R.setSelected(true);
+        rb8R.setText("R");
+        rb8R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton15ActionPerformed(evt);
+                rb8RActionPerformed(evt);
             }
         });
 
-        buttonGroup8.add(jRadioButton16);
-        jRadioButton16.setText("W");
-        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup8.add(rb8W);
+        rb8W.setText("W");
+        rb8W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton16ActionPerformed(evt);
+                rb8WActionPerformed(evt);
             }
         });
 
@@ -449,29 +451,29 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin9.setEditable(false);
 
-        buttonGroup9.add(jRadioButton17);
-        jRadioButton17.setSelected(true);
-        jRadioButton17.setText("R");
-        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup9.add(rb9R);
+        rb9R.setSelected(true);
+        rb9R.setText("R");
+        rb9R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton17ActionPerformed(evt);
+                rb9RActionPerformed(evt);
             }
         });
 
-        buttonGroup9.add(jRadioButton18);
-        jRadioButton18.setText("W");
-        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup9.add(rb9W);
+        rb9W.setText("W");
+        rb9W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton18ActionPerformed(evt);
+                rb9WActionPerformed(evt);
             }
         });
 
-        buttonGroup10.add(jRadioButton19);
-        jRadioButton19.setSelected(true);
-        jRadioButton19.setText("R");
-        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup10.add(rb10R);
+        rb10R.setSelected(true);
+        rb10R.setText("R");
+        rb10R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton19ActionPerformed(evt);
+                rb10RActionPerformed(evt);
             }
         });
 
@@ -479,11 +481,11 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel13.setText("Pin #10");
 
-        buttonGroup10.add(jRadioButton20);
-        jRadioButton20.setText("W");
-        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup10.add(rb10W);
+        rb10W.setText("W");
+        rb10W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton20ActionPerformed(evt);
+                rb10WActionPerformed(evt);
             }
         });
 
@@ -491,20 +493,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin11.setEditable(false);
 
-        buttonGroup11.add(jRadioButton21);
-        jRadioButton21.setSelected(true);
-        jRadioButton21.setText("R");
-        jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup11.add(rb11R);
+        rb11R.setSelected(true);
+        rb11R.setText("R");
+        rb11R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton21ActionPerformed(evt);
+                rb11RActionPerformed(evt);
             }
         });
 
-        buttonGroup11.add(jRadioButton22);
-        jRadioButton22.setText("W");
-        jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup11.add(rb11W);
+        rb11W.setText("W");
+        rb11W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton22ActionPerformed(evt);
+                rb11WActionPerformed(evt);
             }
         });
 
@@ -512,20 +514,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin12.setEditable(false);
 
-        buttonGroup12.add(jRadioButton23);
-        jRadioButton23.setSelected(true);
-        jRadioButton23.setText("R");
-        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup12.add(rb12R);
+        rb12R.setSelected(true);
+        rb12R.setText("R");
+        rb12R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton23ActionPerformed(evt);
+                rb12RActionPerformed(evt);
             }
         });
 
-        buttonGroup12.add(jRadioButton24);
-        jRadioButton24.setText("W");
-        jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup12.add(rb12W);
+        rb12W.setText("W");
+        rb12W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton24ActionPerformed(evt);
+                rb12WActionPerformed(evt);
             }
         });
 
@@ -533,20 +535,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin13.setEditable(false);
 
-        buttonGroup13.add(jRadioButton25);
-        jRadioButton25.setSelected(true);
-        jRadioButton25.setText("R");
-        jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup13.add(rb13R);
+        rb13R.setSelected(true);
+        rb13R.setText("R");
+        rb13R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton25ActionPerformed(evt);
+                rb13RActionPerformed(evt);
             }
         });
 
-        buttonGroup13.add(jRadioButton26);
-        jRadioButton26.setText("W");
-        jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup13.add(rb13W);
+        rb13W.setText("W");
+        rb13W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton26ActionPerformed(evt);
+                rb13WActionPerformed(evt);
             }
         });
 
@@ -554,20 +556,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin14.setEditable(false);
 
-        buttonGroup14.add(jRadioButton27);
-        jRadioButton27.setSelected(true);
-        jRadioButton27.setText("R");
-        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup14.add(rb14R);
+        rb14R.setSelected(true);
+        rb14R.setText("R");
+        rb14R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton27ActionPerformed(evt);
+                rb14RActionPerformed(evt);
             }
         });
 
-        buttonGroup14.add(jRadioButton28);
-        jRadioButton28.setText("W");
-        jRadioButton28.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup14.add(rb14W);
+        rb14W.setText("W");
+        rb14W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton28ActionPerformed(evt);
+                rb14WActionPerformed(evt);
             }
         });
 
@@ -575,20 +577,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin15.setEditable(false);
 
-        buttonGroup15.add(jRadioButton29);
-        jRadioButton29.setSelected(true);
-        jRadioButton29.setText("R");
-        jRadioButton29.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup15.add(rb15R);
+        rb15R.setSelected(true);
+        rb15R.setText("R");
+        rb15R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton29ActionPerformed(evt);
+                rb15RActionPerformed(evt);
             }
         });
 
-        buttonGroup15.add(jRadioButton30);
-        jRadioButton30.setText("W");
-        jRadioButton30.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup15.add(rb15W);
+        rb15W.setText("W");
+        rb15W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton30ActionPerformed(evt);
+                rb15WActionPerformed(evt);
             }
         });
 
@@ -597,20 +599,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin16.setEditable(false);
 
-        buttonGroup16.add(jRadioButton31);
-        jRadioButton31.setSelected(true);
-        jRadioButton31.setText("R");
-        jRadioButton31.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup16.add(rb16R);
+        rb16R.setSelected(true);
+        rb16R.setText("R");
+        rb16R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton31ActionPerformed(evt);
+                rb16RActionPerformed(evt);
             }
         });
 
-        buttonGroup16.add(jRadioButton32);
-        jRadioButton32.setText("W");
-        jRadioButton32.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup16.add(rb16W);
+        rb16W.setText("W");
+        rb16W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton32ActionPerformed(evt);
+                rb16WActionPerformed(evt);
             }
         });
 
@@ -618,20 +620,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin17.setEditable(false);
 
-        buttonGroup17.add(jRadioButton33);
-        jRadioButton33.setSelected(true);
-        jRadioButton33.setText("R");
-        jRadioButton33.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup17.add(rb17R);
+        rb17R.setSelected(true);
+        rb17R.setText("R");
+        rb17R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton33ActionPerformed(evt);
+                rb17RActionPerformed(evt);
             }
         });
 
-        buttonGroup17.add(jRadioButton34);
-        jRadioButton34.setText("W");
-        jRadioButton34.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup17.add(rb17W);
+        rb17W.setText("W");
+        rb17W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton34ActionPerformed(evt);
+                rb17WActionPerformed(evt);
             }
         });
 
@@ -639,20 +641,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin18.setEditable(false);
 
-        buttonGroup18.add(jRadioButton35);
-        jRadioButton35.setSelected(true);
-        jRadioButton35.setText("R");
-        jRadioButton35.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup18.add(rb18R);
+        rb18R.setSelected(true);
+        rb18R.setText("R");
+        rb18R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton35ActionPerformed(evt);
+                rb18RActionPerformed(evt);
             }
         });
 
-        buttonGroup18.add(jRadioButton36);
-        jRadioButton36.setText("W");
-        jRadioButton36.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup18.add(rb18W);
+        rb18W.setText("W");
+        rb18W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton36ActionPerformed(evt);
+                rb18WActionPerformed(evt);
             }
         });
 
@@ -660,20 +662,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin19.setEditable(false);
 
-        buttonGroup19.add(jRadioButton37);
-        jRadioButton37.setSelected(true);
-        jRadioButton37.setText("R");
-        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup19.add(rb19R);
+        rb19R.setSelected(true);
+        rb19R.setText("R");
+        rb19R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton37ActionPerformed(evt);
+                rb19RActionPerformed(evt);
             }
         });
 
-        buttonGroup19.add(jRadioButton38);
-        jRadioButton38.setText("W");
-        jRadioButton38.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup19.add(rb19W);
+        rb19W.setText("W");
+        rb19W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton38ActionPerformed(evt);
+                rb19WActionPerformed(evt);
             }
         });
 
@@ -681,54 +683,54 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin20.setEditable(false);
 
-        buttonGroup20.add(jRadioButton39);
-        jRadioButton39.setSelected(true);
-        jRadioButton39.setText("R");
-        jRadioButton39.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup20.add(rb20R);
+        rb20R.setSelected(true);
+        rb20R.setText("R");
+        rb20R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton39ActionPerformed(evt);
+                rb20RActionPerformed(evt);
             }
         });
 
-        buttonGroup20.add(jRadioButton40);
-        jRadioButton40.setText("W");
-        jRadioButton40.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup20.add(rb20W);
+        rb20W.setText("W");
+        rb20W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton40ActionPerformed(evt);
+                rb20WActionPerformed(evt);
             }
         });
 
-        buttonGroup21.add(jRadioButton49);
-        jRadioButton49.setSelected(true);
-        jRadioButton49.setText("R");
-        jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup21.add(rb21R);
+        rb21R.setSelected(true);
+        rb21R.setText("R");
+        rb21R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton49ActionPerformed(evt);
+                rb21RActionPerformed(evt);
             }
         });
 
-        buttonGroup21.add(jRadioButton50);
-        jRadioButton50.setText("W");
-        jRadioButton50.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup21.add(rb21W);
+        rb21W.setText("W");
+        rb21W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton50ActionPerformed(evt);
+                rb21WActionPerformed(evt);
             }
         });
 
-        buttonGroup30.add(jRadioButton51);
-        jRadioButton51.setSelected(true);
-        jRadioButton51.setText("R");
-        jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup30.add(rb30R);
+        rb30R.setSelected(true);
+        rb30R.setText("R");
+        rb30R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton51ActionPerformed(evt);
+                rb30RActionPerformed(evt);
             }
         });
 
-        buttonGroup30.add(jRadioButton52);
-        jRadioButton52.setText("W");
-        jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup30.add(rb30W);
+        rb30W.setText("W");
+        rb30W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton52ActionPerformed(evt);
+                rb30WActionPerformed(evt);
             }
         });
 
@@ -740,37 +742,37 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin22.setEditable(false);
 
-        buttonGroup33.add(jRadioButton71);
-        jRadioButton71.setSelected(true);
-        jRadioButton71.setText("R");
-        jRadioButton71.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup33.add(rb33R);
+        rb33R.setSelected(true);
+        rb33R.setText("R");
+        rb33R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton71ActionPerformed(evt);
+                rb33RActionPerformed(evt);
             }
         });
 
-        buttonGroup22.add(jRadioButton53);
-        jRadioButton53.setSelected(true);
-        jRadioButton53.setText("R");
-        jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup22.add(rb22R);
+        rb22R.setSelected(true);
+        rb22R.setText("R");
+        rb22R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton53ActionPerformed(evt);
+                rb22RActionPerformed(evt);
             }
         });
 
-        buttonGroup33.add(jRadioButton72);
-        jRadioButton72.setText("W");
-        jRadioButton72.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup33.add(rb33W);
+        rb33W.setText("W");
+        rb33W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton72ActionPerformed(evt);
+                rb33WActionPerformed(evt);
             }
         });
 
-        buttonGroup22.add(jRadioButton54);
-        jRadioButton54.setText("W");
-        jRadioButton54.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup22.add(rb22W);
+        rb22W.setText("W");
+        rb22W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton54ActionPerformed(evt);
+                rb22WActionPerformed(evt);
             }
         });
 
@@ -778,22 +780,22 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel30.setText("Pin #23");
 
-        buttonGroup38.add(jRadioButton73);
-        jRadioButton73.setSelected(true);
-        jRadioButton73.setText("R");
-        jRadioButton73.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup38.add(rb38R);
+        rb38R.setSelected(true);
+        rb38R.setText("R");
+        rb38R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton73ActionPerformed(evt);
+                rb38RActionPerformed(evt);
             }
         });
 
         txtPin23.setEditable(false);
 
-        buttonGroup38.add(jRadioButton74);
-        jRadioButton74.setText("W");
-        jRadioButton74.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup38.add(rb38W);
+        rb38W.setText("W");
+        rb38W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton74ActionPerformed(evt);
+                rb38WActionPerformed(evt);
             }
         });
 
@@ -801,29 +803,29 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel40.setText("Pin #39");
 
-        buttonGroup34.add(jRadioButton75);
-        jRadioButton75.setSelected(true);
-        jRadioButton75.setText("R");
-        jRadioButton75.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup34.add(rb34R);
+        rb34R.setSelected(true);
+        rb34R.setText("R");
+        rb34R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton75ActionPerformed(evt);
+                rb34RActionPerformed(evt);
             }
         });
 
-        buttonGroup23.add(jRadioButton55);
-        jRadioButton55.setSelected(true);
-        jRadioButton55.setText("R");
-        jRadioButton55.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup23.add(rb23R);
+        rb23R.setSelected(true);
+        rb23R.setText("R");
+        rb23R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton55ActionPerformed(evt);
+                rb23RActionPerformed(evt);
             }
         });
 
-        buttonGroup23.add(jRadioButton56);
-        jRadioButton56.setText("W");
-        jRadioButton56.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup23.add(rb23W);
+        rb23W.setText("W");
+        rb23W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton56ActionPerformed(evt);
+                rb23WActionPerformed(evt);
             }
         });
 
@@ -831,30 +833,30 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin24.setEditable(false);
 
-        buttonGroup34.add(jRadioButton76);
-        jRadioButton76.setText("W");
-        jRadioButton76.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup34.add(rb34W);
+        rb34W.setText("W");
+        rb34W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton76ActionPerformed(evt);
+                rb34WActionPerformed(evt);
             }
         });
 
-        buttonGroup24.add(jRadioButton57);
-        jRadioButton57.setSelected(true);
-        jRadioButton57.setText("R");
-        jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup24.add(rb24R);
+        rb24R.setSelected(true);
+        rb24R.setText("R");
+        rb24R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton57ActionPerformed(evt);
+                rb24RActionPerformed(evt);
             }
         });
 
         txtPin39.setEditable(false);
 
-        buttonGroup24.add(jRadioButton58);
-        jRadioButton58.setText("W");
-        jRadioButton58.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup24.add(rb24W);
+        rb24W.setText("W");
+        rb24W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton58ActionPerformed(evt);
+                rb24WActionPerformed(evt);
             }
         });
 
@@ -862,50 +864,50 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel32.setText("Pin #25");
 
-        buttonGroup39.add(jRadioButton77);
-        jRadioButton77.setSelected(true);
-        jRadioButton77.setText("R");
-        jRadioButton77.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup39.add(rb39R);
+        rb39R.setSelected(true);
+        rb39R.setText("R");
+        rb39R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton77ActionPerformed(evt);
+                rb39RActionPerformed(evt);
             }
         });
 
         txtPin25.setEditable(false);
 
-        buttonGroup39.add(jRadioButton78);
-        jRadioButton78.setText("W");
-        jRadioButton78.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup39.add(rb39W);
+        rb39W.setText("W");
+        rb39W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton78ActionPerformed(evt);
+                rb39WActionPerformed(evt);
             }
         });
 
-        buttonGroup25.add(jRadioButton59);
-        jRadioButton59.setSelected(true);
-        jRadioButton59.setText("R");
-        jRadioButton59.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup25.add(rb25R);
+        rb25R.setSelected(true);
+        rb25R.setText("R");
+        rb25R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton59ActionPerformed(evt);
+                rb25RActionPerformed(evt);
             }
         });
 
         txtPin35.setEditable(false);
 
-        buttonGroup25.add(jRadioButton60);
-        jRadioButton60.setText("W");
-        jRadioButton60.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup25.add(rb25W);
+        rb25W.setText("W");
+        rb25W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton60ActionPerformed(evt);
+                rb25WActionPerformed(evt);
             }
         });
 
-        buttonGroup35.add(jRadioButton79);
-        jRadioButton79.setSelected(true);
-        jRadioButton79.setText("R");
-        jRadioButton79.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup35.add(rb35R);
+        rb35R.setSelected(true);
+        rb35R.setText("R");
+        rb35R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton79ActionPerformed(evt);
+                rb35RActionPerformed(evt);
             }
         });
 
@@ -913,11 +915,11 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel43.setText("Pin #40");
 
-        buttonGroup35.add(jRadioButton80);
-        jRadioButton80.setText("W");
-        jRadioButton80.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup35.add(rb35W);
+        rb35W.setText("W");
+        rb35W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton80ActionPerformed(evt);
+                rb35WActionPerformed(evt);
             }
         });
 
@@ -930,20 +932,20 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin40.setEditable(false);
 
-        buttonGroup26.add(jRadioButton41);
-        jRadioButton41.setSelected(true);
-        jRadioButton41.setText("R");
-        jRadioButton41.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup26.add(rb26R);
+        rb26R.setSelected(true);
+        rb26R.setText("R");
+        rb26R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton41ActionPerformed(evt);
+                rb26RActionPerformed(evt);
             }
         });
 
-        buttonGroup26.add(jRadioButton42);
-        jRadioButton42.setText("W");
-        jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup26.add(rb26W);
+        rb26W.setText("W");
+        rb26W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton42ActionPerformed(evt);
+                rb26WActionPerformed(evt);
             }
         });
 
@@ -954,88 +956,88 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel34.setText("Pin #36");
         jLabel34.setToolTipText("");
 
-        buttonGroup27.add(jRadioButton43);
-        jRadioButton43.setSelected(true);
-        jRadioButton43.setText("R");
-        jRadioButton43.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup27.add(rb27R);
+        rb27R.setSelected(true);
+        rb27R.setText("R");
+        rb27R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton43ActionPerformed(evt);
+                rb27RActionPerformed(evt);
             }
         });
 
         txtPin36.setEditable(false);
 
-        buttonGroup27.add(jRadioButton44);
-        jRadioButton44.setText("W");
-        jRadioButton44.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup27.add(rb27W);
+        rb27W.setText("W");
+        rb27W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton44ActionPerformed(evt);
+                rb27WActionPerformed(evt);
             }
         });
 
-        buttonGroup31.add(jRadioButton61);
-        jRadioButton61.setSelected(true);
-        jRadioButton61.setText("R");
-        jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup31.add(rb31R);
+        rb31R.setSelected(true);
+        rb31R.setText("R");
+        rb31R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton61ActionPerformed(evt);
+                rb31RActionPerformed(evt);
             }
         });
 
         jLabel25.setText("Pin #28");
 
-        buttonGroup31.add(jRadioButton62);
-        jRadioButton62.setText("W");
-        jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup31.add(rb31W);
+        rb31W.setText("W");
+        rb31W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton62ActionPerformed(evt);
+                rb31WActionPerformed(evt);
             }
         });
 
         txtPin28.setEditable(false);
 
-        buttonGroup40.add(jRadioButton63);
-        jRadioButton63.setSelected(true);
-        jRadioButton63.setText("R");
-        jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup40.add(rb40R);
+        rb40R.setSelected(true);
+        rb40R.setText("R");
+        rb40R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton63ActionPerformed(evt);
+                rb40RActionPerformed(evt);
             }
         });
 
-        buttonGroup40.add(jRadioButton64);
-        jRadioButton64.setText("W");
-        jRadioButton64.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup40.add(rb40W);
+        rb40W.setText("W");
+        rb40W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton64ActionPerformed(evt);
+                rb40WActionPerformed(evt);
             }
         });
 
-        buttonGroup36.add(jRadioButton65);
-        jRadioButton65.setSelected(true);
-        jRadioButton65.setText("R");
-        jRadioButton65.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup36.add(rb36R);
+        rb36R.setSelected(true);
+        rb36R.setText("R");
+        rb36R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton65ActionPerformed(evt);
+                rb36RActionPerformed(evt);
             }
         });
 
         jLabel35.setText("Pin #32");
 
-        buttonGroup28.add(jRadioButton45);
-        jRadioButton45.setSelected(true);
-        jRadioButton45.setText("R");
-        jRadioButton45.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup28.add(rb28R);
+        rb28R.setSelected(true);
+        rb28R.setText("R");
+        rb28R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton45ActionPerformed(evt);
+                rb28RActionPerformed(evt);
             }
         });
 
-        buttonGroup28.add(jRadioButton46);
-        jRadioButton46.setText("W");
-        jRadioButton46.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup28.add(rb28W);
+        rb28W.setText("W");
+        rb28W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton46ActionPerformed(evt);
+                rb28WActionPerformed(evt);
             }
         });
 
@@ -1043,30 +1045,30 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin29.setEditable(false);
 
-        buttonGroup36.add(jRadioButton66);
-        jRadioButton66.setText("W");
-        jRadioButton66.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup36.add(rb36W);
+        rb36W.setText("W");
+        rb36W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton66ActionPerformed(evt);
+                rb36WActionPerformed(evt);
             }
         });
 
-        buttonGroup29.add(jRadioButton47);
-        jRadioButton47.setSelected(true);
-        jRadioButton47.setText("R");
-        jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup29.add(rb29R);
+        rb29R.setSelected(true);
+        rb29R.setText("R");
+        rb29R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton47ActionPerformed(evt);
+                rb29RActionPerformed(evt);
             }
         });
 
         txtPin32.setEditable(false);
 
-        buttonGroup29.add(jRadioButton48);
-        jRadioButton48.setText("W");
-        jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup29.add(rb29W);
+        rb29W.setText("W");
+        rb29W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton48ActionPerformed(evt);
+                rb29WActionPerformed(evt);
             }
         });
 
@@ -1074,12 +1076,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel27.setText("Pin #21");
 
-        buttonGroup32.add(jRadioButton67);
-        jRadioButton67.setSelected(true);
-        jRadioButton67.setText("R");
-        jRadioButton67.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup32.add(rb32R);
+        rb32R.setSelected(true);
+        rb32R.setText("R");
+        rb32R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton67ActionPerformed(evt);
+                rb32RActionPerformed(evt);
             }
         });
 
@@ -1089,11 +1091,11 @@ public class IotFrame extends javax.swing.JFrame {
 
         txtPin21.setEditable(false);
 
-        buttonGroup32.add(jRadioButton68);
-        jRadioButton68.setText("W");
-        jRadioButton68.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup32.add(rb32W);
+        rb32W.setText("W");
+        rb32W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton68ActionPerformed(evt);
+                rb32WActionPerformed(evt);
             }
         });
 
@@ -1101,22 +1103,22 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel37.setText("Pin #33");
 
-        buttonGroup37.add(jRadioButton69);
-        jRadioButton69.setSelected(true);
-        jRadioButton69.setText("R");
-        jRadioButton69.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup37.add(rb37R);
+        rb37R.setSelected(true);
+        rb37R.setText("R");
+        rb37R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton69ActionPerformed(evt);
+                rb37RActionPerformed(evt);
             }
         });
 
         txtPin33.setEditable(false);
 
-        buttonGroup37.add(jRadioButton70);
-        jRadioButton70.setText("W");
-        jRadioButton70.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup37.add(rb37W);
+        rb37W.setText("W");
+        rb37W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton70ActionPerformed(evt);
+                rb37WActionPerformed(evt);
             }
         });
 
@@ -1131,81 +1133,81 @@ public class IotFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton19)
+                        .addComponent(rb10R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton20))
+                        .addComponent(rb10W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin9, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton17)
+                        .addComponent(rb9R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton18))
+                        .addComponent(rb9W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton15)
+                        .addComponent(rb8R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton16))
+                        .addComponent(rb8W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton13)
+                        .addComponent(rb7R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton14))
+                        .addComponent(rb7W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton11)
+                        .addComponent(rb6R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton12))
+                        .addComponent(rb6W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton9)
+                        .addComponent(rb5R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton10))
+                        .addComponent(rb5W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton7)
+                        .addComponent(rb4R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton8))
+                        .addComponent(rb4W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton5)
+                        .addComponent(rb3R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton6))
+                        .addComponent(rb3W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3)
+                        .addComponent(rb2R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton4))
+                        .addComponent(rb2W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(rb1R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton2)))
+                        .addComponent(rb1W)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1213,81 +1215,81 @@ public class IotFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton21)
+                        .addComponent(rb11R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton22))
+                        .addComponent(rb11W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton23)
+                        .addComponent(rb12R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton24))
+                        .addComponent(rb12W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton25)
+                        .addComponent(rb13R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton26))
+                        .addComponent(rb13W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton27)
+                        .addComponent(rb14R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton28))
+                        .addComponent(rb14W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin15, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton29)
+                        .addComponent(rb15R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton30))
+                        .addComponent(rb15W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin16, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton31)
+                        .addComponent(rb16R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton32))
+                        .addComponent(rb16W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin17, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton33)
+                        .addComponent(rb17R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton34))
+                        .addComponent(rb17W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin18, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton35)
+                        .addComponent(rb18R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton36))
+                        .addComponent(rb18W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton37)
+                        .addComponent(rb19R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton38))
+                        .addComponent(rb19W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin20, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton39)
+                        .addComponent(rb20R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton40)))
+                        .addComponent(rb20W)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1295,81 +1297,81 @@ public class IotFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton49)
+                        .addComponent(rb21R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton50))
+                        .addComponent(rb21W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel29)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin22, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton53)
+                        .addComponent(rb22R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton54))
+                        .addComponent(rb22W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel30)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton55)
+                        .addComponent(rb23R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton56))
+                        .addComponent(rb23W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel31)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin24, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton57)
+                        .addComponent(rb24R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton58))
+                        .addComponent(rb24W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin25, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton59)
+                        .addComponent(rb25R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton60))
+                        .addComponent(rb25W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel33)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin26, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton41)
+                        .addComponent(rb26R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton42))
+                        .addComponent(rb26W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel24)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin27, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton43)
+                        .addComponent(rb27R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton44))
+                        .addComponent(rb27W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin28, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton45)
+                        .addComponent(rb28R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton46))
+                        .addComponent(rb28W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel26)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin29, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton47)
+                        .addComponent(rb29R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton48))
+                        .addComponent(rb29W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel28)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin30, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton51)
+                        .addComponent(rb30R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton52)))
+                        .addComponent(rb30W)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1377,344 +1379,265 @@ public class IotFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin31, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton61)
+                        .addComponent(rb31R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton62))
+                        .addComponent(rb31W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin32, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton67)
+                        .addComponent(rb32R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton68))
+                        .addComponent(rb32W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin33, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton71)
+                        .addComponent(rb33R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton72))
+                        .addComponent(rb33W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel39)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin34, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton75)
+                        .addComponent(rb34R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton76))
+                        .addComponent(rb34W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel41)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin35, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton79)
+                        .addComponent(rb35R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton80))
+                        .addComponent(rb35W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel34)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin36, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton65)
+                        .addComponent(rb36R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton66))
+                        .addComponent(rb36W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel36)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin37, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton69)
+                        .addComponent(rb37R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton70))
+                        .addComponent(rb37W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel38)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin38, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton73)
+                        .addComponent(rb38R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton74))
+                        .addComponent(rb38W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel40)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin39, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton77)
+                        .addComponent(rb39R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton78))
+                        .addComponent(rb39W))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel43)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPin40, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton63)
+                        .addComponent(rb40R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton64))))
+                        .addComponent(rb40W)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton1)
-                                .addComponent(jRadioButton2))
-                            .addComponent(jLabel14)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton21)
-                                .addComponent(jRadioButton22)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton3)
-                                .addComponent(jRadioButton4))
-                            .addComponent(jLabel15)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton23)
-                                .addComponent(jRadioButton24)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton5)
-                                .addComponent(jRadioButton6))
-                            .addComponent(jLabel16)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton25)
-                                .addComponent(jRadioButton26)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton7)
-                                .addComponent(jRadioButton8))
-                            .addComponent(jLabel17)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton27)
-                                .addComponent(jRadioButton28)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton9)
-                                .addComponent(jRadioButton10))
-                            .addComponent(jLabel18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton29)
-                                .addComponent(jRadioButton30)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton11)
-                                .addComponent(jRadioButton12))
-                            .addComponent(jLabel19)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton31)
-                                .addComponent(jRadioButton32)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton13)
-                                .addComponent(jRadioButton14))
-                            .addComponent(jLabel20)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton33)
-                                .addComponent(jRadioButton34)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton15)
-                                .addComponent(jRadioButton16))
-                            .addComponent(jLabel21)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton35)
-                                .addComponent(jRadioButton36)))
-                        .addGap(11, 11, 11)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton17)
-                                .addComponent(jRadioButton18))
-                            .addComponent(jLabel22)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton37)
-                                .addComponent(jRadioButton38)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton19)
-                                .addComponent(jRadioButton20))
-                            .addComponent(jLabel23)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton39)
-                                .addComponent(jRadioButton40))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton49)
-                            .addComponent(jRadioButton50)
-                            .addComponent(jLabel27))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPin22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton53)
-                            .addComponent(jRadioButton54)
-                            .addComponent(jLabel29))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton55)
-                                .addComponent(jRadioButton56)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel31)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton57)
-                                .addComponent(jRadioButton58)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel32)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton59)
-                                .addComponent(jRadioButton60)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel33)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton41)
-                                .addComponent(jRadioButton42)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton43)
-                                .addComponent(jRadioButton44)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel25)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton45)
-                                .addComponent(jRadioButton46)))
-                        .addGap(11, 11, 11)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton47)
-                                .addComponent(jRadioButton48)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton51)
-                                .addComponent(jRadioButton52))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel42)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton61)
-                                .addComponent(jRadioButton62)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel35)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton67)
-                                .addComponent(jRadioButton68)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel37)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton71)
-                                .addComponent(jRadioButton72)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton75)
-                                .addComponent(jRadioButton76)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel41)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton79)
-                                .addComponent(jRadioButton80)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel34)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton65)
-                                .addComponent(jRadioButton66)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel36)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton69)
-                                .addComponent(jRadioButton70)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel38)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton73)
-                                .addComponent(jRadioButton74)))
-                        .addGap(11, 11, 11)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel40)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton77)
-                                .addComponent(jRadioButton78)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel43)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtPin40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton63)
-                                .addComponent(jRadioButton64)))))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb1R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb1W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb11R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb11W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb21R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb21W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin31, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb31R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb31W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb2R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb2W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb12R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb12W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb22R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb22W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb32R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb32W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb3R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb3W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb13R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb13W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb23R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb23W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb33R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb33W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb4R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb4W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb14R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb14W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb24R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb24W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb34R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb34W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb5R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb5W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb15R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb15W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb25R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb25W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb35R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb35W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb6R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb6W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb16R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb16W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb26R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb26W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb36R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb36W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb7R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb7W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb17R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb17W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb27R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb27W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin37, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb37R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb37W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb8R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb8W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb18R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb18W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb28R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb28W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin38, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb38R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb38W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb9R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb9W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb19R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb19W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb29R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb29W, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPin39, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb39R, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(rb39W, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addComponent(txtPin10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb10R)
+                    .addComponent(rb10W)
+                    .addComponent(jLabel23)
+                    .addComponent(txtPin20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb20R)
+                    .addComponent(rb20W)
+                    .addComponent(jLabel28)
+                    .addComponent(txtPin30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb30R)
+                    .addComponent(rb30W)
+                    .addComponent(jLabel43)
+                    .addComponent(txtPin40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb40R)
+                    .addComponent(rb40W))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1729,7 +1652,7 @@ public class IotFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1743,8 +1666,9 @@ public class IotFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnConnect)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnConnect)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1769,48 +1693,43 @@ public class IotFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConnectActionPerformed
-        if(srvIP.getText().equals(""))
-        {
+        if (srvIP.getText().equals("")) {
             showErrorMsg("Service IP is required.");
-        }else if(srvPort.getText().equals(""))
-        {
+        } else if (srvPort.getText().equals("")) {
             showErrorMsg("Service Port is required.");
-        }else if(txtPeriod.getText().equals(""))
-        {
+        } else if (txtPeriod.getText().equals("")) {
             showErrorMsg("Period is required.");
         }
-        
-        if(!srvIP.getText().equals("") && !srvPort.getText().equals("") && !txtPeriod.getText().equals(""))
-        {
+
+        if (!srvIP.getText().equals("") && !srvPort.getText().equals("") && !txtPeriod.getText().equals("")) {
             int port = Integer.parseInt(srvPort.getText());
             period = Integer.parseInt(txtPeriod.getText());
-            
-              try{
-                 
-                  socket = new Socket(srvIP.getText(), port);
-                  if(socket.isConnected()){
-                  serviceIP = srvIP.getText();
-                  servicePort = port;
-                  
-                  jPanel1.setVisible(true);
-                  
-                  btnConnect.setEnabled(false);
-                  btnConnect.setText("Connected");
-                  srvIP.setEnabled(false);
-                  srvPort.setEnabled(false);
-                  txtPeriod.setEnabled(false);
-                  
-                  }
-                
-    
-              } catch (UnknownHostException ex) {
- 
-            showErrorMsg("Server not found: " + ex.getMessage());
- 
-        } catch (IOException ex) {
- 
-            showErrorMsg("I/O error: " + ex.getMessage());
-        }
+
+            try {
+
+                socket = new Socket(srvIP.getText(), port);
+                if (socket.isConnected()) {
+                    serviceIP = srvIP.getText();
+                    servicePort = port;
+
+                    jPanel1.setVisible(true);
+
+                    btnConnect.setEnabled(false);
+                    btnConnect.setText("Connected");
+                    srvIP.setEnabled(false);
+                    srvPort.setEnabled(false);
+                    txtPeriod.setEnabled(false);
+
+                }
+
+            } catch (UnknownHostException ex) {
+
+                showErrorMsg("Server not found: " + ex.getMessage());
+
+            } catch (IOException ex) {
+
+                showErrorMsg("I/O error: " + ex.getMessage());
+            }
         }
     }//GEN-LAST:event_btnConnectActionPerformed
 
@@ -1818,342 +1737,341 @@ public class IotFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-       txtPin1.setEditable(true);
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-txtPin2.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
-
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-txtPin2.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
-
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
-txtPin4.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
-
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-txtPin5.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
-
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-txtPin6.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
-
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-txtPin7.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
-
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-txtPin8.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
-
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-txtPin9.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
-
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-txtPin10.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
-
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-txtPin11.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
-
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
-txtPin12.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
-
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
-txtPin13.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
-
-    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-txtPin14.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton28ActionPerformed
-
-    private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
-txtPin15.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton30ActionPerformed
-
-    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
-txtPin16.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton32ActionPerformed
-
-    private void jRadioButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton34ActionPerformed
-txtPin17.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton34ActionPerformed
-
-    private void jRadioButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton36ActionPerformed
-txtPin18.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton36ActionPerformed
-
-    private void jRadioButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton38ActionPerformed
-txtPin19.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton38ActionPerformed
-
-    private void jRadioButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton40ActionPerformed
-txtPin20.setEditable(true);          // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton40ActionPerformed
-
-    private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
-txtPin26.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton42ActionPerformed
-
-    private void jRadioButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton44ActionPerformed
-txtPin27.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton44ActionPerformed
-
-    private void jRadioButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton46ActionPerformed
-txtPin28.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton46ActionPerformed
-
-    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
-txtPin29.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton48ActionPerformed
-
-    private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
-txtPin21.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton50ActionPerformed
-
-    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
-txtPin30.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton52ActionPerformed
-
-    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
-txtPin22.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton54ActionPerformed
-
-    private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
-txtPin23.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton56ActionPerformed
-
-    private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
-txtPin24.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton58ActionPerformed
-
-    private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
-txtPin25.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton60ActionPerformed
-
-    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
-txtPin31.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton62ActionPerformed
-
-    private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
-txtPin40.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton64ActionPerformed
-
-    private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
-txtPin36.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton66ActionPerformed
-
-    private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
-txtPin32.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton68ActionPerformed
-
-    private void jRadioButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton70ActionPerformed
-txtPin37.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton70ActionPerformed
-
-    private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
-txtPin33.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton72ActionPerformed
-
-    private void jRadioButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton74ActionPerformed
-txtPin38.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton74ActionPerformed
-
-    private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
-txtPin34.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton76ActionPerformed
-
-    private void jRadioButton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton78ActionPerformed
-txtPin39.setEditable(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton78ActionPerformed
-
-    private void jRadioButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton80ActionPerformed
-txtPin35.setEditable(true);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton80ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-       txtPin1.setEditable(false);
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-       txtPin2.setEditable(false);
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-txtPin3.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
-
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
-txtPin4.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
-
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
-txtPin5.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
-
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-txtPin6.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
-
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-txtPin7.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
-
-    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
-txtPin8.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton15ActionPerformed
-
-    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
-txtPin9.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton17ActionPerformed
-
-    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
-txtPin10.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton19ActionPerformed
-
-    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
-txtPin11.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton21ActionPerformed
-
-    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
-txtPin12.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton23ActionPerformed
-
-    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
-txtPin13.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton25ActionPerformed
-
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
-txtPin14.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
-
-    private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
-txtPin15.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton29ActionPerformed
-
-    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
-txtPin16.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton31ActionPerformed
-
-    private void jRadioButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton33ActionPerformed
-txtPin17.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton33ActionPerformed
-
-    private void jRadioButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton35ActionPerformed
-txtPin18.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton35ActionPerformed
-
-    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
-txtPin19.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton37ActionPerformed
-
-    private void jRadioButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton39ActionPerformed
-txtPin20.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton39ActionPerformed
-
-    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
-txtPin21.setEditable(false);          // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton49ActionPerformed
-
-    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
-txtPin22.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton53ActionPerformed
-
-    private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
-txtPin23.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton55ActionPerformed
-
-    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
-txtPin24.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton57ActionPerformed
-
-    private void jRadioButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton59ActionPerformed
-txtPin25.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton59ActionPerformed
-
-    private void jRadioButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton41ActionPerformed
-txtPin26.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton41ActionPerformed
-
-    private void jRadioButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton43ActionPerformed
-txtPin27.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton43ActionPerformed
-
-    private void jRadioButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton45ActionPerformed
-txtPin28.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton45ActionPerformed
-
-    private void jRadioButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton47ActionPerformed
-txtPin29.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton47ActionPerformed
-
-    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
-txtPin30.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton51ActionPerformed
-
-    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
-txtPin31.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton61ActionPerformed
-
-    private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
-txtPin32.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton67ActionPerformed
-
-    private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
-txtPin33.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton71ActionPerformed
-
-    private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
-txtPin34.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton75ActionPerformed
-
-    private void jRadioButton79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton79ActionPerformed
-txtPin35.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton79ActionPerformed
-
-    private void jRadioButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton65ActionPerformed
-txtPin36.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton65ActionPerformed
-
-    private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
-txtPin37.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton69ActionPerformed
-
-    private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
-txtPin38.setEditable(false);         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton73ActionPerformed
-
-    private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
-txtPin39.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton77ActionPerformed
-
-    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
-txtPin40.setEditable(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton63ActionPerformed
-    
-    private void readIotBoxPins()
-    {
-                Timer timer = new Timer(1000, new ActionListener() {
-
-                @Override
-                public void actionPerformed(ActionEvent arg0) {
-               
-                }
-                });
-                timer.start();     
+    private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed
+        txtPin1.setEditable(true);
+    }//GEN-LAST:event_rb1WActionPerformed
+
+    private void rb2WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2WActionPerformed
+        txtPin2.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb2WActionPerformed
+
+    private void rb3WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb3WActionPerformed
+        txtPin2.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb3WActionPerformed
+
+    private void rb4WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb4WActionPerformed
+        txtPin4.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb4WActionPerformed
+
+    private void rb5WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb5WActionPerformed
+        txtPin5.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb5WActionPerformed
+
+    private void rb6WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb6WActionPerformed
+        txtPin6.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb6WActionPerformed
+
+    private void rb7WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb7WActionPerformed
+        txtPin7.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb7WActionPerformed
+
+    private void rb8WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb8WActionPerformed
+        txtPin8.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb8WActionPerformed
+
+    private void rb9WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb9WActionPerformed
+        txtPin9.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb9WActionPerformed
+
+    private void rb10WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb10WActionPerformed
+        txtPin10.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb10WActionPerformed
+
+    private void rb11WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb11WActionPerformed
+        txtPin11.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb11WActionPerformed
+
+    private void rb12WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb12WActionPerformed
+        txtPin12.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb12WActionPerformed
+
+    private void rb13WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb13WActionPerformed
+        txtPin13.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb13WActionPerformed
+
+    private void rb14WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb14WActionPerformed
+        txtPin14.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb14WActionPerformed
+
+    private void rb15WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb15WActionPerformed
+        txtPin15.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb15WActionPerformed
+
+    private void rb16WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb16WActionPerformed
+        txtPin16.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb16WActionPerformed
+
+    private void rb17WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb17WActionPerformed
+        txtPin17.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb17WActionPerformed
+
+    private void rb18WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb18WActionPerformed
+        txtPin18.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb18WActionPerformed
+
+    private void rb19WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb19WActionPerformed
+        txtPin19.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb19WActionPerformed
+
+    private void rb20WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb20WActionPerformed
+        txtPin20.setEditable(true);          // TODO add your handling code here:
+    }//GEN-LAST:event_rb20WActionPerformed
+
+    private void rb26WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb26WActionPerformed
+        txtPin26.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb26WActionPerformed
+
+    private void rb27WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb27WActionPerformed
+        txtPin27.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb27WActionPerformed
+
+    private void rb28WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb28WActionPerformed
+        txtPin28.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb28WActionPerformed
+
+    private void rb29WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb29WActionPerformed
+        txtPin29.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb29WActionPerformed
+
+    private void rb21WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb21WActionPerformed
+        txtPin21.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb21WActionPerformed
+
+    private void rb30WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb30WActionPerformed
+        txtPin30.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb30WActionPerformed
+
+    private void rb22WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb22WActionPerformed
+        txtPin22.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb22WActionPerformed
+
+    private void rb23WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb23WActionPerformed
+        txtPin23.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb23WActionPerformed
+
+    private void rb24WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb24WActionPerformed
+        txtPin24.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb24WActionPerformed
+
+    private void rb25WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb25WActionPerformed
+        txtPin25.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb25WActionPerformed
+
+    private void rb31WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb31WActionPerformed
+        txtPin31.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb31WActionPerformed
+
+    private void rb40WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb40WActionPerformed
+        txtPin40.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb40WActionPerformed
+
+    private void rb36WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb36WActionPerformed
+        txtPin36.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb36WActionPerformed
+
+    private void rb32WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb32WActionPerformed
+        txtPin32.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb32WActionPerformed
+
+    private void rb37WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb37WActionPerformed
+        txtPin37.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb37WActionPerformed
+
+    private void rb33WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb33WActionPerformed
+        txtPin33.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb33WActionPerformed
+
+    private void rb38WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb38WActionPerformed
+        txtPin38.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb38WActionPerformed
+
+    private void rb34WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb34WActionPerformed
+        txtPin34.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb34WActionPerformed
+
+    private void rb39WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb39WActionPerformed
+        txtPin39.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb39WActionPerformed
+
+    private void rb35WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb35WActionPerformed
+        txtPin35.setEditable(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb35WActionPerformed
+
+    private void rb1RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1RActionPerformed
+        txtPin1.setEditable(false);
+    }//GEN-LAST:event_rb1RActionPerformed
+
+    private void rb2RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2RActionPerformed
+        txtPin2.setEditable(false);
+    }//GEN-LAST:event_rb2RActionPerformed
+
+    private void rb3RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb3RActionPerformed
+        txtPin3.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb3RActionPerformed
+
+    private void rb4RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb4RActionPerformed
+        txtPin4.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb4RActionPerformed
+
+    private void rb5RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb5RActionPerformed
+        txtPin5.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb5RActionPerformed
+
+    private void rb6RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb6RActionPerformed
+        txtPin6.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb6RActionPerformed
+
+    private void rb7RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb7RActionPerformed
+        txtPin7.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb7RActionPerformed
+
+    private void rb8RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb8RActionPerformed
+        txtPin8.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb8RActionPerformed
+
+    private void rb9RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb9RActionPerformed
+        txtPin9.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb9RActionPerformed
+
+    private void rb10RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb10RActionPerformed
+        txtPin10.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb10RActionPerformed
+
+    private void rb11RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb11RActionPerformed
+        txtPin11.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb11RActionPerformed
+
+    private void rb12RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb12RActionPerformed
+        txtPin12.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb12RActionPerformed
+
+    private void rb13RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb13RActionPerformed
+        txtPin13.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb13RActionPerformed
+
+    private void rb14RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb14RActionPerformed
+        txtPin14.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb14RActionPerformed
+
+    private void rb15RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb15RActionPerformed
+        txtPin15.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb15RActionPerformed
+
+    private void rb16RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb16RActionPerformed
+        txtPin16.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb16RActionPerformed
+
+    private void rb17RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb17RActionPerformed
+        txtPin17.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb17RActionPerformed
+
+    private void rb18RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb18RActionPerformed
+        txtPin18.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb18RActionPerformed
+
+    private void rb19RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb19RActionPerformed
+        txtPin19.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb19RActionPerformed
+
+    private void rb20RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb20RActionPerformed
+        txtPin20.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb20RActionPerformed
+
+    private void rb21RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb21RActionPerformed
+        txtPin21.setEditable(false);          // TODO add your handling code here:
+    }//GEN-LAST:event_rb21RActionPerformed
+
+    private void rb22RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb22RActionPerformed
+        txtPin22.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb22RActionPerformed
+
+    private void rb23RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb23RActionPerformed
+        txtPin23.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb23RActionPerformed
+
+    private void rb24RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb24RActionPerformed
+        txtPin24.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb24RActionPerformed
+
+    private void rb25RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb25RActionPerformed
+        txtPin25.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb25RActionPerformed
+
+    private void rb26RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb26RActionPerformed
+        txtPin26.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb26RActionPerformed
+
+    private void rb27RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb27RActionPerformed
+        txtPin27.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb27RActionPerformed
+
+    private void rb28RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb28RActionPerformed
+        txtPin28.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb28RActionPerformed
+
+    private void rb29RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb29RActionPerformed
+        txtPin29.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb29RActionPerformed
+
+    private void rb30RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb30RActionPerformed
+        txtPin30.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb30RActionPerformed
+
+    private void rb31RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb31RActionPerformed
+        txtPin31.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb31RActionPerformed
+
+    private void rb32RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb32RActionPerformed
+        txtPin32.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb32RActionPerformed
+
+    private void rb33RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb33RActionPerformed
+        txtPin33.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb33RActionPerformed
+
+    private void rb34RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb34RActionPerformed
+        txtPin34.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb34RActionPerformed
+
+    private void rb35RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb35RActionPerformed
+        txtPin35.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb35RActionPerformed
+
+    private void rb36RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb36RActionPerformed
+        txtPin36.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb36RActionPerformed
+
+    private void rb37RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb37RActionPerformed
+        txtPin37.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb37RActionPerformed
+
+    private void rb38RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb38RActionPerformed
+        txtPin38.setEditable(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_rb38RActionPerformed
+
+    private void rb39RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb39RActionPerformed
+        txtPin39.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb39RActionPerformed
+
+    private void rb40RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb40RActionPerformed
+        txtPin40.setEditable(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb40RActionPerformed
+
+    private void readIotBoxPins() {
+        Timer timer = new Timer(1000, new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+
+            }
+        });
+        timer.start();
     }
-    
-    private void showErrorMsg(String message)
-    {
-          JOptionPane.showMessageDialog(this,message,"Error",JOptionPane.ERROR_MESSAGE);
+
+    private void showErrorMsg(String message) {
+        JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
+
     /**
      * @param args the command line arguments
      */
@@ -2275,86 +2193,86 @@ txtPin40.setEditable(false);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton18;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton21;
-    private javax.swing.JRadioButton jRadioButton22;
-    private javax.swing.JRadioButton jRadioButton23;
-    private javax.swing.JRadioButton jRadioButton24;
-    private javax.swing.JRadioButton jRadioButton25;
-    private javax.swing.JRadioButton jRadioButton26;
-    private javax.swing.JRadioButton jRadioButton27;
-    private javax.swing.JRadioButton jRadioButton28;
-    private javax.swing.JRadioButton jRadioButton29;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton30;
-    private javax.swing.JRadioButton jRadioButton31;
-    private javax.swing.JRadioButton jRadioButton32;
-    private javax.swing.JRadioButton jRadioButton33;
-    private javax.swing.JRadioButton jRadioButton34;
-    private javax.swing.JRadioButton jRadioButton35;
-    private javax.swing.JRadioButton jRadioButton36;
-    private javax.swing.JRadioButton jRadioButton37;
-    private javax.swing.JRadioButton jRadioButton38;
-    private javax.swing.JRadioButton jRadioButton39;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton40;
-    private javax.swing.JRadioButton jRadioButton41;
-    private javax.swing.JRadioButton jRadioButton42;
-    private javax.swing.JRadioButton jRadioButton43;
-    private javax.swing.JRadioButton jRadioButton44;
-    private javax.swing.JRadioButton jRadioButton45;
-    private javax.swing.JRadioButton jRadioButton46;
-    private javax.swing.JRadioButton jRadioButton47;
-    private javax.swing.JRadioButton jRadioButton48;
-    private javax.swing.JRadioButton jRadioButton49;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton50;
-    private javax.swing.JRadioButton jRadioButton51;
-    private javax.swing.JRadioButton jRadioButton52;
-    private javax.swing.JRadioButton jRadioButton53;
-    private javax.swing.JRadioButton jRadioButton54;
-    private javax.swing.JRadioButton jRadioButton55;
-    private javax.swing.JRadioButton jRadioButton56;
-    private javax.swing.JRadioButton jRadioButton57;
-    private javax.swing.JRadioButton jRadioButton58;
-    private javax.swing.JRadioButton jRadioButton59;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton60;
-    private javax.swing.JRadioButton jRadioButton61;
-    private javax.swing.JRadioButton jRadioButton62;
-    private javax.swing.JRadioButton jRadioButton63;
-    private javax.swing.JRadioButton jRadioButton64;
-    private javax.swing.JRadioButton jRadioButton65;
-    private javax.swing.JRadioButton jRadioButton66;
-    private javax.swing.JRadioButton jRadioButton67;
-    private javax.swing.JRadioButton jRadioButton68;
-    private javax.swing.JRadioButton jRadioButton69;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton70;
-    private javax.swing.JRadioButton jRadioButton71;
-    private javax.swing.JRadioButton jRadioButton72;
-    private javax.swing.JRadioButton jRadioButton73;
-    private javax.swing.JRadioButton jRadioButton74;
-    private javax.swing.JRadioButton jRadioButton75;
-    private javax.swing.JRadioButton jRadioButton76;
-    private javax.swing.JRadioButton jRadioButton77;
-    private javax.swing.JRadioButton jRadioButton78;
-    private javax.swing.JRadioButton jRadioButton79;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton80;
-    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JRadioButton rb10R;
+    private javax.swing.JRadioButton rb10W;
+    private javax.swing.JRadioButton rb11R;
+    private javax.swing.JRadioButton rb11W;
+    private javax.swing.JRadioButton rb12R;
+    private javax.swing.JRadioButton rb12W;
+    private javax.swing.JRadioButton rb13R;
+    private javax.swing.JRadioButton rb13W;
+    private javax.swing.JRadioButton rb14R;
+    private javax.swing.JRadioButton rb14W;
+    private javax.swing.JRadioButton rb15R;
+    private javax.swing.JRadioButton rb15W;
+    private javax.swing.JRadioButton rb16R;
+    private javax.swing.JRadioButton rb16W;
+    private javax.swing.JRadioButton rb17R;
+    private javax.swing.JRadioButton rb17W;
+    private javax.swing.JRadioButton rb18R;
+    private javax.swing.JRadioButton rb18W;
+    private javax.swing.JRadioButton rb19R;
+    private javax.swing.JRadioButton rb19W;
+    private javax.swing.JRadioButton rb1R;
+    private javax.swing.JRadioButton rb1W;
+    private javax.swing.JRadioButton rb20R;
+    private javax.swing.JRadioButton rb20W;
+    private javax.swing.JRadioButton rb21R;
+    private javax.swing.JRadioButton rb21W;
+    private javax.swing.JRadioButton rb22R;
+    private javax.swing.JRadioButton rb22W;
+    private javax.swing.JRadioButton rb23R;
+    private javax.swing.JRadioButton rb23W;
+    private javax.swing.JRadioButton rb24R;
+    private javax.swing.JRadioButton rb24W;
+    private javax.swing.JRadioButton rb25R;
+    private javax.swing.JRadioButton rb25W;
+    private javax.swing.JRadioButton rb26R;
+    private javax.swing.JRadioButton rb26W;
+    private javax.swing.JRadioButton rb27R;
+    private javax.swing.JRadioButton rb27W;
+    private javax.swing.JRadioButton rb28R;
+    private javax.swing.JRadioButton rb28W;
+    private javax.swing.JRadioButton rb29R;
+    private javax.swing.JRadioButton rb29W;
+    private javax.swing.JRadioButton rb2R;
+    private javax.swing.JRadioButton rb2W;
+    private javax.swing.JRadioButton rb30R;
+    private javax.swing.JRadioButton rb30W;
+    private javax.swing.JRadioButton rb31R;
+    private javax.swing.JRadioButton rb31W;
+    private javax.swing.JRadioButton rb32R;
+    private javax.swing.JRadioButton rb32W;
+    private javax.swing.JRadioButton rb33R;
+    private javax.swing.JRadioButton rb33W;
+    private javax.swing.JRadioButton rb34R;
+    private javax.swing.JRadioButton rb34W;
+    private javax.swing.JRadioButton rb35R;
+    private javax.swing.JRadioButton rb35W;
+    private javax.swing.JRadioButton rb36R;
+    private javax.swing.JRadioButton rb36W;
+    private javax.swing.JRadioButton rb37R;
+    private javax.swing.JRadioButton rb37W;
+    private javax.swing.JRadioButton rb38R;
+    private javax.swing.JRadioButton rb38W;
+    private javax.swing.JRadioButton rb39R;
+    private javax.swing.JRadioButton rb39W;
+    private javax.swing.JRadioButton rb3R;
+    private javax.swing.JRadioButton rb3W;
+    private javax.swing.JRadioButton rb40R;
+    private javax.swing.JRadioButton rb40W;
+    private javax.swing.JRadioButton rb4R;
+    private javax.swing.JRadioButton rb4W;
+    private javax.swing.JRadioButton rb5R;
+    private javax.swing.JRadioButton rb5W;
+    private javax.swing.JRadioButton rb6R;
+    private javax.swing.JRadioButton rb6W;
+    private javax.swing.JRadioButton rb7R;
+    private javax.swing.JRadioButton rb7W;
+    private javax.swing.JRadioButton rb8R;
+    private javax.swing.JRadioButton rb8W;
+    private javax.swing.JRadioButton rb9R;
+    private javax.swing.JRadioButton rb9W;
     private javax.swing.JTextField srvIP;
     private javax.swing.JTextField srvPort;
     private javax.swing.JTextField txtPeriod;
