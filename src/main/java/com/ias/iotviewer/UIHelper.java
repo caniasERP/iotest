@@ -35,6 +35,7 @@ public class UIHelper {
     private Socket socket;
     private Hashtable<Integer, String> readValues;
     private Hashtable<Integer, String> writeValues;
+    private Hashtable<Integer, Integer> pinStates;
     private PrintWriter out;
     private BufferedReader in;
 
@@ -88,7 +89,9 @@ public class UIHelper {
                         readValues.put(pinNo, "");
                     } else {
                         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pinNo);
-                        writeValues.put(pinNo, txtFld.getText());
+                        if (!txtFld.getText().equals("")) {
+                            writeValues.put(pinNo, txtFld.getText());
+                        }
                     }
 
                 }
@@ -100,6 +103,78 @@ public class UIHelper {
         refreshUI();
     }
 
+    public void getPinStates() {
+        JSONObject ReqJson = new JSONObject();
+        JSONArray ReqJsonArr = new JSONArray();
+        JSONArray ReqJsonArr2 = new JSONArray();
+        JSONArray ReqJsonArr3 = new JSONArray();
+        JSONObject RespJson;
+
+        for (int i = 0; i < 40; i++) {
+
+            ReqJsonArr.add(i + 1);
+        }
+
+        JSONObject reqItem2 = new JSONObject();
+        reqItem2.put("cmd", "mode");
+        ReqJsonArr2.add(reqItem2);
+
+        reqItem2.put("pins", ReqJsonArr);
+
+        ReqJsonArr3.add(reqItem2);
+
+        ReqJson.put("commands", ReqJsonArr3);
+
+        logger.info("checking pins state : sent json : " + ReqJson.toString());
+
+        try {
+
+            if (socket.isConnected()) {
+                out.println(ReqJson.toString());
+                String tcpResponse = in.readLine();
+                RespJson = JSONObject.fromObject(tcpResponse);
+
+                logger.info("checking pins state : received json : " + RespJson.toString());
+
+                if (RespJson.get("status").equals(0)) {
+                    JSONArray jarr = RespJson.getJSONArray("values");
+                    for (int i = 0; i < jarr.size(); i++) {
+                        pinStates.put(i + 1, (Integer) jarr.get(i));
+                    }
+                    prepareScreen(RespJson);
+                } else {
+                    JSONObject errJsonPre = RespJson.getJSONObject("error");
+                    logger.error("checking pins state error: " + errJsonPre.get("detail") + "-" + errJsonPre.get("message"));
+                }
+            }
+
+        } catch (Exception ex) {
+            logger.error(ex.toString());
+        }
+    }
+
+    public void prepareScreen(JSONObject json) {
+
+        for (Integer c : pinStates.keySet()) {
+
+            String compName = "txtPin" + c;
+            String rbName = "rb"+c;
+            JTextField txtFld = (JTextField) getComponentByName(frame, compName);
+
+            if (pinStates.get(c) != 1) {
+                txtFld.setEnabled(false);
+                rbName = rbName+"R";
+            }else{
+                txtFld.setEnabled(true);
+                rbName = rbName+"W";
+            }
+            
+            JRadioButton rb = (JRadioButton) getComponentByName(frame, rbName);
+            rb.setSelected(true);
+
+        }
+    }
+
     private void sendToService() {
 
         //setting mode per pin
@@ -109,11 +184,9 @@ public class UIHelper {
 
         JSONObject readReqJson = new JSONObject();
         JSONArray readReqJsonArr = new JSONArray();
-        JSONObject readRespJson;
 
         JSONObject writeReqJson = new JSONObject();
         JSONArray writeReqJsonArr = new JSONArray();
-        JSONObject writeRespJson;
 
         for (Integer c : readValues.keySet()) {
             JSONObject reqItem = new JSONObject();
@@ -192,18 +265,17 @@ public class UIHelper {
 
     }
 
-    private void refreshUI()
-    {
+    private void refreshUI() {
         for (Integer c : readValues.keySet()) {
-            
-            String compName = "txtPin"+c;
-            
-            JTextField txtFld = (JTextField)getComponentByName(frame,compName);
+
+            String compName = "txtPin" + c;
+
+            JTextField txtFld = (JTextField) getComponentByName(frame, compName);
             txtFld.setText(readValues.get(c));
-            
+
         }
     }
-    
+
     private void handleReadResp(String resp) {
         logger.info("received json (for read) " + resp);
 

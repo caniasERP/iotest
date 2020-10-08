@@ -45,9 +45,6 @@ public class IotFrame extends javax.swing.JFrame {
         initComponents();
         jPanel1.setVisible(false);
         PropertyConfigurator.configure("log4j.properties");
-        
-        
-        
     }
 
     /**
@@ -293,10 +290,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Pin #1");
 
-        txtPin1.setEditable(false);
-
         buttonGroup1.add(rb1R);
-        rb1R.setSelected(true);
         rb1R.setText("R");
         rb1R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,10 +308,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Pin #2");
 
-        txtPin2.setEditable(false);
-
         buttonGroup2.add(rb2R);
-        rb2R.setSelected(true);
         rb2R.setText("R");
         rb2R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -335,10 +326,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Pin #3");
 
-        txtPin3.setEditable(false);
-
         buttonGroup3.add(rb3R);
-        rb3R.setSelected(true);
         rb3R.setText("R");
         rb3R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,10 +344,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel7.setText("Pin #4");
 
-        txtPin4.setEditable(false);
-
         buttonGroup4.add(rb4R);
-        rb4R.setSelected(true);
         rb4R.setText("R");
         rb4R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,10 +362,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Pin #5");
 
-        txtPin5.setEditable(false);
-
         buttonGroup5.add(rb5R);
-        rb5R.setSelected(true);
         rb5R.setText("R");
         rb5R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -398,10 +380,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel9.setText("Pin #6");
 
-        txtPin6.setEditable(false);
-
         buttonGroup6.add(rb6R);
-        rb6R.setSelected(true);
         rb6R.setText("R");
         rb6R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,10 +398,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel10.setText("Pin #7");
 
-        txtPin7.setEditable(false);
-
         buttonGroup7.add(rb7R);
-        rb7R.setSelected(true);
         rb7R.setText("R");
         rb7R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,10 +416,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Pin #8");
 
-        txtPin8.setEditable(false);
-
         buttonGroup8.add(rb8R);
-        rb8R.setSelected(true);
         rb8R.setText("R");
         rb8R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -461,10 +434,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel12.setText("Pin #9");
 
-        txtPin9.setEditable(false);
-
         buttonGroup9.add(rb9R);
-        rb9R.setSelected(true);
         rb9R.setText("R");
         rb9R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -481,15 +451,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup10.add(rb10R);
-        rb10R.setSelected(true);
         rb10R.setText("R");
         rb10R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb10RActionPerformed(evt);
             }
         });
-
-        txtPin10.setEditable(false);
 
         jLabel13.setText("Pin #10");
 
@@ -503,10 +470,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel14.setText("Pin #11");
 
-        txtPin11.setEditable(false);
-
         buttonGroup11.add(rb11R);
-        rb11R.setSelected(true);
         rb11R.setText("R");
         rb11R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -524,10 +488,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel15.setText("Pin #12");
 
-        txtPin12.setEditable(false);
-
         buttonGroup12.add(rb12R);
-        rb12R.setSelected(true);
         rb12R.setText("R");
         rb12R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -545,10 +506,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel16.setText("Pin #13");
 
-        txtPin13.setEditable(false);
-
         buttonGroup13.add(rb13R);
-        rb13R.setSelected(true);
         rb13R.setText("R");
         rb13R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -566,10 +524,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel17.setText("Pin #14");
 
-        txtPin14.setEditable(false);
-
         buttonGroup14.add(rb14R);
-        rb14R.setSelected(true);
         rb14R.setText("R");
         rb14R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -587,10 +542,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel18.setText("Pin #15");
 
-        txtPin15.setEditable(false);
-
         buttonGroup15.add(rb15R);
-        rb15R.setSelected(true);
         rb15R.setText("R");
         rb15R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -609,10 +561,7 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel19.setText("Pin #16");
         jLabel19.setToolTipText("");
 
-        txtPin16.setEditable(false);
-
         buttonGroup16.add(rb16R);
-        rb16R.setSelected(true);
         rb16R.setText("R");
         rb16R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -630,10 +579,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel20.setText("Pin #17");
 
-        txtPin17.setEditable(false);
-
         buttonGroup17.add(rb17R);
-        rb17R.setSelected(true);
         rb17R.setText("R");
         rb17R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -651,10 +597,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel21.setText("Pin #18");
 
-        txtPin18.setEditable(false);
-
         buttonGroup18.add(rb18R);
-        rb18R.setSelected(true);
         rb18R.setText("R");
         rb18R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -672,10 +615,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel22.setText("Pin #19");
 
-        txtPin19.setEditable(false);
-
         buttonGroup19.add(rb19R);
-        rb19R.setSelected(true);
         rb19R.setText("R");
         rb19R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -693,10 +633,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel23.setText("Pin #20");
 
-        txtPin20.setEditable(false);
-
         buttonGroup20.add(rb20R);
-        rb20R.setSelected(true);
         rb20R.setText("R");
         rb20R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -713,7 +650,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup21.add(rb21R);
-        rb21R.setSelected(true);
         rb21R.setText("R");
         rb21R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -730,7 +666,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup30.add(rb30R);
-        rb30R.setSelected(true);
         rb30R.setText("R");
         rb30R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -750,12 +685,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel29.setText("Pin #22");
 
-        txtPin38.setEditable(false);
-
-        txtPin22.setEditable(false);
-
         buttonGroup33.add(rb33R);
-        rb33R.setSelected(true);
         rb33R.setText("R");
         rb33R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -764,7 +694,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup22.add(rb22R);
-        rb22R.setSelected(true);
         rb22R.setText("R");
         rb22R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -793,15 +722,12 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel30.setText("Pin #23");
 
         buttonGroup38.add(rb38R);
-        rb38R.setSelected(true);
         rb38R.setText("R");
         rb38R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb38RActionPerformed(evt);
             }
         });
-
-        txtPin23.setEditable(false);
 
         buttonGroup38.add(rb38W);
         rb38W.setText("W");
@@ -811,12 +737,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        txtPin34.setEditable(false);
-
         jLabel40.setText("Pin #39");
 
         buttonGroup34.add(rb34R);
-        rb34R.setSelected(true);
         rb34R.setText("R");
         rb34R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -825,7 +748,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup23.add(rb23R);
-        rb23R.setSelected(true);
         rb23R.setText("R");
         rb23R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -843,8 +765,6 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel31.setText("Pin #24");
 
-        txtPin24.setEditable(false);
-
         buttonGroup34.add(rb34W);
         rb34W.setText("W");
         rb34W.addActionListener(new java.awt.event.ActionListener() {
@@ -854,15 +774,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup24.add(rb24R);
-        rb24R.setSelected(true);
         rb24R.setText("R");
         rb24R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb24RActionPerformed(evt);
             }
         });
-
-        txtPin39.setEditable(false);
 
         buttonGroup24.add(rb24W);
         rb24W.setText("W");
@@ -877,15 +794,12 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel32.setText("Pin #25");
 
         buttonGroup39.add(rb39R);
-        rb39R.setSelected(true);
         rb39R.setText("R");
         rb39R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb39RActionPerformed(evt);
             }
         });
-
-        txtPin25.setEditable(false);
 
         buttonGroup39.add(rb39W);
         rb39W.setText("W");
@@ -896,15 +810,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup25.add(rb25R);
-        rb25R.setSelected(true);
         rb25R.setText("R");
         rb25R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb25RActionPerformed(evt);
             }
         });
-
-        txtPin35.setEditable(false);
 
         buttonGroup25.add(rb25W);
         rb25W.setText("W");
@@ -915,7 +826,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup35.add(rb35R);
-        rb35R.setSelected(true);
         rb35R.setText("R");
         rb35R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -938,14 +848,7 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel33.setText("Pin #26");
         jLabel33.setToolTipText("");
 
-        txtPin26.setEditable(false);
-
-        txtPin31.setEditable(false);
-
-        txtPin40.setEditable(false);
-
         buttonGroup26.add(rb26R);
-        rb26R.setSelected(true);
         rb26R.setText("R");
         rb26R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -963,21 +866,16 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel24.setText("Pin #27");
 
-        txtPin27.setEditable(false);
-
         jLabel34.setText("Pin #36");
         jLabel34.setToolTipText("");
 
         buttonGroup27.add(rb27R);
-        rb27R.setSelected(true);
         rb27R.setText("R");
         rb27R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb27RActionPerformed(evt);
             }
         });
-
-        txtPin36.setEditable(false);
 
         buttonGroup27.add(rb27W);
         rb27W.setText("W");
@@ -988,7 +886,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup31.add(rb31R);
-        rb31R.setSelected(true);
         rb31R.setText("R");
         rb31R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1006,10 +903,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        txtPin28.setEditable(false);
-
         buttonGroup40.add(rb40R);
-        rb40R.setSelected(true);
         rb40R.setText("R");
         rb40R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1026,7 +920,6 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup36.add(rb36R);
-        rb36R.setSelected(true);
         rb36R.setText("R");
         rb36R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1037,7 +930,6 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel35.setText("Pin #32");
 
         buttonGroup28.add(rb28R);
-        rb28R.setSelected(true);
         rb28R.setText("R");
         rb28R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1055,8 +947,6 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel26.setText("Pin #29");
 
-        txtPin29.setEditable(false);
-
         buttonGroup36.add(rb36W);
         rb36W.setText("W");
         rb36W.addActionListener(new java.awt.event.ActionListener() {
@@ -1066,15 +956,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         buttonGroup29.add(rb29R);
-        rb29R.setSelected(true);
         rb29R.setText("R");
         rb29R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb29RActionPerformed(evt);
             }
         });
-
-        txtPin32.setEditable(false);
 
         buttonGroup29.add(rb29W);
         rb29W.setText("W");
@@ -1089,7 +976,6 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel27.setText("Pin #21");
 
         buttonGroup32.add(rb32R);
-        rb32R.setSelected(true);
         rb32R.setText("R");
         rb32R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1099,10 +985,6 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel28.setText("Pin #30");
 
-        txtPin37.setEditable(false);
-
-        txtPin21.setEditable(false);
-
         buttonGroup32.add(rb32W);
         rb32W.setText("W");
         rb32W.addActionListener(new java.awt.event.ActionListener() {
@@ -1111,20 +993,15 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        txtPin30.setEditable(false);
-
         jLabel37.setText("Pin #33");
 
         buttonGroup37.add(rb37R);
-        rb37R.setSelected(true);
         rb37R.setText("R");
         rb37R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb37RActionPerformed(evt);
             }
         });
-
-        txtPin33.setEditable(false);
 
         buttonGroup37.add(rb37W);
         rb37W.setText("W");
@@ -1733,6 +1610,8 @@ public class IotFrame extends javax.swing.JFrame {
                     txtPeriod.setEnabled(false);
                     
                     uiHelper = new UIHelper(this,jPanel1,socket);
+                    
+                    uiHelper.getPinStates();
                     
                     timer = new Timer(period, new ActionListener() {
 
