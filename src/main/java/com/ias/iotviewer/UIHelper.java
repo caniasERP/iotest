@@ -132,6 +132,7 @@ public class UIHelper {
             if (socket.isConnected()) {
                 out.println(ReqJson.toString());
                 String tcpResponse = in.readLine();
+                logger.info("checking pins state : received tcp response "+tcpResponse);
                 RespJson = JSONObject.fromObject(tcpResponse);
 
                 logger.info("checking pins state : received json : " + RespJson.toString());
