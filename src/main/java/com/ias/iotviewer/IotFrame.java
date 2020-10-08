@@ -46,6 +46,8 @@ public class IotFrame extends javax.swing.JFrame {
         jPanel1.setVisible(false);
         PropertyConfigurator.configure("log4j.properties");
         
+        
+        
     }
 
     /**
@@ -1737,10 +1739,8 @@ public class IotFrame extends javax.swing.JFrame {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                            
-                          //  uiHelper.sendAndReceive();
-                          
-                       
-                          
+                          uiHelper.sendAndReceive();
+                         
                         }
                     });
                     timer.start();

@@ -24,6 +24,15 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <build>
+        <resources>
+        <resource>
+            <directory>.</directory>
+            <targetPath>${project.build.directory}</targetPath>
+            <includes>
+                <include>log4j.properties</include>
+            </includes>
+        </resource>
+    </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>

@@ -97,7 +97,7 @@ public class UIHelper {
         }
 
         sendToService();
-
+        refreshUI();
     }
 
     private void sendToService() {
@@ -192,6 +192,18 @@ public class UIHelper {
 
     }
 
+    private void refreshUI()
+    {
+        for (Integer c : readValues.keySet()) {
+            
+            String compName = "txtPin"+c;
+            
+            JTextField txtFld = (JTextField)getComponentByName(frame,compName);
+            txtFld.setText(readValues.get(c));
+            
+        }
+    }
+    
     private void handleReadResp(String resp) {
         logger.info("received json (for read) " + resp);
 
@@ -213,7 +225,7 @@ public class UIHelper {
                 logger.error("read error " + errJson.get("detail") + "-" + errJson.get("message"));
             }
         } catch (Exception ex) {
-            logger.info(ex.toString());
+            logger.error(ex.toString());
         }
 
     }
