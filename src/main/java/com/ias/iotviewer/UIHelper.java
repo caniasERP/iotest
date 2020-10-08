@@ -137,7 +137,7 @@ public class UIHelper {
                 logger.info("checking pins state : received json : " + RespJson.toString());
 
                 if (RespJson.get("status").equals(0)) {
-                    JSONArray jarr = RespJson.getJSONArray("values");
+                    JSONArray jarr = RespJson.getJSONArray("modes");
                     for (int i = 0; i < jarr.size(); i++) {
                         pinStates.put(i + 1, (Integer) jarr.get(i));
                     }
