@@ -1611,13 +1611,14 @@ public class IotFrame extends javax.swing.JFrame {
                     
                     uiHelper = new UIHelper(this,jPanel1,socket);
                     
+                    uiHelper.getPinStates(); 
                     
                     
                     timer = new Timer(period, new ActionListener() {
 
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                          uiHelper.getPinStates(); 
+                          
                           uiHelper.sendAndReceive();
                          
                         }

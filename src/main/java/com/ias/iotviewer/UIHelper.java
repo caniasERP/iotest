@@ -293,7 +293,7 @@ public class UIHelper {
             JSONObject readJson = JSONObject.fromObject(resp);
 
             if (readJson.get("status").equals(0)) {
-                JSONArray readArr = readJson.getJSONArray("pins");
+                JSONArray readArr = readJson.getJSONArray("values");
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
                         JSONObject jsItem = readArr.getJSONObject(i);
