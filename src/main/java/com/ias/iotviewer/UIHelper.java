@@ -182,9 +182,6 @@ public class UIHelper {
         JSONArray preReqJsonArr = new JSONArray();
         JSONObject preRespJson;
 
-        JSONObject readReqJson = new JSONObject();
-        JSONArray readReqJsonArr = new JSONArray();
-
         JSONObject writeReqJson = new JSONObject();
         JSONArray writeReqJsonArr = new JSONArray();
 
@@ -201,11 +198,11 @@ public class UIHelper {
 
         for (Integer c : writeValues.keySet()) {
             if (pinStates.get(c) != 1) {
-            JSONObject reqItem = new JSONObject();
-            reqItem.put("cmd", "mode");
-            reqItem.put("pin", c);
-            reqItem.put("value", 1);
-            preReqJsonArr.add(reqItem);
+                JSONObject reqItem = new JSONObject();
+                reqItem.put("cmd", "mode");
+                reqItem.put("pin", c);
+                reqItem.put("value", 1);
+                preReqJsonArr.add(reqItem);
             }
         }
 
@@ -219,26 +216,9 @@ public class UIHelper {
             String tcpResponse = in.readLine();
             preRespJson = JSONObject.fromObject(tcpResponse);
 
-            logger.info("received json : " + preRespJson.toString());
+            logger.info("received json (for write): " + preRespJson.toString());
 
             if (preRespJson.get("status").equals(0)) {
-
-                //reading pins
-                for (Integer c : readValues.keySet()) {
-                    JSONObject reqItem = new JSONObject();
-                    reqItem.put("cmd", "get");
-                    reqItem.put("pin", c);
-                    readReqJsonArr.add(reqItem);
-                }
-
-                readReqJson.put("commands", readReqJsonArr);
-
-                logger.info("sent json (for read) : " + readReqJson.toString());
-
-                out.println(readReqJson.toString());
-                String tcpReadResponse = in.readLine();
-
-                handleReadResp(tcpReadResponse);
 
                 //writing to pins
                 for (Integer c : writeValues.keySet()) {
@@ -255,6 +235,34 @@ public class UIHelper {
                 String tcpWriteResponse = in.readLine();
 
                 handleWriteResp(tcpWriteResponse);
+
+                //reading pins
+                JSONObject ReadReqJson = new JSONObject();
+                JSONArray ReadReqJsonArr = new JSONArray();
+                JSONArray ReadReqJsonArr2 = new JSONArray();
+                JSONArray ReadReqJsonArr3 = new JSONArray();
+
+                for (int i = 0; i < 40; i++) {
+
+                    ReadReqJsonArr.add(i + 1);
+                }
+
+                JSONObject ReadreqItem2 = new JSONObject();
+                ReadreqItem2.put("cmd", "get");
+                ReadReqJsonArr2.add(ReadreqItem2);
+
+                ReadreqItem2.put("pins", ReadReqJsonArr);
+
+                ReadReqJsonArr3.add(ReadreqItem2);
+
+                ReadReqJson.put("commands", ReadReqJsonArr3);
+
+                logger.info("sent json (for read) : " + ReadReqJson.toString());
+
+                out.println(ReadReqJson.toString());
+                String tcpReadResponse = in.readLine();
+
+                handleReadResp(tcpReadResponse);
 
             } else {
                 JSONObject errJsonPre = preRespJson.getJSONObject("error");
