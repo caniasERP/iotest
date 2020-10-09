@@ -330,7 +330,7 @@ public class UIHelper {
                         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pin);
                         txtFld.setText(value + "");
                         txtFld.setEnabled(false);
-                        showInfoMsg("read from pin #" + pin + " ok");
+
                     }
                 }
             } else {
@@ -354,6 +354,10 @@ public class UIHelper {
         ReadreqItem.put("pin", pin);
         ReadreqItem.put("value", 1);
         ReqJsonArr.add(ReadreqItem);
+        ReadreqItem = new JSONObject();
+        ReadreqItem.put("cmd", "get");
+        ReadreqItem.put("pin", pin);
+        ReqJsonArr.add(ReadreqItem);
 
         ReqJson.put("commands", ReqJsonArr);
 
@@ -367,10 +371,20 @@ public class UIHelper {
 
             if (writeJson.get("status").equals(0)) {
 
-                txtFld.setEnabled(true);
+                JSONArray readArr = writeJson.getJSONArray("pins");
+                if (readArr != null && readArr.size() > 0) {
+                    for (int i = 0; i < readArr.size(); i++) {
+                        JSONObject jsItem = readArr.getJSONObject(i);
+                        int value = (Integer) jsItem.get("value");
+
+                        txtFld.setText(value + "");
+                        txtFld.setEnabled(true);
+
+                    }
+                }
 
                 logger.info("write to pin ok");
-                showInfoMsg("pin #" + pin + " mode changed to write ok");
+
             } else {
                 JSONObject errJson = writeJson.getJSONObject("error");
                 logger.error("write to pin error " + errJson.get("detail") + "-" + errJson.get("message"));
@@ -410,7 +424,7 @@ public class UIHelper {
             if (writeJson.get("status").equals(0)) {
 
                 logger.info("write to pin ok");
-                showInfoMsg("pin #" + pin + " value changed");
+
             } else {
                 JSONObject errJson = writeJson.getJSONObject("error");
                 logger.error("write to pin error " + errJson.get("detail") + "-" + errJson.get("message"));
