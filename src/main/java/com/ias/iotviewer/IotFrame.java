@@ -284,6 +284,7 @@ public class IotFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IoT Monitor by IAS");
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -305,7 +306,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Pin #1");
+        jLabel3.setText("#1");
 
         txtPin1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -334,7 +335,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Pin #2");
+        jLabel5.setText("#2");
 
         txtPin2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -358,7 +359,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Pin #3");
+        jLabel6.setText("#3");
 
         txtPin3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -382,7 +383,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Pin #4");
+        jLabel7.setText("#4");
 
         txtPin4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -406,7 +407,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Pin #5");
+        jLabel8.setText("#5");
 
         txtPin5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -430,7 +431,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("Pin #6");
+        jLabel9.setText("#6");
 
         txtPin6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -454,7 +455,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("Pin #7");
+        jLabel10.setText("#7");
 
         txtPin7.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -478,7 +479,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("Pin #8");
+        jLabel11.setText("#8");
 
         txtPin8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -502,7 +503,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setText("Pin #9");
+        jLabel12.setText("#9");
 
         txtPin9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -540,7 +541,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setText("Pin #10");
+        jLabel13.setText("#10");
 
         buttonGroup10.add(rb10W);
         rb10W.setText("W");
@@ -550,7 +551,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setText("Pin #11");
+        jLabel14.setText("#11");
 
         txtPin11.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -574,7 +575,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("Pin #12");
+        jLabel15.setText("#12");
 
         txtPin12.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -598,7 +599,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel16.setText("Pin #13");
+        jLabel16.setText("#13");
 
         txtPin13.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -622,7 +623,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel17.setText("Pin #14");
+        jLabel17.setText("#14");
 
         txtPin14.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -646,7 +647,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setText("Pin #15");
+        jLabel18.setText("#15");
 
         txtPin15.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -670,7 +671,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel19.setText("Pin #16");
+        jLabel19.setText("#16");
         jLabel19.setToolTipText("");
 
         txtPin16.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -695,7 +696,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setText("Pin #17");
+        jLabel20.setText("#17");
 
         txtPin17.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -719,7 +720,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel21.setText("Pin #18");
+        jLabel21.setText("#18");
 
         txtPin18.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -743,7 +744,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setText("Pin #19");
+        jLabel22.setText("#19");
 
         txtPin19.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -767,7 +768,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel23.setText("Pin #20");
+        jLabel23.setText("#20");
 
         txtPin20.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -823,9 +824,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel38.setText("Pin #38");
+        jLabel38.setText("#38");
 
-        jLabel29.setText("Pin #22");
+        jLabel29.setText("#22");
 
         txtPin38.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -871,9 +872,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel39.setText("Pin #34");
+        jLabel39.setText("#34");
 
-        jLabel30.setText("Pin #23");
+        jLabel30.setText("#23");
 
         buttonGroup38.add(rb38R);
         rb38R.setText("R");
@@ -903,7 +904,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel40.setText("Pin #39");
+        jLabel40.setText("#39");
 
         buttonGroup34.add(rb34R);
         rb34R.setText("R");
@@ -929,7 +930,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel31.setText("Pin #24");
+        jLabel31.setText("#24");
 
         txtPin24.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -967,9 +968,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel41.setText("Pin #35");
+        jLabel41.setText("#35");
 
-        jLabel32.setText("Pin #25");
+        jLabel32.setText("#25");
 
         buttonGroup39.add(rb39R);
         rb39R.setText("R");
@@ -1023,9 +1024,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel42.setText("Pin #31");
+        jLabel42.setText("#31");
 
-        jLabel43.setText("Pin #40");
+        jLabel43.setText("#40");
 
         buttonGroup35.add(rb35W);
         rb35W.setText("W");
@@ -1035,7 +1036,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel33.setText("Pin #26");
+        jLabel33.setText("#26");
         jLabel33.setToolTipText("");
 
         txtPin26.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1072,7 +1073,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel24.setText("Pin #27");
+        jLabel24.setText("#27");
 
         txtPin27.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -1080,7 +1081,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel34.setText("Pin #36");
+        jLabel34.setText("#36");
         jLabel34.setToolTipText("");
 
         buttonGroup27.add(rb27R);
@@ -1113,7 +1114,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel25.setText("Pin #28");
+        jLabel25.setText("#28");
 
         buttonGroup31.add(rb31W);
         rb31W.setText("W");
@@ -1153,7 +1154,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel35.setText("Pin #32");
+        jLabel35.setText("#32");
 
         buttonGroup28.add(rb28R);
         rb28R.setText("R");
@@ -1171,7 +1172,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel26.setText("Pin #29");
+        jLabel26.setText("#29");
 
         txtPin29.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -1209,9 +1210,9 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel36.setText("Pin #37");
+        jLabel36.setText("#37");
 
-        jLabel27.setText("Pin #21");
+        jLabel27.setText("#21");
 
         buttonGroup32.add(rb32R);
         rb32R.setText("R");
@@ -1221,7 +1222,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel28.setText("Pin #30");
+        jLabel28.setText("#30");
 
         txtPin37.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -1249,7 +1250,7 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel37.setText("Pin #33");
+        jLabel37.setText("#33");
 
         buttonGroup37.add(rb37R);
         rb37R.setText("R");
@@ -1605,7 +1606,7 @@ public class IotFrame extends javax.swing.JFrame {
                         .addComponent(rb40R)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rb40W)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1810,7 +1811,7 @@ public class IotFrame extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(srvPort, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113)
+                        .addGap(58, 58, 58)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1877,6 +1878,7 @@ public class IotFrame extends javax.swing.JFrame {
                     uiHelper = new UIHelper(this, jPanel1, socket);
                     
                     uiHelper.getPinStates();                    
+                    uiHelper.sendAndReceive();
                     
                     timer = new Timer(period, new ActionListener() {
                         
