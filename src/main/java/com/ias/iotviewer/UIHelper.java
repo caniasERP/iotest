@@ -346,7 +346,6 @@ public class UIHelper {
     private void writeActionRB(int pin) {
 
         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pin);
-        int value = Integer.parseInt(txtFld.getText());
 
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
@@ -355,11 +354,7 @@ public class UIHelper {
         ReadreqItem.put("pin", pin);
         ReadreqItem.put("value", 1);
         ReqJsonArr.add(ReadreqItem);
-        ReadreqItem = new JSONObject();
-        ReadreqItem.put("cmd", "set");
-        ReadreqItem.put("pin", pin);
-        ReadreqItem.put("value", value);
-        ReqJsonArr.add(ReadreqItem);
+
         ReqJson.put("commands", ReqJsonArr);
 
         logger.info("tcp request write to pin " + ReqJson.toString());
@@ -371,10 +366,9 @@ public class UIHelper {
             JSONObject writeJson = JSONObject.fromObject(tcpWriteResponse);
 
             if (writeJson.get("status").equals(0)) {
-                
-                
+
                 txtFld.setEnabled(true);
-        
+
                 logger.info("write to pin ok");
                 showInfoMsg("pin #" + pin + " mode changed to write ok");
             } else {
@@ -387,27 +381,26 @@ public class UIHelper {
         }
     }
 
-    public void sendWriteOnChange(Object obj)
-    {
-        
+    public void sendWriteOnChange(Object obj) {
+
         JTextField txtFld = (JTextField) obj;
         int value = Integer.parseInt(txtFld.getText());
-        String vName = getComponentVariableName(txtFld); 
+        String vName = getComponentVariableName(txtFld);
         int pin = Integer.parseInt(vName.replace("txtPin", ""));
-        
+
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
-        
+
         WritereqItem = new JSONObject();
         WritereqItem.put("cmd", "set");
         WritereqItem.put("pin", pin);
         WritereqItem.put("value", value);
         ReqJsonArr.add(WritereqItem);
         ReqJson.put("commands", ReqJsonArr);
-        
+
         logger.info("tcp request write to pin " + ReqJson.toString());
-        
+
         try {
             out.println(ReqJson.toString());
             String tcpWriteResponse = in.readLine();
@@ -415,7 +408,7 @@ public class UIHelper {
             JSONObject writeJson = JSONObject.fromObject(tcpWriteResponse);
 
             if (writeJson.get("status").equals(0)) {
-                        
+
                 logger.info("write to pin ok");
                 showInfoMsg("pin #" + pin + " value changed");
             } else {
@@ -426,8 +419,9 @@ public class UIHelper {
         } catch (Exception ex) {
             logger.error(ex);
         }
-        
+
     }
+
     private void showInfoMsg(String message) {
         JOptionPane.showMessageDialog(frame, message, "Information", JOptionPane.INFORMATION_MESSAGE);
     }
