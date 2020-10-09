@@ -82,6 +82,11 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup40">
     </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -772,6 +777,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin1">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin1KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb1R">
           <Properties>
@@ -792,6 +800,7 @@
             <Property name="text" type="java.lang.String" value="W"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rb1WMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb1WActionPerformed"/>
           </Events>
         </Component>
@@ -801,6 +810,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin2">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin2KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb2R">
           <Properties>
@@ -830,6 +842,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin3">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin3KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb3R">
           <Properties>
@@ -859,6 +874,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin4">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin4KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb4R">
           <Properties>
@@ -888,6 +906,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin5">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin5KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb5R">
           <Properties>
@@ -917,6 +938,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin6">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin6KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb6R">
           <Properties>
@@ -946,6 +970,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin7">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin7KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb7R">
           <Properties>
@@ -975,6 +1002,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin8">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin8KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb8R">
           <Properties>
@@ -1004,6 +1034,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin9">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin9KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb9R">
           <Properties>
@@ -1039,6 +1072,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin10">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin10KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
@@ -1062,6 +1098,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin11">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin11KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb11R">
           <Properties>
@@ -1091,6 +1130,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin12">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin12KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb12R">
           <Properties>
@@ -1120,6 +1162,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin13">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin13KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb13R">
           <Properties>
@@ -1149,6 +1194,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin14">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin14KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb14R">
           <Properties>
@@ -1178,6 +1226,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin15">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin15KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb15R">
           <Properties>
@@ -1208,6 +1259,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin16">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin16KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb16R">
           <Properties>
@@ -1237,6 +1291,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin17">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin17KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb17R">
           <Properties>
@@ -1266,6 +1323,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin18">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin18KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb18R">
           <Properties>
@@ -1295,6 +1355,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin19">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin19KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb19R">
           <Properties>
@@ -1324,6 +1387,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin20">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin20KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb20R">
           <Properties>
@@ -1402,8 +1468,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin38">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin38KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin22">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin22KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb33R">
           <Properties>
@@ -1471,6 +1543,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin23">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin23KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb38W">
           <Properties>
@@ -1484,6 +1559,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin34">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin34KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel40">
           <Properties>
@@ -1529,6 +1607,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin24">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin24KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb34W">
           <Properties>
@@ -1553,6 +1634,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin39">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin39KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb24W">
           <Properties>
@@ -1587,6 +1671,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin25">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin25KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb39W">
           <Properties>
@@ -1611,6 +1698,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin35">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin35KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb25W">
           <Properties>
@@ -1662,10 +1752,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin26">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin26KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin31">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin31KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin40">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin40KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb26R">
           <Properties>
@@ -1695,6 +1794,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin27">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin27KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel34">
           <Properties>
@@ -1714,6 +1816,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin36">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin36KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb27W">
           <Properties>
@@ -1754,6 +1859,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin28">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin28KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb40R">
           <Properties>
@@ -1821,6 +1929,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin29">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin29KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb36W">
           <Properties>
@@ -1845,6 +1956,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin32">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin32KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb29W">
           <Properties>
@@ -1884,8 +1998,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin37">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin37KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin21">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin21KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb32W">
           <Properties>
@@ -1899,6 +2019,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin30">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin30KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel37">
           <Properties>
@@ -1917,6 +2040,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPin33">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin33KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rb37W">
           <Properties>
@@ -1937,9 +2063,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPeriod">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="1000"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

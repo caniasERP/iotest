@@ -9,12 +9,15 @@ import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.net.SocketAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.TimerTask;
+import java.util.prefs.Preferences;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -38,13 +41,24 @@ public class IotFrame extends javax.swing.JFrame {
     private Socket socket;
     private UIHelper uiHelper;
     private Timer timer;
-            
+    
+    final String PREF_IOTBOX_IP = "IotBoxIP";
+    final String PREF_IOTBOX_PORT = "IotBoxPort";
+    final String PREF_PERIOD = "IotBoxPeriod";
+    
     final static Logger logger = Logger.getLogger("IotFrame");
+    Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFrame.class);
     
     public IotFrame() {
         initComponents();
         jPanel1.setVisible(false);
         PropertyConfigurator.configure("log4j.properties");
+        String iotBoxIP = prefs.get(PREF_IOTBOX_IP, "");
+        String iotBoxPort = prefs.get(PREF_IOTBOX_PORT, "");
+        String iotBoxPeriod = prefs.get(PREF_PERIOD, "");
+        srvIP.setText(iotBoxIP);
+        srvPort.setText(iotBoxPort);
+        txtPeriod.setText(iotBoxPeriod);
     }
 
     /**
@@ -96,6 +110,7 @@ public class IotFrame extends javax.swing.JFrame {
         buttonGroup38 = new javax.swing.ButtonGroup();
         buttonGroup39 = new javax.swing.ButtonGroup();
         buttonGroup40 = new javax.swing.ButtonGroup();
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         srvIP = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -265,6 +280,8 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtPeriod = new javax.swing.JTextField();
 
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IoT Monitor by IAS");
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -290,6 +307,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Pin #1");
 
+        txtPin1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin1KeyReleased(evt);
+            }
+        });
+
         buttonGroup1.add(rb1R);
         rb1R.setText("R");
         rb1R.addActionListener(new java.awt.event.ActionListener() {
@@ -300,6 +323,11 @@ public class IotFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(rb1W);
         rb1W.setText("W");
+        rb1W.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rb1WMouseClicked(evt);
+            }
+        });
         rb1W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb1WActionPerformed(evt);
@@ -307,6 +335,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Pin #2");
+
+        txtPin2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin2KeyReleased(evt);
+            }
+        });
 
         buttonGroup2.add(rb2R);
         rb2R.setText("R");
@@ -326,6 +360,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Pin #3");
 
+        txtPin3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin3KeyReleased(evt);
+            }
+        });
+
         buttonGroup3.add(rb3R);
         rb3R.setText("R");
         rb3R.addActionListener(new java.awt.event.ActionListener() {
@@ -343,6 +383,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel7.setText("Pin #4");
+
+        txtPin4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin4KeyReleased(evt);
+            }
+        });
 
         buttonGroup4.add(rb4R);
         rb4R.setText("R");
@@ -362,6 +408,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Pin #5");
 
+        txtPin5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin5KeyReleased(evt);
+            }
+        });
+
         buttonGroup5.add(rb5R);
         rb5R.setText("R");
         rb5R.addActionListener(new java.awt.event.ActionListener() {
@@ -379,6 +431,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel9.setText("Pin #6");
+
+        txtPin6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin6KeyReleased(evt);
+            }
+        });
 
         buttonGroup6.add(rb6R);
         rb6R.setText("R");
@@ -398,6 +456,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel10.setText("Pin #7");
 
+        txtPin7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin7KeyReleased(evt);
+            }
+        });
+
         buttonGroup7.add(rb7R);
         rb7R.setText("R");
         rb7R.addActionListener(new java.awt.event.ActionListener() {
@@ -416,6 +480,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Pin #8");
 
+        txtPin8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin8KeyReleased(evt);
+            }
+        });
+
         buttonGroup8.add(rb8R);
         rb8R.setText("R");
         rb8R.addActionListener(new java.awt.event.ActionListener() {
@@ -433,6 +503,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel12.setText("Pin #9");
+
+        txtPin9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin9KeyReleased(evt);
+            }
+        });
 
         buttonGroup9.add(rb9R);
         rb9R.setText("R");
@@ -458,6 +534,12 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin10KeyReleased(evt);
+            }
+        });
+
         jLabel13.setText("Pin #10");
 
         buttonGroup10.add(rb10W);
@@ -469,6 +551,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel14.setText("Pin #11");
+
+        txtPin11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin11KeyReleased(evt);
+            }
+        });
 
         buttonGroup11.add(rb11R);
         rb11R.setText("R");
@@ -488,6 +576,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel15.setText("Pin #12");
 
+        txtPin12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin12KeyReleased(evt);
+            }
+        });
+
         buttonGroup12.add(rb12R);
         rb12R.setText("R");
         rb12R.addActionListener(new java.awt.event.ActionListener() {
@@ -505,6 +599,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel16.setText("Pin #13");
+
+        txtPin13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin13KeyReleased(evt);
+            }
+        });
 
         buttonGroup13.add(rb13R);
         rb13R.setText("R");
@@ -524,6 +624,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel17.setText("Pin #14");
 
+        txtPin14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin14KeyReleased(evt);
+            }
+        });
+
         buttonGroup14.add(rb14R);
         rb14R.setText("R");
         rb14R.addActionListener(new java.awt.event.ActionListener() {
@@ -541,6 +647,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel18.setText("Pin #15");
+
+        txtPin15.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin15KeyReleased(evt);
+            }
+        });
 
         buttonGroup15.add(rb15R);
         rb15R.setText("R");
@@ -561,6 +673,12 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel19.setText("Pin #16");
         jLabel19.setToolTipText("");
 
+        txtPin16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin16KeyReleased(evt);
+            }
+        });
+
         buttonGroup16.add(rb16R);
         rb16R.setText("R");
         rb16R.addActionListener(new java.awt.event.ActionListener() {
@@ -578,6 +696,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel20.setText("Pin #17");
+
+        txtPin17.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin17KeyReleased(evt);
+            }
+        });
 
         buttonGroup17.add(rb17R);
         rb17R.setText("R");
@@ -597,6 +721,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel21.setText("Pin #18");
 
+        txtPin18.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin18KeyReleased(evt);
+            }
+        });
+
         buttonGroup18.add(rb18R);
         rb18R.setText("R");
         rb18R.addActionListener(new java.awt.event.ActionListener() {
@@ -615,6 +745,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel22.setText("Pin #19");
 
+        txtPin19.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin19KeyReleased(evt);
+            }
+        });
+
         buttonGroup19.add(rb19R);
         rb19R.setText("R");
         rb19R.addActionListener(new java.awt.event.ActionListener() {
@@ -632,6 +768,12 @@ public class IotFrame extends javax.swing.JFrame {
         });
 
         jLabel23.setText("Pin #20");
+
+        txtPin20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin20KeyReleased(evt);
+            }
+        });
 
         buttonGroup20.add(rb20R);
         rb20R.setText("R");
@@ -685,6 +827,18 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel29.setText("Pin #22");
 
+        txtPin38.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin38KeyReleased(evt);
+            }
+        });
+
+        txtPin22.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin22KeyReleased(evt);
+            }
+        });
+
         buttonGroup33.add(rb33R);
         rb33R.setText("R");
         rb33R.addActionListener(new java.awt.event.ActionListener() {
@@ -729,11 +883,23 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin23KeyReleased(evt);
+            }
+        });
+
         buttonGroup38.add(rb38W);
         rb38W.setText("W");
         rb38W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb38WActionPerformed(evt);
+            }
+        });
+
+        txtPin34.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin34KeyReleased(evt);
             }
         });
 
@@ -765,6 +931,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel31.setText("Pin #24");
 
+        txtPin24.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin24KeyReleased(evt);
+            }
+        });
+
         buttonGroup34.add(rb34W);
         rb34W.setText("W");
         rb34W.addActionListener(new java.awt.event.ActionListener() {
@@ -778,6 +950,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb24R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb24RActionPerformed(evt);
+            }
+        });
+
+        txtPin39.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin39KeyReleased(evt);
             }
         });
 
@@ -801,6 +979,12 @@ public class IotFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPin25.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin25KeyReleased(evt);
+            }
+        });
+
         buttonGroup39.add(rb39W);
         rb39W.setText("W");
         rb39W.addActionListener(new java.awt.event.ActionListener() {
@@ -814,6 +998,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb25R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb25RActionPerformed(evt);
+            }
+        });
+
+        txtPin35.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin35KeyReleased(evt);
             }
         });
 
@@ -848,6 +1038,24 @@ public class IotFrame extends javax.swing.JFrame {
         jLabel33.setText("Pin #26");
         jLabel33.setToolTipText("");
 
+        txtPin26.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin26KeyReleased(evt);
+            }
+        });
+
+        txtPin31.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin31KeyReleased(evt);
+            }
+        });
+
+        txtPin40.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin40KeyReleased(evt);
+            }
+        });
+
         buttonGroup26.add(rb26R);
         rb26R.setText("R");
         rb26R.addActionListener(new java.awt.event.ActionListener() {
@@ -866,6 +1074,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel24.setText("Pin #27");
 
+        txtPin27.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin27KeyReleased(evt);
+            }
+        });
+
         jLabel34.setText("Pin #36");
         jLabel34.setToolTipText("");
 
@@ -874,6 +1088,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb27R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb27RActionPerformed(evt);
+            }
+        });
+
+        txtPin36.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin36KeyReleased(evt);
             }
         });
 
@@ -900,6 +1120,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb31W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb31WActionPerformed(evt);
+            }
+        });
+
+        txtPin28.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin28KeyReleased(evt);
             }
         });
 
@@ -947,6 +1173,12 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel26.setText("Pin #29");
 
+        txtPin29.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin29KeyReleased(evt);
+            }
+        });
+
         buttonGroup36.add(rb36W);
         rb36W.setText("W");
         rb36W.addActionListener(new java.awt.event.ActionListener() {
@@ -960,6 +1192,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb29R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb29RActionPerformed(evt);
+            }
+        });
+
+        txtPin32.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin32KeyReleased(evt);
             }
         });
 
@@ -985,11 +1223,29 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel28.setText("Pin #30");
 
+        txtPin37.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin37KeyReleased(evt);
+            }
+        });
+
+        txtPin21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin21KeyReleased(evt);
+            }
+        });
+
         buttonGroup32.add(rb32W);
         rb32W.setText("W");
         rb32W.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb32WActionPerformed(evt);
+            }
+        });
+
+        txtPin30.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin30KeyReleased(evt);
             }
         });
 
@@ -1000,6 +1256,12 @@ public class IotFrame extends javax.swing.JFrame {
         rb37R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb37RActionPerformed(evt);
+            }
+        });
+
+        txtPin33.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin33KeyReleased(evt);
             }
         });
 
@@ -1532,8 +1794,6 @@ public class IotFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Read/Write Period (m/s):");
 
-        txtPeriod.setText("1000");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1589,391 +1849,564 @@ public class IotFrame extends javax.swing.JFrame {
         } else if (txtPeriod.getText().equals("")) {
             showErrorMsg("Period is required.");
         }
-
+        
         if (!srvIP.getText().equals("") && !srvPort.getText().equals("") && !txtPeriod.getText().equals("")) {
             int port = Integer.parseInt(srvPort.getText());
             period = Integer.parseInt(txtPeriod.getText());
-
+            
+            prefs.put(PREF_IOTBOX_IP, srvIP.getText());
+            prefs.put(PREF_IOTBOX_PORT, srvPort.getText());
+            prefs.put(PREF_PERIOD, txtPeriod.getText());
+            
             try {
-
-                socket = new Socket(srvIP.getText(), port);
+                SocketAddress sockaddr = new InetSocketAddress(srvIP.getText(), port);
+                socket = new Socket();
+                socket.connect(sockaddr, 15000);
                 if (socket.isConnected()) {
                     serviceIP = srvIP.getText();
                     servicePort = port;
-
+                    
                     jPanel1.setVisible(true);
-
+                    
                     btnConnect.setEnabled(false);
                     btnConnect.setText("Connected");
                     srvIP.setEnabled(false);
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
                     
-                    uiHelper = new UIHelper(this,jPanel1,socket);
+                    uiHelper = new UIHelper(this, jPanel1, socket);
                     
-                    uiHelper.getPinStates(); 
-                    
+                    uiHelper.getPinStates();                    
                     
                     timer = new Timer(period, new ActionListener() {
-
+                        
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                          
-                          uiHelper.sendAndReceive();
-                         
+                            
+                            uiHelper.sendAndReceive();
+                            
                         }
                     });
                     timer.start();
-
+                    
                 }
-
+                
             } catch (Exception ex) {
-
+                
                 showErrorMsg(ex.toString());
                 logger.error("Connection error " + ex.toString());
-               
+                
             }
+            
         }
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        if(uiHelper!=null)
-        {
-        uiHelper.closeConnection();
+        if (uiHelper != null) {
+            uiHelper.closeConnection();
         }
     }//GEN-LAST:event_formWindowClosing
 
     private void rb1WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1WActionPerformed
-        txtPin1.setEditable(true);
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb1WActionPerformed
 
     private void rb2WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2WActionPerformed
-        txtPin2.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());     // TODO add your handling code here:
     }//GEN-LAST:event_rb2WActionPerformed
 
     private void rb3WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb3WActionPerformed
-        txtPin2.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb3WActionPerformed
 
     private void rb4WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb4WActionPerformed
-        txtPin4.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb4WActionPerformed
 
     private void rb5WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb5WActionPerformed
-        txtPin5.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb5WActionPerformed
 
     private void rb6WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb6WActionPerformed
-        txtPin6.setEditable(true);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb6WActionPerformed
 
     private void rb7WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb7WActionPerformed
-        txtPin7.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb7WActionPerformed
 
     private void rb8WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb8WActionPerformed
-        txtPin8.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb8WActionPerformed
 
     private void rb9WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb9WActionPerformed
-        txtPin9.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb9WActionPerformed
 
     private void rb10WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb10WActionPerformed
-        txtPin10.setEditable(true);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb10WActionPerformed
 
     private void rb11WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb11WActionPerformed
-        txtPin11.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb11WActionPerformed
 
     private void rb12WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb12WActionPerformed
-        txtPin12.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb12WActionPerformed
 
     private void rb13WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb13WActionPerformed
-        txtPin13.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());    // TODO add your handling code here:
     }//GEN-LAST:event_rb13WActionPerformed
 
     private void rb14WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb14WActionPerformed
-        txtPin14.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb14WActionPerformed
 
     private void rb15WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb15WActionPerformed
-        txtPin15.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());      // TODO add your handling code here:
     }//GEN-LAST:event_rb15WActionPerformed
 
     private void rb16WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb16WActionPerformed
-        txtPin16.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb16WActionPerformed
 
     private void rb17WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb17WActionPerformed
-        txtPin17.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb17WActionPerformed
 
     private void rb18WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb18WActionPerformed
-        txtPin18.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());     // TODO add your handling code here:
     }//GEN-LAST:event_rb18WActionPerformed
 
     private void rb19WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb19WActionPerformed
-        txtPin19.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb19WActionPerformed
 
     private void rb20WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb20WActionPerformed
-        txtPin20.setEditable(true);          // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());          // TODO add your handling code here:
     }//GEN-LAST:event_rb20WActionPerformed
 
     private void rb26WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb26WActionPerformed
-        txtPin26.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb26WActionPerformed
 
     private void rb27WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb27WActionPerformed
-        txtPin27.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());      // TODO add your handling code here:
     }//GEN-LAST:event_rb27WActionPerformed
 
     private void rb28WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb28WActionPerformed
-        txtPin28.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb28WActionPerformed
 
     private void rb29WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb29WActionPerformed
-        txtPin29.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb29WActionPerformed
 
     private void rb21WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb21WActionPerformed
-        txtPin21.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb21WActionPerformed
 
     private void rb30WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb30WActionPerformed
-        txtPin30.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());      // TODO add your handling code here:
     }//GEN-LAST:event_rb30WActionPerformed
 
     private void rb22WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb22WActionPerformed
-        txtPin22.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb22WActionPerformed
 
     private void rb23WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb23WActionPerformed
-        txtPin23.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb23WActionPerformed
 
     private void rb24WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb24WActionPerformed
-        txtPin24.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb24WActionPerformed
 
     private void rb25WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb25WActionPerformed
-        txtPin25.setEditable(true);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb25WActionPerformed
 
     private void rb31WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb31WActionPerformed
-        txtPin31.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb31WActionPerformed
 
     private void rb40WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb40WActionPerformed
-        txtPin40.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb40WActionPerformed
 
     private void rb36WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb36WActionPerformed
-        txtPin36.setEditable(true);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb36WActionPerformed
 
     private void rb32WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb32WActionPerformed
-        txtPin32.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb32WActionPerformed
 
     private void rb37WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb37WActionPerformed
-        txtPin37.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb37WActionPerformed
 
     private void rb33WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb33WActionPerformed
-        txtPin33.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb33WActionPerformed
 
     private void rb38WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb38WActionPerformed
-        txtPin38.setEditable(true);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb38WActionPerformed
 
     private void rb34WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb34WActionPerformed
-        txtPin34.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb34WActionPerformed
 
     private void rb39WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb39WActionPerformed
-        txtPin39.setEditable(true);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb39WActionPerformed
 
     private void rb35WActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb35WActionPerformed
-        txtPin35.setEditable(true);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb35WActionPerformed
 
     private void rb1RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1RActionPerformed
-        txtPin1.setEditable(false);
+       
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb1RActionPerformed
 
     private void rb2RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2RActionPerformed
-        txtPin2.setEditable(false);
+      
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb2RActionPerformed
 
     private void rb3RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb3RActionPerformed
-        txtPin3.setEditable(false);        // TODO add your handling code here:
+        
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb3RActionPerformed
 
     private void rb4RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb4RActionPerformed
-        txtPin4.setEditable(false);        // TODO add your handling code here:
+      
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb4RActionPerformed
 
     private void rb5RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb5RActionPerformed
-        txtPin5.setEditable(false);        // TODO add your handling code here:
+       
+        uiHelper.actionHandlerRB(evt.getSource());
     }//GEN-LAST:event_rb5RActionPerformed
 
     private void rb6RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb6RActionPerformed
-        txtPin6.setEditable(false);        // TODO add your handling code here:
+         uiHelper.actionHandlerRB(evt.getSource());  // TODO add your handling code here:
     }//GEN-LAST:event_rb6RActionPerformed
 
     private void rb7RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb7RActionPerformed
-        txtPin7.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());   // TODO add your handling code here:
     }//GEN-LAST:event_rb7RActionPerformed
 
     private void rb8RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb8RActionPerformed
-        txtPin8.setEditable(false);         // TODO add your handling code here:
+         uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb8RActionPerformed
 
     private void rb9RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb9RActionPerformed
-        txtPin9.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());      // TODO add your handling code here:
     }//GEN-LAST:event_rb9RActionPerformed
 
     private void rb10RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb10RActionPerformed
-        txtPin10.setEditable(false);         // TODO add your handling code here:
+         uiHelper.actionHandlerRB(evt.getSource());   // TODO add your handling code here:
     }//GEN-LAST:event_rb10RActionPerformed
 
     private void rb11RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb11RActionPerformed
-        txtPin11.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb11RActionPerformed
 
     private void rb12RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb12RActionPerformed
-        txtPin12.setEditable(false);        // TODO add your handling code here:
+         uiHelper.actionHandlerRB(evt.getSource());     // TODO add your handling code here:
     }//GEN-LAST:event_rb12RActionPerformed
 
     private void rb13RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb13RActionPerformed
-        txtPin13.setEditable(false);        // TODO add your handling code here:
+         uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb13RActionPerformed
 
     private void rb14RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb14RActionPerformed
-        txtPin14.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb14RActionPerformed
 
     private void rb15RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb15RActionPerformed
-        txtPin15.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());     // TODO add your handling code here:
     }//GEN-LAST:event_rb15RActionPerformed
 
     private void rb16RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb16RActionPerformed
-        txtPin16.setEditable(false);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb16RActionPerformed
 
     private void rb17RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb17RActionPerformed
-        txtPin17.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb17RActionPerformed
 
     private void rb18RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb18RActionPerformed
-        txtPin18.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb18RActionPerformed
 
     private void rb19RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb19RActionPerformed
-        txtPin19.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb19RActionPerformed
 
     private void rb20RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb20RActionPerformed
-        txtPin20.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb20RActionPerformed
 
     private void rb21RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb21RActionPerformed
-        txtPin21.setEditable(false);          // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb21RActionPerformed
 
     private void rb22RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb22RActionPerformed
-        txtPin22.setEditable(false);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb22RActionPerformed
 
     private void rb23RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb23RActionPerformed
-        txtPin23.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb23RActionPerformed
 
     private void rb24RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb24RActionPerformed
-        txtPin24.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb24RActionPerformed
 
     private void rb25RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb25RActionPerformed
-        txtPin25.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb25RActionPerformed
 
     private void rb26RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb26RActionPerformed
-        txtPin26.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb26RActionPerformed
 
     private void rb27RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb27RActionPerformed
-        txtPin27.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb27RActionPerformed
 
     private void rb28RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb28RActionPerformed
-        txtPin28.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb28RActionPerformed
 
     private void rb29RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb29RActionPerformed
-        txtPin29.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb29RActionPerformed
 
     private void rb30RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb30RActionPerformed
-        txtPin30.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb30RActionPerformed
 
     private void rb31RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb31RActionPerformed
-        txtPin31.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());       // TODO add your handling code here:
     }//GEN-LAST:event_rb31RActionPerformed
 
     private void rb32RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb32RActionPerformed
-        txtPin32.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb32RActionPerformed
 
     private void rb33RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb33RActionPerformed
-        txtPin33.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());      // TODO add your handling code here:
     }//GEN-LAST:event_rb33RActionPerformed
 
     private void rb34RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb34RActionPerformed
-        txtPin34.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb34RActionPerformed
 
     private void rb35RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb35RActionPerformed
-        txtPin35.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb35RActionPerformed
 
     private void rb36RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb36RActionPerformed
-        txtPin36.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb36RActionPerformed
 
     private void rb37RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb37RActionPerformed
-        txtPin37.setEditable(false);         // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb37RActionPerformed
 
     private void rb38RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb38RActionPerformed
-        txtPin38.setEditable(false);         // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());         // TODO add your handling code here:
     }//GEN-LAST:event_rb38RActionPerformed
 
     private void rb39RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb39RActionPerformed
-        txtPin39.setEditable(false);        // TODO add your handling code here:
+        uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb39RActionPerformed
 
     private void rb40RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb40RActionPerformed
-        txtPin40.setEditable(false);        // TODO add your handling code here:
+       uiHelper.actionHandlerRB(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_rb40RActionPerformed
 
+    private void rb1WMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb1WMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb1WMouseClicked
+
+    private void txtPin3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin3KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());
+    }//GEN-LAST:event_txtPin3KeyReleased
+
+    private void txtPin1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin1KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin1KeyReleased
+
+    private void txtPin2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin2KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin2KeyReleased
+
+    private void txtPin4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin4KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin4KeyReleased
+
+    private void txtPin5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin5KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin5KeyReleased
+
+    private void txtPin6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin6KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin6KeyReleased
+
+    private void txtPin7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin7KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin7KeyReleased
+
+    private void txtPin8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin8KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin8KeyReleased
+
+    private void txtPin9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin9KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin9KeyReleased
+
+    private void txtPin10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin10KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin10KeyReleased
+
+    private void txtPin11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin11KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin11KeyReleased
+
+    private void txtPin12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin12KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin12KeyReleased
+
+    private void txtPin13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin13KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin13KeyReleased
+
+    private void txtPin14KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin14KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin14KeyReleased
+
+    private void txtPin15KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin15KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin15KeyReleased
+
+    private void txtPin16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin16KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin16KeyReleased
+
+    private void txtPin17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin17KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin17KeyReleased
+
+    private void txtPin18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin18KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin18KeyReleased
+
+    private void txtPin19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin19KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin19KeyReleased
+
+    private void txtPin20KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin20KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin20KeyReleased
+
+    private void txtPin21KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin21KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin21KeyReleased
+
+    private void txtPin22KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin22KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin22KeyReleased
+
+    private void txtPin23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin23KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin23KeyReleased
+
+    private void txtPin24KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin24KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin24KeyReleased
+
+    private void txtPin25KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin25KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin25KeyReleased
+
+    private void txtPin26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin26KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin26KeyReleased
+
+    private void txtPin27KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin27KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin27KeyReleased
+
+    private void txtPin28KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin28KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin28KeyReleased
+
+    private void txtPin29KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin29KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin29KeyReleased
+
+    private void txtPin30KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin30KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin30KeyReleased
+
+    private void txtPin31KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin31KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin31KeyReleased
+
+    private void txtPin32KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin32KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin32KeyReleased
+
+    private void txtPin33KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin33KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin33KeyReleased
+
+    private void txtPin34KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin34KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin34KeyReleased
+
+    private void txtPin35KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin35KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin35KeyReleased
+
+    private void txtPin36KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin36KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin36KeyReleased
+
+    private void txtPin37KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin37KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin37KeyReleased
+
+    private void txtPin38KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin38KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin38KeyReleased
+
+    private void txtPin39KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin39KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin39KeyReleased
+
+    private void txtPin40KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin40KeyReleased
+uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin40KeyReleased
+    
     private void readIotBoxPins() {
         Timer timer = new Timer(1000, new ActionListener() {
-
+            
             @Override
             public void actionPerformed(ActionEvent arg0) {
-
+                
             }
         });
         timer.start();
     }
-
+    
     private void showErrorMsg(String message) {
         JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
@@ -2099,6 +2532,7 @@ public class IotFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JRadioButton rb10R;
     private javax.swing.JRadioButton rb10W;
     private javax.swing.JRadioButton rb11R;
