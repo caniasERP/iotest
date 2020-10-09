@@ -33,7 +33,7 @@ public class UIHelper {
     private JFrame frame;
     private JPanel panel;
     private Socket socket;
-    private Hashtable<Integer, String> readValues;
+    private Hashtable<Integer, Integer> readValues;
     private Hashtable<Integer, String> writeValues;
     private Hashtable<Integer, Integer> pinStates;
     private PrintWriter out;
@@ -45,7 +45,7 @@ public class UIHelper {
         this.frame = frame;
         this.panel = panel;
         this.socket = socket;
-        readValues = new Hashtable<Integer, String>();
+        readValues = new Hashtable<Integer, Integer>();
         writeValues = new Hashtable<Integer, String>();
         pinStates = new Hashtable<Integer, Integer>();
         try {
@@ -87,7 +87,7 @@ public class UIHelper {
                     int pinNo = Integer.parseInt(vName.replace(lastChar, ""));
 
                     if (lastChar.equals("R")) {
-                        readValues.put(pinNo, "");
+                        readValues.put(pinNo, 0);
                     } else {
                         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pinNo);
                         if (!txtFld.getText().equals("")) {
@@ -281,7 +281,7 @@ public class UIHelper {
             String compName = "txtPin" + c;
 
             JTextField txtFld = (JTextField) getComponentByName(frame, compName);
-            txtFld.setText(readValues.get(c));
+            txtFld.setText(readValues.get(c).toString());
 
         }
     }
@@ -296,10 +296,7 @@ public class UIHelper {
                 JSONArray readArr = readJson.getJSONArray("values");
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
-                        JSONObject jsItem = readArr.getJSONObject(i);
-                        int pinNO = Integer.parseInt(jsItem.getString("pin"));
-                        String value = jsItem.getString("value");
-                        readValues.put(pinNO, value);
+                        readValues.put(i + 1, (Integer) readArr.get(i));
                     }
                 }
             } else {
