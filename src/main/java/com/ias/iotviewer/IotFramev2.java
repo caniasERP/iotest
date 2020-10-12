@@ -554,12 +554,13 @@ public class IotFramev2 extends javax.swing.JFrame {
                     timer.start();
 
                     for (int i = 0; i < interruptPins.length; i++) {
+                        final int i2 = i;
                         Timer timer;
                         timer = new Timer(period, new ActionListener() {
-                            
+                        
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                uiHelper.readSinglePin(interruptPins[i]);
+                                uiHelper.readSinglePin(interruptPins[i2]);
                             }
                         });
                         timer.start();
