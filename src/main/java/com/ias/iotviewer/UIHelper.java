@@ -315,7 +315,7 @@ public class UIHelper {
             out.println(ReadReqJson.toString());
             String tcpReadResponse = in.readLine();
 
-            handleReadResp(tcpReadResponse);
+            handleReadResp2(tcpReadResponse);
 
         } catch (Exception ex) {
             logger.error(ex);
@@ -406,13 +406,13 @@ public class UIHelper {
 
                 //serial port read
                 if (readJson.get("data1") != null) {
-                    String data1 = (String) readJson.get("data1");
+                    String data1 = readJson.getString("data1");
                     JTextField txt1 = getComponentByName(frame, "serTxt1");
                     txt1.setText(data1);
                 }
 
                 if (readJson.get("data2") != null) {
-                    String data2 = (String) readJson.get("data2");
+                    String data2 = readJson.getString("data2");
                     JTextField txt2 = getComponentByName(frame, "serTxt2");
                     txt2.setText(data2);
                 }
@@ -646,7 +646,7 @@ public class UIHelper {
 
             JSONObject readJson = JSONObject.fromObject(tcpReadResponse);
 
-            if (readJson.get("status").equals(0)) {
+            if (readJson!=null && readJson.get("status")!=null && readJson.get("status").equals(0)) {
                 JSONArray readArr = readJson.getJSONArray("pins");
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
