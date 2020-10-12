@@ -48,7 +48,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.ias.iotviewer.IotFrame</mainClass>
+                            <mainClass>com.ias.iotviewer.IotFramev2</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
