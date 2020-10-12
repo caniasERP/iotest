@@ -212,14 +212,15 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
-                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtPin14" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtPin12" min="-2" pref="54" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -280,15 +281,16 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtPin7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="txtPin7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtPin14" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="txtPin12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="3" attributes="0">
@@ -389,19 +391,6 @@
             <Property name="text" type="java.lang.String" value="INT"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="#12"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtPin14">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin14KeyReleased"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel31">
           <Properties>
             <Property name="text" type="java.lang.String" value="#24"/>
@@ -489,6 +478,19 @@
           </Properties>
           <Events>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin7KeyReleased"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel15">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="#12"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtPin12">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPin12KeyReleased"/>
           </Events>
         </Component>
       </SubComponents>

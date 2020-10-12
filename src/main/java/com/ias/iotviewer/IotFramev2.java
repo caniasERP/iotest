@@ -31,9 +31,11 @@ public class IotFramev2 extends javax.swing.JFrame {
     private UIHelper uiHelper;
     private Timer timer;
 
-    final String PREF_IOTBOX_IP = "IotBoxIP";
-    final String PREF_IOTBOX_PORT = "IotBoxPort";
-    final String PREF_PERIOD = "IotBoxPeriod";
+    private final String PREF_IOTBOX_IP = "IotBoxIP";
+    private final String PREF_IOTBOX_PORT = "IotBoxPort";
+    private final String PREF_PERIOD = "IotBoxPeriod";
+
+    final Integer[] interruptPins = {7, 12};
 
     final static Logger logger = Logger.getLogger("IotFramev2");
     Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFrame.class);
@@ -81,8 +83,6 @@ public class IotFramev2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        txtPin14 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
         txtPin24 = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
@@ -99,6 +99,8 @@ public class IotFramev2 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtPin7 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        txtPin12 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IoT Monitor by IAS v1.02");
@@ -164,15 +166,6 @@ public class IotFramev2 extends javax.swing.JFrame {
         jLabel2.setText("DOUT");
 
         jLabel3.setText("INT");
-
-        jLabel17.setText("#12");
-
-        txtPin14.setEditable(false);
-        txtPin14.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin14KeyReleased(evt);
-            }
-        });
 
         jLabel31.setText("#24");
 
@@ -242,6 +235,15 @@ public class IotFramev2 extends javax.swing.JFrame {
         txtPin7.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPin7KeyReleased(evt);
+            }
+        });
+
+        jLabel15.setText("#12");
+
+        txtPin12.setEditable(false);
+        txtPin12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin12KeyReleased(evt);
             }
         });
 
@@ -318,13 +320,14 @@ public class IotFramev2 extends javax.swing.JFrame {
                                 .addComponent(jLabel2)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(176, 176, 176)
-                                .addComponent(jLabel17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtPin14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(207, 207, 207)
-                                .addComponent(jLabel3)))))
+                                .addComponent(jLabel3)
+                                .addGap(31, 31, 31))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -369,13 +372,14 @@ public class IotFramev2 extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txtPin7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txtPin14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel10))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel15))
+                                        .addGap(6, 6, 6))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel2)
@@ -484,10 +488,6 @@ public class IotFramev2 extends javax.swing.JFrame {
         uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_txtPin23KeyReleased
 
-    private void txtPin14KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin14KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin14KeyReleased
-
     private void serTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt1KeyTyped
         if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
             evt.consume();
@@ -553,6 +553,17 @@ public class IotFramev2 extends javax.swing.JFrame {
                     });
                     timer.start();
 
+                    for (int i = 0; i < interruptPins.length; i++) {
+                        Timer timer;
+                        timer = new Timer(period, new ActionListener() {
+                            
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                uiHelper.readSinglePin(interruptPins[i]);
+                            }
+                        });
+                        timer.start();
+                    }
                 }
 
             } catch (Exception ex) {
@@ -582,6 +593,10 @@ public class IotFramev2 extends javax.swing.JFrame {
     private void btnSendToSerial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial2ActionPerformed
         uiHelper.writeToSerialPort(2);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSendToSerial2ActionPerformed
+
+    private void txtPin12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin12KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin12KeyReleased
 
     /**
      * @param args the command line arguments
@@ -624,8 +639,8 @@ public class IotFramev2 extends javax.swing.JFrame {
     private javax.swing.JButton btnSendToSerial2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel27;
@@ -646,8 +661,8 @@ public class IotFramev2 extends javax.swing.JFrame {
     private javax.swing.JTextField srvIP;
     private javax.swing.JTextField srvPort;
     private javax.swing.JTextField txtPeriod;
+    private javax.swing.JTextField txtPin12;
     private javax.swing.JTextField txtPin13;
-    private javax.swing.JTextField txtPin14;
     private javax.swing.JTextField txtPin19;
     private javax.swing.JTextField txtPin21;
     private javax.swing.JTextField txtPin22;
