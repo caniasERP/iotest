@@ -30,14 +30,14 @@ public class IotFramev2 extends javax.swing.JFrame {
     private Socket socket;
     private UIHelper uiHelper;
     private Timer timer;
-    
+
     final String PREF_IOTBOX_IP = "IotBoxIP";
     final String PREF_IOTBOX_PORT = "IotBoxPort";
     final String PREF_PERIOD = "IotBoxPeriod";
-    
+
     final static Logger logger = Logger.getLogger("IotFramev2");
     Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFrame.class);
-    
+
     /**
      * Creates new form IotFramev2
      */
@@ -101,7 +101,7 @@ public class IotFramev2 extends javax.swing.JFrame {
         txtPin7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("IoT Monitor by IAS");
+        setTitle("IoT Monitor by IAS v1.02");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -323,7 +323,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtPin14, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(199, 199, 199)
+                                .addGap(207, 207, 207)
                                 .addComponent(jLabel3)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -489,18 +489,18 @@ public class IotFramev2 extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPin14KeyReleased
 
     private void serTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt1KeyTyped
-if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
-        evt.consume();
-    }        // TODO add your handling code here:
+        if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
+            evt.consume();
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_serTxt1KeyTyped
 
     private void serTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt2KeyTyped
-if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
-        evt.consume();
-    }           // TODO add your handling code here:
+        if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
+            evt.consume();
+        }           // TODO add your handling code here:
     }//GEN-LAST:event_serTxt2KeyTyped
 
-     private void showErrorMsg(String message) {
+    private void showErrorMsg(String message) {
         JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
     private void btnConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConnectActionPerformed
@@ -555,7 +555,7 @@ if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
                 }
 
             } catch (Exception ex) {
-ex.printStackTrace();
+                ex.printStackTrace();
                 showErrorMsg(ex.toString());
                 logger.error("Connection error " + ex.toString());
 
@@ -569,17 +569,17 @@ ex.printStackTrace();
     }//GEN-LAST:event_txtPin7KeyReleased
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
- if (uiHelper != null) {
+        if (uiHelper != null) {
             uiHelper.closeConnection();
         }        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
 
     private void btnSendToSerial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial1ActionPerformed
-uiHelper.writeToSerialPort(1,evt.getSource());        // TODO add your handling code here:
+        uiHelper.writeToSerialPort(1, evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_btnSendToSerial1ActionPerformed
 
     private void btnSendToSerial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial2ActionPerformed
-uiHelper.writeToSerialPort(2,evt.getSource());        // TODO add your handling code here:
+        uiHelper.writeToSerialPort(2, evt.getSource());        // TODO add your handling code here:
     }//GEN-LAST:event_btnSendToSerial2ActionPerformed
 
     /**

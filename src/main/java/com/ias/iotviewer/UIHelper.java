@@ -22,12 +22,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import net.sf.json.*;
+import org.apache.commons.lang.exception.ExceptionUtils;
 
 /**
  *
@@ -463,7 +465,7 @@ public class UIHelper {
             try {
                 socket.close();
             } catch (Exception ex) {
-                logger.error(ex);
+                logger.error(ExceptionUtils.getFullStackTrace(ex));
             }
         }
     }
@@ -498,7 +500,11 @@ public class UIHelper {
         ReqJsonArr.add(WritereqItem);
         ReqJson.put("commands", ReqJsonArr);
         
-        logger.info("tcp request write to pin " + ReqJson.toString());
+        txtFld.setText("");
+        JButton btn = getComponentByName(frame,"btnSendToSerial"+portNo);
+        btn.setEnabled(false);
+        
+        logger.info("tcp request write to serial port " + ReqJson.toString());
         
         try {
             out.println(ReqJson.toString());
@@ -516,7 +522,7 @@ public class UIHelper {
             }
             
         } catch (Exception ex) {
-            logger.error(ex);
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
     }
     
@@ -564,7 +570,7 @@ public class UIHelper {
             }
             
         } catch (Exception ex) {
-            logger.error(ex);
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
     }
     
@@ -616,7 +622,7 @@ public class UIHelper {
             }
             
         } catch (Exception ex) {
-            logger.error(ex);
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
     }
     
@@ -656,7 +662,7 @@ public class UIHelper {
             }
             
         } catch (Exception ex) {
-            logger.error(ex);
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
         
     }
