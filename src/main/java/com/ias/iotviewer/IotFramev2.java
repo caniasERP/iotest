@@ -576,11 +576,11 @@ public class IotFramev2 extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void btnSendToSerial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial1ActionPerformed
-        uiHelper.writeToSerialPort(1, evt.getSource());        // TODO add your handling code here:
+        uiHelper.writeToSerialPort(1);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSendToSerial1ActionPerformed
 
     private void btnSendToSerial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial2ActionPerformed
-        uiHelper.writeToSerialPort(2, evt.getSource());        // TODO add your handling code here:
+        uiHelper.writeToSerialPort(2);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSendToSerial2ActionPerformed
 
     /**

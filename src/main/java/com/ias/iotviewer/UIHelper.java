@@ -485,13 +485,13 @@ public class UIHelper {
         }
     }
     
-    public void writeToSerialPort(int portNo,Object obj)
+    public void writeToSerialPort(int portNo)
     {
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
         
-        JTextField txtFld = (JTextField)obj;
+        JTextField txtFld = (JTextField)getComponentByName(frame,"serTxt"+portNo);
         
         WritereqItem = new JSONObject();
         WritereqItem.put("cmd", "serial_write");
