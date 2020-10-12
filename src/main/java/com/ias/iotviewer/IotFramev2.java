@@ -547,7 +547,8 @@ public class IotFramev2 extends javax.swing.JFrame {
                         public void actionPerformed(ActionEvent e) {
 
                             uiHelper.sendAndReceive2();
-
+                            btnSendToSerial1.setEnabled(true);
+                            btnSendToSerial2.setEnabled(true);
                         }
                     });
                     timer.start();
