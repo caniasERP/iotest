@@ -222,12 +222,12 @@ public class UIHelper {
     }
 
     public void prepareScreen2() {
-        System.out.println(pinStates.size());
+       
         for (Integer c : pinStates.keySet()) {
 
             if (pinsList.contains(c)) {
                 String compName = "txtPin" + c;
-                System.out.println(compName);
+             
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
 
                 if (txtFld != null) {
