@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.net.Socket;
 import java.util.Arrays;
@@ -407,12 +408,15 @@ public class UIHelper {
                 //serial port read
                 if (readJson.get("data1") != null) {
                     String data1 = readJson.getString("data1");
+                    data1 = bytesToHex(data1.getBytes("ISO8859_9")).toString();
+                    
                     JTextField txt1 = getComponentByName(frame, "serTxt1");
                     txt1.setText(data1);
                 }
 
                 if (readJson.get("data2") != null) {
                     String data2 = readJson.getString("data2");
+                    data2 = bytesToHex(data2.getBytes("ISO8859_9")).toString();
                     JTextField txt2 = getComponentByName(frame, "serTxt2");
                     txt2.setText(data2);
                 }
@@ -490,12 +494,20 @@ public class UIHelper {
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
 
+        String dataToWrite="";
+        
         JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt" + portNo);
 
+        byte[] bytes = hexToBytes(txtFld.getText());
+        try {
+            dataToWrite = new String(bytes,"ISO8859_9");
+        } catch (Exception ex) {
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
+        }
         WritereqItem = new JSONObject();
         WritereqItem.put("cmd", "serial_write");
         WritereqItem.put("port", portNo);
-        WritereqItem.put("data", txtFld.getText());
+        WritereqItem.put("data", dataToWrite);
         ReqJsonArr.add(WritereqItem);
         ReqJson.put("commands", ReqJsonArr);
 
