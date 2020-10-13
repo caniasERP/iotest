@@ -222,12 +222,12 @@ public class UIHelper {
     }
 
     public void prepareScreen2() {
-       
+
         for (Integer c : pinStates.keySet()) {
 
             if (pinsList.contains(c)) {
                 String compName = "txtPin" + c;
-             
+
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
 
                 if (txtFld != null) {
@@ -626,7 +626,6 @@ public class UIHelper {
     }
 
     public void readSinglePin(int pinNo) {
-       
 
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
@@ -636,17 +635,17 @@ public class UIHelper {
         ReqJsonArr.add(ReadreqItem);
         ReqJson.put("commands", ReqJsonArr);
 
-        logger.info("tcp request read from pin #"+pinNo +" "+ ReqJson.toString());
+        logger.info("tcp request read from pin #" + pinNo + " " + ReqJson.toString());
 
         try {
             out.println(ReqJson.toString());
             String tcpReadResponse = in.readLine();
 
-            logger.info("tcp response read from pin #"+pinNo+" " + tcpReadResponse);
+            logger.info("tcp response read from pin #" + pinNo + " " + tcpReadResponse);
 
             JSONObject readJson = JSONObject.fromObject(tcpReadResponse);
 
-            if (readJson!=null && readJson.get("status")!=null && readJson.get("status").equals(0)) {
+            if (readJson != null && readJson.get("status") != null && readJson.get("status").equals(0)) {
                 JSONArray readArr = readJson.getJSONArray("pins");
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
@@ -712,6 +711,32 @@ public class UIHelper {
 
     private void showInfoMsg(String message) {
         JOptionPane.showMessageDialog(frame, message, "Information", JOptionPane.INFORMATION_MESSAGE);
+    }
+//used for reading data from serial port
+
+    public static StringBuffer bytesToHex(byte[] bytes) {
+        StringBuffer sb = new StringBuffer(bytes.length * 2);
+        String tmp;
+        for (int x = 0; x < bytes.length; x++) {
+            tmp = Integer.toHexString(0xff & bytes[x]).toUpperCase();
+            if (tmp.length() == 1) {
+                sb.append('0');
+            }
+            sb.append(tmp);
+
+        }
+        return sb;
+    }
+
+    //used for writing data to serial port
+    public static byte[] hexToBytes(String hex) {
+        byte[] bytes = new byte[hex.length() / 2];
+        for (int x = 0; x < bytes.length; x++) {
+            StringBuffer token;
+            token = new StringBuffer("00").append(hex.substring(x * 2, x * 2 + 2));
+            bytes[x] = (byte) Integer.parseInt(token.toString(), 16);
+        }
+        return bytes;
     }
 
     static public String getComponentVariableName(Object object) {
