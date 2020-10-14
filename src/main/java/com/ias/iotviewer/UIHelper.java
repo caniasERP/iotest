@@ -491,7 +491,7 @@ public class UIHelper {
 
         String dataToWrite = "";
 
-        JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt" + portNo);
+        JTextField txtFld = (JTextField) getComponentByName(frame, "serWTxt" + portNo);
 
         byte[] bytes = txtFld.getText().getBytes();
         try {
@@ -678,7 +678,9 @@ public class UIHelper {
     public void sendWriteOnChange(Object obj) {
 
         JTextField txtFld = (JTextField) obj;
-        int value = Integer.parseInt(txtFld.getText());
+        String value = txtFld.getText();
+        byte[] bytes = value.getBytes();
+        String data = new String(bytes,StandardCharsets.US_ASCII);
         String vName = getComponentVariableName(txtFld);
         int pin = Integer.parseInt(vName.replace("txtPin", ""));
 
