@@ -121,7 +121,7 @@ public class IotFramev2 extends javax.swing.JFrame {
 
         srvPort.setName("dvcPort"); // NOI18N
 
-        jLabel6.setText("Read/Write Period (m/s):");
+        jLabel6.setText("Pin Read Period (m/s):");
 
         btnConnect.setText("Connect");
         btnConnect.addActionListener(new java.awt.event.ActionListener() {

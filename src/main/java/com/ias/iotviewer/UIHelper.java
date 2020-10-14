@@ -683,7 +683,7 @@ public class UIHelper {
         String data = new String(bytes,StandardCharsets.US_ASCII);
         String vName = getComponentVariableName(txtFld);
         int pin = Integer.parseInt(vName.replace("txtPin", ""));
-
+        int sendData = Integer.parseInt(value);
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
@@ -691,7 +691,7 @@ public class UIHelper {
         WritereqItem = new JSONObject();
         WritereqItem.put("cmd", "set");
         WritereqItem.put("pin", pin);
-        WritereqItem.put("value", value);
+        WritereqItem.put("value", sendData);
         ReqJsonArr.add(WritereqItem);
         ReqJson.put("commands", ReqJsonArr);
 
