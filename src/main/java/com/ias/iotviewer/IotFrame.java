@@ -1875,7 +1875,7 @@ public class IotFrame extends javax.swing.JFrame {
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
                     
-                    uiHelper = new UIHelper(this, jPanel1, socket);
+                    uiHelper = new UIHelper(this, jPanel1, socket,null);
                     
                     uiHelper.getPinStates();                    
                     uiHelper.sendAndReceive();

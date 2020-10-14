@@ -5,22 +5,19 @@
  */
 package com.ias.iotviewer;
 
+import static com.ias.iotviewer.UIHelper.logger;
 import java.awt.Component;
-import java.awt.Container;
 import java.awt.Window;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.prefs.Preferences;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -41,26 +38,35 @@ public class UIHelper {
     private JFrame frame;
     private JPanel panel;
     private Socket socket;
+    private Socket socketForIntSerial;
     private Hashtable<Integer, Integer> readValues;
     private Hashtable<Integer, Integer> writeValues;
     private Hashtable<Integer, Integer> pinStates;
     private PrintWriter out;
     private BufferedReader in;
     private Integer[] pinsV2 = {13, 19, 21, 22, 23, 24, 26, 32};
+    final Integer[] interruptPins = {7, 12};
     List<Integer> pinsList = Arrays.asList(pinsV2);
+    static MyRunnable myRunnable;
 
     final static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger("UIHelper");
+    Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.UIHelper.class);
 
-    public UIHelper(JFrame frame, JPanel panel, Socket socket) {
+    public UIHelper(JFrame frame, JPanel panel, Socket socket, Socket socketForIntSerial) {
         this.frame = frame;
         this.panel = panel;
         this.socket = socket;
+        this.socketForIntSerial = socketForIntSerial;
         readValues = new Hashtable<Integer, Integer>();
         writeValues = new Hashtable<Integer, Integer>();
         pinStates = new Hashtable<Integer, Integer>();
+        myRunnable = new MyRunnable(socketForIntSerial, this);
+
         try {
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            startCheckInterruptAndSerial();
         } catch (Exception ex) {
             logger.error(ex);
         }
@@ -305,10 +311,6 @@ public class UIHelper {
             ReadreqItem2.put("pins", ReadReqJsonArr);
 
             ReadReqJsonArr3.add(ReadreqItem2);
-
-            JSONObject ReadreqItem3 = new JSONObject();
-            ReadreqItem3.put("cmd", "serial_read");
-            ReadReqJsonArr3.add(ReadreqItem3);
             ReadReqJson.put("commands", ReadReqJsonArr3);
 
             logger.info("sent json (for read) : " + ReadReqJson.toString());
@@ -405,22 +407,7 @@ public class UIHelper {
                     }
                 }
 
-                //serial port read
-                if (readJson.get("data1") != null) {
-                    String data1 = readJson.getString("data1");
-                    data1 = bytesToHex(data1.getBytes("ISO8859_9")).toString();
-                    
-                    JTextField txt1 = getComponentByName(frame, "serTxt1");
-                    txt1.setText(data1);
-                }
-
-                if (readJson.get("data2") != null) {
-                    String data2 = readJson.getString("data2");
-                    data2 = bytesToHex(data2.getBytes("ISO8859_9")).toString();
-                    JTextField txt2 = getComponentByName(frame, "serTxt2");
-                    txt2.setText(data2);
-                }
-                //serial port read
+                
             } else {
                 JSONObject errJson = readJson.getJSONObject("error");
                 logger.error("read error " + errJson.get("detail") + "-" + errJson.get("message"));
@@ -449,6 +436,8 @@ public class UIHelper {
     }
 
     public void closeConnection() {
+
+        myRunnable.doStop();
 
         if (socket != null) {
             if (in != null) {
@@ -494,13 +483,13 @@ public class UIHelper {
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
 
-        String dataToWrite="";
-        
+        String dataToWrite = "";
+
         JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt" + portNo);
 
         byte[] bytes = hexToBytes(txtFld.getText());
         try {
-            dataToWrite = new String(bytes,"ISO8859_9");
+            dataToWrite = new String(bytes, "ISO8859_9");
         } catch (Exception ex) {
             logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
@@ -724,8 +713,16 @@ public class UIHelper {
     private void showInfoMsg(String message) {
         JOptionPane.showMessageDialog(frame, message, "Information", JOptionPane.INFORMATION_MESSAGE);
     }
-//used for reading data from serial port
 
+
+    public static void startCheckInterruptAndSerial() {
+
+        Thread thread;
+        thread = new Thread(myRunnable);
+        thread.setName("IAS-Checking Interrupts and Serial Ports");
+        thread.start();
+    }
+//used for reading data from serial port
     public static StringBuffer bytesToHex(byte[] bytes) {
         StringBuffer sb = new StringBuffer(bytes.length * 2);
         String tmp;
@@ -847,5 +844,93 @@ public class UIHelper {
 
         // no match found
         return null;
+    }
+
+    public void handleInterruptAndSerial(String response) {
+        try {
+            logger.info("received response (for checking Int/Serial) : " + response);
+            JSONObject respJson = JSONObject.fromObject(response);
+
+            if (!respJson.isEmpty()) {
+                if (respJson.get("status").equals(0)) {
+                    if(respJson.has("SerialA"))
+                    {
+                        String data = respJson.getString("SerialA");
+                        data = bytesToHex(data.getBytes("ISO8859_9")).toString();
+
+                        JTextField txtFld = (JTextField)getComponentByName(frame,"serTxt1");
+                        txtFld.setText(data);
+                    }
+                    if(respJson.has("SerialB"))
+                    {
+                        String data = respJson.getString("SerialB");
+                        data = bytesToHex(data.getBytes("ISO8859_9")).toString();
+
+                        JTextField txtFld = (JTextField)getComponentByName(frame,"serTxt2");
+                        txtFld.setText(data);
+                    }
+                    if(respJson.has("int7")){
+                        int value = (Integer) respJson.get("int7");
+                        JTextField txtFld = (JTextField)getComponentByName(frame,"txtPin7");
+                        txtFld.setText(value+"");
+                    }
+                    if(respJson.has("int12")){
+                        int value = (Integer) respJson.get("int12");
+                        JTextField txtFld = (JTextField)getComponentByName(frame,"txtPin12");
+                        txtFld.setText(value+"");
+                    }
+                } else {
+
+                    JSONObject errJson = respJson.getJSONObject("error");
+                    logger.error("check Interrupt/Serial error " + errJson.get("detail") + "-" + errJson.get("message"));
+
+                }
+            }
+        } catch (Exception ex) {
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
+        }
+    }
+}
+
+class MyRunnable implements Runnable {
+
+    private boolean doStop = false;
+    private Socket socket;
+
+    private BufferedReader in;
+    private UIHelper uiHelper;
+    final static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger("MyRunnable");
+
+    public MyRunnable(Socket socket, UIHelper uiHelper) {
+        try {
+            this.socket = socket;
+            this.uiHelper = uiHelper;
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (Exception ex) {
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
+        }
+    }
+
+    public synchronized void doStop() {
+        this.doStop = true;
+    }
+
+    private synchronized boolean keepRunning() {
+        return this.doStop == false;
+    }
+
+    @Override
+    public void run() {
+        while (keepRunning()) {
+            try {
+                String tcpResponse = in.readLine();
+                if (tcpResponse != null && !"".equals(tcpResponse)) {
+                    uiHelper.handleInterruptAndSerial(tcpResponse);
+                }
+            } catch (Exception ex) {
+                logger.error(ExceptionUtils.getFullStackTrace(ex));
+            }
+
+        }
     }
 }

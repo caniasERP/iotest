@@ -10,8 +10,6 @@ import java.awt.event.ActionListener;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
-import java.util.Arrays;
-import java.util.List;
 import java.util.prefs.Preferences;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
@@ -28,6 +26,7 @@ public class IotFramev2 extends javax.swing.JFrame {
     private int servicePort;
     private int period;
     private Socket socket;
+    private Socket interruptSerialSocket;
     private UIHelper uiHelper;
     private Timer timer;
 
@@ -35,10 +34,12 @@ public class IotFramev2 extends javax.swing.JFrame {
     private final String PREF_IOTBOX_PORT = "IotBoxPort";
     private final String PREF_PERIOD = "IotBoxPeriod";
 
-    final Integer[] interruptPins = {7, 12};
+    private final int INT_SERIAL_PORT=5556;
+    
+    
 
     final static Logger logger = Logger.getLogger("IotFramev2");
-    Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFrame.class);
+    Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFramev2.class);
 
     /**
      * Creates new form IotFramev2
@@ -536,7 +537,11 @@ public class IotFramev2 extends javax.swing.JFrame {
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
 
-                    uiHelper = new UIHelper(this, jPanel1, socket);
+                    SocketAddress sockaddr2 = new InetSocketAddress(srvIP.getText(),INT_SERIAL_PORT);
+                    interruptSerialSocket = new Socket();
+                    interruptSerialSocket.connect(sockaddr2, 15000);
+
+                    uiHelper = new UIHelper(this, jPanel1, socket, interruptSerialSocket);
 
                     uiHelper.getPinStates2();
                     uiHelper.sendAndReceive2();
@@ -553,18 +558,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                     });
                     timer.start();
 
-                    for (int i = 0; i < interruptPins.length; i++) {
-                        final int i2 = i;
-                        Timer timer;
-                        timer = new Timer(period, new ActionListener() {
-                        
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                uiHelper.readSinglePin(interruptPins[i2]);
-                            }
-                        });
-                        timer.start();
-                    }
+                    
                 }
 
             } catch (Exception ex) {
