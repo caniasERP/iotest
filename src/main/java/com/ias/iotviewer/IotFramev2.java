@@ -226,10 +226,10 @@ public class IotFramev2 extends javax.swing.JFrame {
         });
 
         jLabel7.setLabelFor(serTxt2);
-        jLabel7.setText("#B");
+        jLabel7.setText("Serial #B");
 
         jLabel8.setLabelFor(serTxt1);
-        jLabel8.setText("#A");
+        jLabel8.setText("Serial #A");
 
         jLabel10.setText("#7");
 
@@ -434,7 +434,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
