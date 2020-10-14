@@ -7,6 +7,7 @@ package com.ias.iotviewer;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
@@ -34,9 +35,7 @@ public class IotFramev2 extends javax.swing.JFrame {
     private final String PREF_IOTBOX_PORT = "IotBoxPort";
     private final String PREF_PERIOD = "IotBoxPeriod";
 
-    private final int INT_SERIAL_PORT=5556;
-    
-    
+    private final int INT_SERIAL_PORT = 5556;
 
     final static Logger logger = Logger.getLogger("IotFramev2");
     Preferences prefs = Preferences.userNodeForPackage(com.ias.iotviewer.IotFramev2.class);
@@ -492,13 +491,27 @@ public class IotFramev2 extends javax.swing.JFrame {
     private void serTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt1KeyTyped
         if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
             evt.consume();
-        }        // TODO add your handling code here:
+        }
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == KeyEvent.VK_BACK_SPACE)
+                || (c == KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }
     }//GEN-LAST:event_serTxt1KeyTyped
 
     private void serTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt2KeyTyped
         if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
             evt.consume();
-        }           // TODO add your handling code here:
+        }          
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == KeyEvent.VK_BACK_SPACE)
+                || (c == KeyEvent.VK_DELETE))) {
+            getToolkit().beep();
+            evt.consume();
+        }
     }//GEN-LAST:event_serTxt2KeyTyped
 
     private void showErrorMsg(String message) {
@@ -537,7 +550,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                     srvPort.setEnabled(false);
                     txtPeriod.setEnabled(false);
 
-                    SocketAddress sockaddr2 = new InetSocketAddress(srvIP.getText(),INT_SERIAL_PORT);
+                    SocketAddress sockaddr2 = new InetSocketAddress(srvIP.getText(), INT_SERIAL_PORT);
                     interruptSerialSocket = new Socket();
                     interruptSerialSocket.connect(sockaddr2, 15000);
 
@@ -558,7 +571,6 @@ public class IotFramev2 extends javax.swing.JFrame {
                     });
                     timer.start();
 
-                    
                 }
 
             } catch (Exception ex) {

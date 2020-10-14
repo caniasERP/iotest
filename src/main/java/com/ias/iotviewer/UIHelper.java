@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.lang.reflect.Field;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -231,9 +232,8 @@ public class UIHelper {
     public void prepareScreen2() {
 
         for (Integer c : pinStates.keySet()) {
-
+            String compName = "txtPin" + c;
             if (pinsList.contains(c)) {
-                String compName = "txtPin" + c;
 
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
 
@@ -245,6 +245,13 @@ public class UIHelper {
                         txtFld.setEnabled(true);
 
                     }
+                }
+            } else {
+                JTextField txtFld = (JTextField) getComponentByName(frame, compName);
+                if (txtFld != null) {
+
+                    txtFld.setEnabled(false);
+
                 }
             }
 
@@ -407,13 +414,12 @@ public class UIHelper {
                     }
                 }
 
-                
             } else {
                 JSONObject errJson = readJson.getJSONObject("error");
                 logger.error("read error " + errJson.get("detail") + "-" + errJson.get("message"));
             }
         } catch (Exception ex) {
-            logger.error(ex);
+            logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
 
     }
@@ -487,9 +493,9 @@ public class UIHelper {
 
         JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt" + portNo);
 
-        byte[] bytes = hexToBytes(txtFld.getText());
+        byte[] bytes = txtFld.getText().getBytes();
         try {
-            dataToWrite = new String(bytes, "ISO8859_9");
+            dataToWrite = new String(bytes, StandardCharsets.UTF_8);
         } catch (Exception ex) {
             logger.error(ExceptionUtils.getFullStackTrace(ex));
         }
@@ -714,7 +720,6 @@ public class UIHelper {
         JOptionPane.showMessageDialog(frame, message, "Information", JOptionPane.INFORMATION_MESSAGE);
     }
 
-
     public static void startCheckInterruptAndSerial() {
 
         Thread thread;
@@ -723,6 +728,7 @@ public class UIHelper {
         thread.start();
     }
 //used for reading data from serial port
+
     public static StringBuffer bytesToHex(byte[] bytes) {
         StringBuffer sb = new StringBuffer(bytes.length * 2);
         String tmp;
@@ -853,31 +859,31 @@ public class UIHelper {
 
             if (!respJson.isEmpty()) {
                 if (respJson.get("status").equals(0)) {
-                    if(respJson.has("SerialA"))
-                    {
+                    if (respJson.has("SerialA")) {
                         String data = respJson.getString("SerialA");
-                        data = bytesToHex(data.getBytes("ISO8859_9")).toString();
+                        byte[] bytes = data.getBytes();
+                        String dataEncoded = new String(bytes, StandardCharsets.UTF_8);
 
-                        JTextField txtFld = (JTextField)getComponentByName(frame,"serTxt1");
-                        txtFld.setText(data);
+                        JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt1");
+                        txtFld.setText(dataEncoded);
                     }
-                    if(respJson.has("SerialB"))
-                    {
+                    if (respJson.has("SerialB")) {
                         String data = respJson.getString("SerialB");
-                        data = bytesToHex(data.getBytes("ISO8859_9")).toString();
+                        byte[] bytes = data.getBytes();
+                        String dataEncoded = new String(bytes, StandardCharsets.UTF_8);
 
-                        JTextField txtFld = (JTextField)getComponentByName(frame,"serTxt2");
-                        txtFld.setText(data);
+                        JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt2");
+                        txtFld.setText(dataEncoded);
                     }
-                    if(respJson.has("int7")){
+                    if (respJson.has("int7")) {
                         int value = (Integer) respJson.get("int7");
-                        JTextField txtFld = (JTextField)getComponentByName(frame,"txtPin7");
-                        txtFld.setText(value+"");
+                        JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin7");
+                        txtFld.setText(value + "");
                     }
-                    if(respJson.has("int12")){
+                    if (respJson.has("int12")) {
                         int value = (Integer) respJson.get("int12");
-                        JTextField txtFld = (JTextField)getComponentByName(frame,"txtPin12");
-                        txtFld.setText(value+"");
+                        JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin12");
+                        txtFld.setText(value + "");
                     }
                 } else {
 
