@@ -588,7 +588,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                     uiHelper = new UIHelper(this, jPanel1, socket, interruptSerialSocket);
 
                     uiHelper.getPinStates2();
-                    uiHelper.sendAndReceive2();
+                    uiHelper.checkAllPins();
 
                     timer = new Timer(period, new ActionListener() {
 

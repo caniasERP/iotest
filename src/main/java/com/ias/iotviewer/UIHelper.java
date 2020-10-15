@@ -7,6 +7,7 @@ package com.ias.iotviewer;
 
 import static com.ias.iotviewer.UIHelper.logger;
 import java.awt.Component;
+import java.awt.Font;
 import java.awt.Window;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -45,9 +46,13 @@ public class UIHelper {
     private Hashtable<Integer, Integer> pinStates;
     private PrintWriter out;
     private BufferedReader in;
+    private Integer[] allPins = {7, 12, 13, 19, 21, 22, 23, 24, 26, 32};
     private Integer[] pinsV2 = {13, 19, 21, 22, 23, 24, 26, 32};
+    private Integer[] optPins = {13, 22, 26, 32};
     final Integer[] interruptPins = {7, 12};
+    final Integer[] doutPins = {19, 21, 23, 24};
     List<Integer> pinsList = Arrays.asList(pinsV2);
+    List<Integer> pinsList2 = Arrays.asList(allPins);
     static MyRunnable myRunnable;
 
     final static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger("UIHelper");
@@ -240,7 +245,7 @@ public class UIHelper {
                 if (txtFld != null) {
                     if (pinStates.get(c) != 1) {
                         txtFld.setEnabled(false);
-
+                        txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
                     } else {
                         txtFld.setEnabled(true);
 
@@ -251,7 +256,7 @@ public class UIHelper {
                 if (txtFld != null) {
 
                     txtFld.setEnabled(false);
-
+                    txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
                 }
             }
 
@@ -296,6 +301,60 @@ public class UIHelper {
 
     }
 
+    public void checkAllPins() {
+
+        try {
+
+            //reading pins
+            JSONObject ReadReqJson = new JSONObject();
+            JSONArray ReadReqJsonArr = new JSONArray();
+            JSONArray ReadReqJsonArr2 = new JSONArray();
+            JSONArray ReadReqJsonArr3 = new JSONArray();
+
+            for (int i = 0; i < allPins.length; i++) {
+
+                ReadReqJsonArr.add(allPins[i]);
+            }
+
+            JSONObject ReadreqItem2 = new JSONObject();
+            ReadreqItem2.put("cmd", "get");
+            ReadReqJsonArr2.add(ReadreqItem2);
+
+            ReadreqItem2.put("pins", ReadReqJsonArr);
+
+            ReadReqJsonArr3.add(ReadreqItem2);
+            ReadReqJson.put("commands", ReadReqJsonArr3);
+
+            logger.info("sent json (for read) : " + ReadReqJson.toString());
+
+            out.println(ReadReqJson.toString());
+            String tcpReadResponse = in.readLine();
+
+            logger.info("received json (for read) " + tcpReadResponse);
+
+            JSONObject readJson = JSONObject.fromObject(tcpReadResponse);
+
+            if (readJson.get("status").equals(0)) {
+                JSONArray readArr = readJson.getJSONArray("values");
+                if (readArr != null && readArr.size() > 0) {
+                    for (int i = 0; i < readArr.size(); i++) {
+                        readValues.put(allPins[i], (Integer) readArr.get(i));
+                    }
+                }
+
+                refreshUI2();
+
+            } else {
+                JSONObject errJson = readJson.getJSONObject("error");
+                logger.error("read error " + errJson.get("detail") + "-" + errJson.get("message"));
+            }
+
+        } catch (Exception ex) {
+            logger.error(ex);
+        }
+
+    }
+
     private void sendToService2() {
 
         try {
@@ -306,9 +365,9 @@ public class UIHelper {
             JSONArray ReadReqJsonArr2 = new JSONArray();
             JSONArray ReadReqJsonArr3 = new JSONArray();
 
-            for (int i = 0; i < 40; i++) {
+            for (int i = 0; i < optPins.length; i++) {
 
-                ReadReqJsonArr.add(i + 1);
+                ReadReqJsonArr.add(optPins[i]);
             }
 
             JSONObject ReadreqItem2 = new JSONObject();
@@ -358,7 +417,7 @@ public class UIHelper {
     private void refreshUI2() {
         for (Integer c : readValues.keySet()) {
 
-            if (pinsList.contains(c)) {
+            if (pinsList2.contains(c)) {
                 String compName = "txtPin" + c;
 
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
@@ -368,7 +427,7 @@ public class UIHelper {
 
                         txtFld.setText(readValues.get(c).toString());
                     } else {
-
+                        txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
                         txtFld.setEnabled(false);
 
                     }
@@ -410,7 +469,7 @@ public class UIHelper {
                 JSONArray readArr = readJson.getJSONArray("values");
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
-                        readValues.put(i + 1, (Integer) readArr.get(i));
+                        readValues.put(optPins[i], (Integer) readArr.get(i));
                     }
                 }
 
@@ -680,7 +739,7 @@ public class UIHelper {
         JTextField txtFld = (JTextField) obj;
         String value = txtFld.getText();
         byte[] bytes = value.getBytes();
-        String data = new String(bytes,StandardCharsets.US_ASCII);
+        String data = new String(bytes, StandardCharsets.US_ASCII);
         String vName = getComponentVariableName(txtFld);
         int pin = Integer.parseInt(vName.replace("txtPin", ""));
         int sendData = Integer.parseInt(value);
