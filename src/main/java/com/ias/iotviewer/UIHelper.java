@@ -221,10 +221,10 @@ public class UIHelper {
             JTextField txtFld = (JTextField) getComponentByName(frame, compName);
 
             if (pinStates.get(c) != 1) {
-                txtFld.setEnabled(false);
+                txtFld.setEditable(false);
                 rbName = rbName + "R";
             } else {
-                txtFld.setEnabled(true);
+                txtFld.setEditable(true);
                 rbName = rbName + "W";
             }
 
@@ -244,10 +244,10 @@ public class UIHelper {
 
                 if (txtFld != null) {
                     if (pinStates.get(c) != 1) {
-                        txtFld.setEnabled(false);
-                        txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
+                        txtFld.setEditable(false);
+                        //txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
                     } else {
-                        txtFld.setEnabled(true);
+                        txtFld.setEditable(true);
 
                     }
                 }
@@ -255,8 +255,8 @@ public class UIHelper {
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
                 if (txtFld != null) {
 
-                    txtFld.setEnabled(false);
-                    txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
+                    txtFld.setEditable(false);
+                    //txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
                 }
             }
 
@@ -402,7 +402,7 @@ public class UIHelper {
                 txtFld.setText(readValues.get(c).toString());
             } else {
                 JTextField txtFld = (JTextField) getComponentByName(frame, compName);
-                txtFld.setEnabled(false);
+                txtFld.setEditable(false);
                 JRadioButton rbR = (JRadioButton) getComponentByName(frame, "rb" + c + "R");
                 rbR.setEnabled(false);
 
@@ -427,8 +427,9 @@ public class UIHelper {
 
                         txtFld.setText(readValues.get(c).toString());
                     } else {
-                        txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
-                        txtFld.setEnabled(false);
+                        //txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
+                        txtFld.setEditable(false);
+                        //txtFld.setEnabled(false);
 
                     }
                 }
@@ -625,7 +626,7 @@ public class UIHelper {
 
                         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pin);
                         txtFld.setText(value + "");
-                        txtFld.setEnabled(false);
+                        txtFld.setEditable(false);
 
                     }
                 }
@@ -674,7 +675,7 @@ public class UIHelper {
                         int value = (Integer) jsItem.get("value");
 
                         txtFld.setText(value + "");
-                        txtFld.setEnabled(true);
+                        txtFld.setEditable(true);
 
                     }
                 }
@@ -720,7 +721,7 @@ public class UIHelper {
 
                         JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin" + pinNo);
                         txtFld.setText(value + "");
-                        txtFld.setEnabled(false);
+                        txtFld.setEditable(false);
 
                     }
                 }

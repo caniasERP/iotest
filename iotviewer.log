@@ -3,3 +3,543 @@
 2020-10-08 12:17:05 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:22222222
 2020-10-08 12:17:21 ERROR IotFrame:1753 - Connection error java.net.ConnectException: Connection refused: connect
 2020-10-08 12:20:01 ERROR IotFrame:1753 - Connection error java.lang.IllegalArgumentException: port out of range:222222
+2020-10-15 23:48:25 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-15 23:48:25 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:48:25 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:48:25 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-15 23:48:25 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-15 23:48:30 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:48:30 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:48:35 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:48:35 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:48:40 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:48:40 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:48:45 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:48:45 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:53:21 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-15 23:53:22 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:53:22 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:53:22 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-15 23:53:22 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-15 23:53:27 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:53:27 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:57:48 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-15 23:57:48 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:57:48 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:57:48 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-15 23:57:48 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-15 23:57:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-15 23:57:54 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-15 23:59:20 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-15 23:59:20 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:59:20 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:59:20 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-15 23:59:20 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-15 23:59:48 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-15 23:59:48 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:59:48 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-15 23:59:48 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-15 23:59:48 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:00:13 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:00:13 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:00:13 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:00:13 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:00:13 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:00:18 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:00:18 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:00:48 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:00:48 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:00:48 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:00:48 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:00:48 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:01:28 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:01:28 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:01:28 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:01:28 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:01:28 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:02:35 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:02:36 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:02:36 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:02:36 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:02:36 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:02:41 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:02:41 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:03:11 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:03:11 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:03:11 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:03:11 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:03:11 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:03:16 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:03:16 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:03:21 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:03:21 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:03:26 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:03:26 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:06:01 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:06:01 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:06:01 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:06:01 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:06:01 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:06:06 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:06:06 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:06:11 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:06:11 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:21 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:08:21 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:08:21 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:08:21 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:08:21 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:08:26 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:26 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:31 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:31 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:36 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:36 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:44 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:08:44 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:08:44 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:08:44 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:08:44 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:08:49 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:50 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:54 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:08:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:08:59 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:09:04 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:09:05 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:10:20 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:10:20 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:10:20 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:10:20 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:10:20 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:10:25 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:10:25 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:15:04 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:15:04 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:15:04 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:15:04 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:15:04 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:15:09 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:15:09 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:15:14 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:15:14 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:16:09 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:16:09 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:16:09 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:16:09 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:16:09 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:16:49 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:16:49 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:16:49 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:16:49 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:16:49 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:16:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:16:54 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:16:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:16:59 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:17:04 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:17:04 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:17:09 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:17:09 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:17:14 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:17:14 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:17:19 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:17:19 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:18:27 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:18:27 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:18:27 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:18:27 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:18:27 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:18:32 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:18:32 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:18:37 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:18:37 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:18:42 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:18:42 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:19:37 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:19:37 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:19:37 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:19:37 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:19:37 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:19:42 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:19:42 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:21:48 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:21:48 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:21:48 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:21:49 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:21:49 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:21:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:21:54 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:21:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:21:59 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:04 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:04 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:09 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:09 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:14 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:14 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:19 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:19 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:24 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:24 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:29 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:29 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:34 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:34 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:39 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:39 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:22:44 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:22:44 INFO  UIHelper:463 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:23:20 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:23:20 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:23:20 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:23:20 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:23:20 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:26:34 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:26:34 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:26:34 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:26:34 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:26:34 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:26:39 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:26:39 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:26:44 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:26:44 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:26:49 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:26:49 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:26:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:26:54 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:26:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:26:59 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:27:14 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:27:14 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:27:14 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:27:14 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:27:14 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:28:15 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:28:15 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:28:15 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:28:15 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:28:15 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:28:20 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:28:20 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:28:25 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:28:25 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:16 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:29:16 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:29:16 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:29:16 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:29:16 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:29:21 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:21 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:26 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:26 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:31 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:31 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:36 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:36 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:41 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:41 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:29:46 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:29:46 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:31:08 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:31:08 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:31:08 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:31:08 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:31:08 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:31:13 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:31:13 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:31:18 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:31:18 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:31:23 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:31:23 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:31:28 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:31:28 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:36:56 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:36:56 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:36:56 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:36:56 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:36:56 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:37:01 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:37:01 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:37:06 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:37:06 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:37:11 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:37:11 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:21 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:38:21 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:38:21 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:38:21 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:38:21 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:38:26 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":1}]}
+2020-10-16 00:38:26 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:26 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:38:26 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:26 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:31 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:31 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:32 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":0}]}
+2020-10-16 00:38:32 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:32 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:38:36 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:36 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:41 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:41 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:44 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":1}]}
+2020-10-16 00:38:44 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:44 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:38:46 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:46 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:49 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":0}]}
+2020-10-16 00:38:49 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:49 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:38:51 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:51 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:53 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":1}]}
+2020-10-16 00:38:53 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:53 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:38:56 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:38:56 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:38:59 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":0}]}
+2020-10-16 00:38:59 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:38:59 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:39:01 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:39:01 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:39:06 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:39:06 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:39:11 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:39:11 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:40:56 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:40:56 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:40:56 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:40:56 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:40:56 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,0,0,0]}
+2020-10-16 00:41:01 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:41:01 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:41:01 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":24,"value":1}]}
+2020-10-16 00:41:01 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:41:01 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:41:06 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:41:06 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:41:11 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:41:11 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:41:16 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:41:16 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:42:56 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:42:56 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:42:56 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:42:56 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:42:56 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,0,0,0,1,0,0]}
+2020-10-16 00:43:01 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:01 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:02 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":19,"value":1}]}
+2020-10-16 00:43:02 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:43:02 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:43:04 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":21,"value":1}]}
+2020-10-16 00:43:04 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:43:04 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:43:06 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":19,"value":0}]}
+2020-10-16 00:43:06 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:43:06 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:43:06 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:06 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:07 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":23,"value":1}]}
+2020-10-16 00:43:07 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:43:07 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:43:11 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:11 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:13 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":7,"value":0}]}
+2020-10-16 00:43:13 INFO  UIHelper:763 - tcp response write to pin {"error":{"detail":"Pin(7) must be output mode(0)","lastcommand":{"cmd":"set","pin":7,"value":0},"message":"exception occured"},"status":-2}
+2020-10-16 00:43:13 ERROR UIHelper:772 - write to pin error Pin(7) must be output mode(0)-exception occured
+2020-10-16 00:43:13 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":7,"value":0}]}
+2020-10-16 00:43:13 INFO  UIHelper:763 - tcp response write to pin {"error":{"detail":"Pin(7) must be output mode(0)","lastcommand":{"cmd":"set","pin":7,"value":0},"message":"exception occured"},"status":-2}
+2020-10-16 00:43:13 ERROR UIHelper:772 - write to pin error Pin(7) must be output mode(0)-exception occured
+2020-10-16 00:43:14 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":12,"value":0}]}
+2020-10-16 00:43:14 INFO  UIHelper:763 - tcp response write to pin {"error":{"detail":"Pin(12) must be output mode(0)","lastcommand":{"cmd":"set","pin":12,"value":0},"message":"exception occured"},"status":-2}
+2020-10-16 00:43:14 ERROR UIHelper:772 - write to pin error Pin(12) must be output mode(0)-exception occured
+2020-10-16 00:43:15 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":12,"value":0}]}
+2020-10-16 00:43:15 INFO  UIHelper:763 - tcp response write to pin {"error":{"detail":"Pin(12) must be output mode(0)","lastcommand":{"cmd":"set","pin":12,"value":0},"message":"exception occured"},"status":-2}
+2020-10-16 00:43:15 ERROR UIHelper:772 - write to pin error Pin(12) must be output mode(0)-exception occured
+2020-10-16 00:43:16 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:16 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:21 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:21 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:26 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:26 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:31 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:31 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:36 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:36 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:41 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:41 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:46 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:46 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:51 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:51 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:43:56 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:43:56 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:46:42 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:46:42 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:46:42 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:46:42 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:46:42 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:46:47 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:46:47 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:46:52 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:46:52 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:46:57 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:46:57 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:47:02 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:47:02 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:47:07 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:47:07 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:47:15 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:47:15 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:47:15 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:47:15 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:47:15 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:47:20 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:47:20 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:47:25 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:47:25 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:47:30 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:47:30 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:49:28 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:49:28 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:49:28 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:49:28 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:49:28 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:49:33 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:49:33 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:49:38 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:49:38 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:49:43 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:49:43 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:53:54 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:53:54 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:53:54 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:53:54 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:53:54 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:53:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:53:59 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:54:07 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:54:07 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:54:07 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:54:07 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:54:07 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:54:12 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:54:12 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:54:54 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:54:54 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:54:54 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:54:54 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:54:54 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:54:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:54:59 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:04 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:04 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:09 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:09 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:14 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:14 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:19 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:19 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:24 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:24 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:29 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:29 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:34 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:34 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:39 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:39 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:44 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:44 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:49 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:49 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:54 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:55:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:55:59 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:18 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:56:18 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:56:18 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:56:18 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:56:18 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:56:24 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:24 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:29 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:29 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:34 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:34 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:39 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:39 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:44 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:44 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:49 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:49 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:53 INFO  UIHelper:187 - checking pins state : sent json : {"commands":[{"cmd":"mode","pins":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}]}
+2020-10-16 00:56:53 INFO  UIHelper:193 - checking pins state : received tcp response {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:56:53 INFO  UIHelper:196 - checking pins state : received json : {"modes":[-1,-1,2,-1,2,-1,0,2,-1,2,0,0,0,-1,3,0,-1,0,1,-1,1,0,1,1,-1,0,3,3,2,-1,0,0,0,-1,3,0,-1,-1,-1,-1],"status":0}
+2020-10-16 00:56:53 INFO  UIHelper:328 - sent json (for read) : {"commands":[{"cmd":"get","pins":[7,12,13,19,21,22,23,24,26,32]}]}
+2020-10-16 00:56:53 INFO  UIHelper:333 - received json (for read) {"status":0,"values":[0,0,0,0,1,0,1,1,0,0]}
+2020-10-16 00:56:54 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:54 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:57 INFO  UIHelper:573 - tcp request write to serial port {"commands":[{"cmd":"serial_write","port":1,"data":"ssdasdasd"}]}
+2020-10-16 00:56:57 INFO  UIHelper:578 - tcp response write to pin {"status":0}
+2020-10-16 00:56:57 INFO  UIHelper:583 - write to serial port 1 ok
+2020-10-16 00:56:58 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:58 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:56:59 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:56:59 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:02 INFO  UIHelper:573 - tcp request write to serial port {"commands":[{"cmd":"serial_write","port":2,"data":"asdasdasd"}]}
+2020-10-16 00:57:02 INFO  UIHelper:578 - tcp response write to pin {"status":0}
+2020-10-16 00:57:02 INFO  UIHelper:583 - write to serial port 2 ok
+2020-10-16 00:57:03 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:03 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:04 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:04 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:08 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:08 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:09 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:09 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:13 INFO  UIHelper:573 - tcp request write to serial port {"commands":[{"cmd":"serial_write","port":1,"data":"qwwqqwqw"}]}
+2020-10-16 00:57:13 INFO  UIHelper:578 - tcp response write to pin {"status":0}
+2020-10-16 00:57:13 INFO  UIHelper:583 - write to serial port 1 ok
+2020-10-16 00:57:13 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:13 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:14 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:14 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:17 INFO  UIHelper:573 - tcp request write to serial port {"commands":[{"cmd":"serial_write","port":2,"data":"qwqwqw"}]}
+2020-10-16 00:57:17 INFO  UIHelper:578 - tcp response write to pin {"status":0}
+2020-10-16 00:57:17 INFO  UIHelper:583 - write to serial port 2 ok
+2020-10-16 00:57:18 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:18 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:19 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:19 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:23 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":21,"value":1}]}
+2020-10-16 00:57:23 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:57:23 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:57:23 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:23 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:24 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:24 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:25 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":19,"value":1}]}
+2020-10-16 00:57:25 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:57:25 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:57:27 INFO  UIHelper:758 - tcp request write to pin {"commands":[{"cmd":"set","pin":23,"value":0}]}
+2020-10-16 00:57:27 INFO  UIHelper:763 - tcp response write to pin {"status":0}
+2020-10-16 00:57:27 INFO  UIHelper:768 - write to pin ok
+2020-10-16 00:57:28 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:28 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:29 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:29 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:33 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:33 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:34 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:34 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:38 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:38 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:39 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:39 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
+2020-10-16 00:57:44 INFO  UIHelper:382 - sent json (for read) : {"commands":[{"cmd":"get","pins":[13,22,26,32]}]}
+2020-10-16 00:57:44 INFO  UIHelper:464 - received json (for read) {"status":0,"values":[0,0,0,0]}
