@@ -106,7 +106,7 @@ public class IotFramev2 extends javax.swing.JFrame {
         serWTxt2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("IoT Monitor by IAS v1.04");
+        setTitle("IoT Monitor by IAS v1.05");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {

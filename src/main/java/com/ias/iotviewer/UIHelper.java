@@ -937,16 +937,35 @@ public class UIHelper {
                         JTextField txtFld = (JTextField) getComponentByName(frame, "serTxt2");
                         txtFld.setText(dataEncoded);
                     }
-                    if (respJson.has("int7")) {
-                        int value = (Integer) respJson.get("int7");
-                        JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin7");
-                        txtFld.setText(value + "");
+                     if (respJson.has("interrupts")) {
+                        JSONArray jarr = respJson.getJSONArray("interrupts");
+                        for (int i = 0; i < jarr.size(); i++) {
+                            JSONObject interruptJson = (JSONObject) jarr.get(i);
+                            int pin = (Integer)interruptJson.get("pin");
+                            int value = (Integer)interruptJson.get("value");
+
+                            if (pin == 7) {
+                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin7");    
+                                txtFld.setText(value + "");
+                            }
+                            if (pin == 12) {
+                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin12");    
+                                txtFld.setText(value + "");
+                            }
+                        }
                     }
-                    if (respJson.has("int12")) {
-                        int value = (Integer) respJson.get("int12");
-                        JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin12");
-                        txtFld.setText(value + "");
-                    }
+                     else {
+                        if (respJson.has("int7")) {
+                            int value = (Integer) respJson.get("int7");
+                            JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin7");
+                            txtFld.setText(value + "");
+                        }
+                        if (respJson.has("int12")) {
+                            int value = (Integer) respJson.get("int12");
+                            JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin12");
+                            txtFld.setText(value + "");
+                        }
+                     }
                 } else {
 
                     JSONObject errJson = respJson.getJSONObject("error");
