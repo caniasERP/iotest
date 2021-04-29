@@ -7,7 +7,6 @@ package com.ias.iotviewer;
 
 import static com.ias.iotviewer.UIHelper.logger;
 import java.awt.Component;
-import java.awt.Font;
 import java.awt.Window;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -42,15 +41,17 @@ public class UIHelper {
     private Socket socket;
     private Socket socketForIntSerial;
     private Hashtable<Integer, Integer> readValues;
+    private Hashtable<String, Float> readValuesANALOG;
     private Hashtable<Integer, Integer> writeValues;
     private Hashtable<Integer, Integer> pinStates;
     private PrintWriter out;
     private BufferedReader in;
-    private Integer[] allPins = {7, 12, 13, 19, 21, 22, 23, 24, 26, 32};
-    private Integer[] pinsV2 = {13, 19, 21, 22, 23, 24, 26, 32};
-    private Integer[] optPins = {13, 22, 26, 32};
-    final Integer[] interruptPins = {7, 12};
-    final Integer[] doutPins = {19, 21, 23, 24};
+    private Integer[] allPins = {2, 3, 17, 18, 21, 23, 25, 27, 6, 10, 11, 19, 22};
+    private Integer[] pinsV2 = {2, 3, 17, 18, 21, 23, 25, 27, 6, 10, 11, 19, 22};
+    private Integer[] optPins = {2, 3, 17, 18, 21, 23, 25, 27};
+    final Integer[] interruptPins = {27, 25};
+    final Integer[] doutPins = {6, 10, 11, 19};
+    private String[] ioOutPins = {"AOUT1", "AOUT2", "PWMOUT"};
     List<Integer> pinsList = Arrays.asList(pinsV2);
     List<Integer> pinsList2 = Arrays.asList(allPins);
     static MyRunnable myRunnable;
@@ -64,6 +65,7 @@ public class UIHelper {
         this.socket = socket;
         this.socketForIntSerial = socketForIntSerial;
         readValues = new Hashtable<Integer, Integer>();
+        readValuesANALOG = new Hashtable<String, Float>();
         writeValues = new Hashtable<Integer, Integer>();
         pinStates = new Hashtable<Integer, Integer>();
         myRunnable = new MyRunnable(socketForIntSerial, this);
@@ -96,6 +98,7 @@ public class UIHelper {
         Component myCA[] = panel.getComponents();
 
         readValues.clear();
+        readValuesANALOG.clear();
         writeValues.clear();
 
         sendToService();
@@ -107,6 +110,7 @@ public class UIHelper {
         Component myCA[] = panel.getComponents();
 
         readValues.clear();
+        readValuesANALOG.clear();
         writeValues.clear();
 
         sendToService2();
@@ -341,6 +345,18 @@ public class UIHelper {
                         readValues.put(allPins[i], (Integer) readArr.get(i));
                     }
                 }
+                
+                readArr = readJson.getJSONArray("ioports");
+                if (readArr != null && readArr.size() > 0) {
+                    for (int i = 0; i < readArr.size(); i++) {
+                        JSONObject ioJson = (JSONObject) readArr.get(i);
+                        double d = (double) ioJson.getDouble("value");
+                        float f = (float) d;
+                        Float F = (Float) f;
+                        readValuesANALOG.put((String) ioJson.get("ioport"), F);
+                        //readValuesANALOG.put((String) ioJson.get("ioport"), (Float) ioJson.getDouble("value"));
+                    }
+                }
 
                 refreshUI2();
 
@@ -377,6 +393,25 @@ public class UIHelper {
             ReadreqItem2.put("pins", ReadReqJsonArr);
 
             ReadReqJsonArr3.add(ReadreqItem2);
+            
+            
+            JSONObject ReadreqItem4 = new JSONObject();
+            ReadreqItem4.put("cmd", "get");
+            ReadreqItem4.put("ioport", "AIN1");
+            ReadReqJsonArr3.add(ReadreqItem4);
+            ReadreqItem4 = new JSONObject();
+            ReadreqItem4.put("cmd", "get");
+            ReadreqItem4.put("ioport", "AIN2");
+            ReadReqJsonArr3.add(ReadreqItem4);
+            ReadreqItem4 = new JSONObject();
+            ReadreqItem4.put("cmd", "get");
+            ReadreqItem4.put("ioport", "PWMIN1");
+            ReadReqJsonArr3.add(ReadreqItem4);
+            ReadreqItem4 = new JSONObject();
+            ReadreqItem4.put("cmd", "get");
+            ReadreqItem4.put("ioport", "PWMIN2");
+            ReadReqJsonArr3.add(ReadreqItem4);
+
             ReadReqJson.put("commands", ReadReqJsonArr3);
 
             logger.info("sent json (for read) : " + ReadReqJson.toString());
@@ -410,12 +445,14 @@ public class UIHelper {
                 rbW.setEnabled(false);
 
             }
-
         }
     }
 
     private void refreshUI2() {
-        for (Integer c : readValues.keySet()) {
+        
+        logger.info("refreshUI2");
+        
+            for (Integer c : readValues.keySet()) {
 
             if (pinsList2.contains(c)) {
                 String compName = "txtPin" + c;
@@ -435,6 +472,24 @@ public class UIHelper {
                 }
             }
         }
+        for (String c : readValuesANALOG.keySet()) {
+
+            String compName = "txtPin" + c;
+
+            JTextField txtFld = (JTextField) getComponentByName(frame, compName);
+
+            if (txtFld != null) {
+                if (readValuesANALOG.get(c) != -1) {
+
+                    txtFld.setText(readValuesANALOG.get(c).toString());
+                } else {
+                    //txtFld.setFont(txtFld.getFont().deriveFont(Font.BOLD, 14f));
+                    txtFld.setEditable(false);
+                    //txtFld.setEnabled(false);
+
+                }
+            }
+        }
     }
 
     private void handleReadResp(String resp) {
@@ -448,6 +503,17 @@ public class UIHelper {
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
                         readValues.put(i + 1, (Integer) readArr.get(i));
+                    }
+                }
+                readArr = readJson.getJSONArray("ioports");
+                if (readArr != null && readArr.size() > 0) {
+                    for (int i = 0; i < readArr.size(); i++) {
+                        JSONObject ioJson = (JSONObject) readArr.get(i);
+                        double d = (double) ioJson.getDouble("value");
+                        float f = (float) d;
+                        Float F = (Float) f;
+                        readValuesANALOG.put((String) ioJson.get("ioport"), F);
+                        //readValuesANALOG.put((String) ioJson.get("ioport"), (Float) ioJson.getDouble("value"));
                     }
                 }
             } else {
@@ -471,6 +537,17 @@ public class UIHelper {
                 if (readArr != null && readArr.size() > 0) {
                     for (int i = 0; i < readArr.size(); i++) {
                         readValues.put(optPins[i], (Integer) readArr.get(i));
+                    }
+                }
+                readArr = readJson.getJSONArray("ioports");
+                if (readArr != null && readArr.size() > 0) {
+                    for (int i = 0; i < readArr.size(); i++) {
+                        JSONObject ioJson = (JSONObject) readArr.get(i);
+                        
+                        double d = (double) ioJson.getDouble("value");
+                        float f = (float) d;
+                        Float F = (Float) f;
+                        readValuesANALOG.put((String) ioJson.get("ioport"), F);
                     }
                 }
 
@@ -739,20 +816,39 @@ public class UIHelper {
 
         JTextField txtFld = (JTextField) obj;
         String value = txtFld.getText();
-        byte[] bytes = value.getBytes();
-        String data = new String(bytes, StandardCharsets.US_ASCII);
+        //byte[] bytes = value.getBytes();
+       // String data = new String(bytes, StandardCharsets.US_ASCII);
         String vName = getComponentVariableName(txtFld);
-        int pin = Integer.parseInt(vName.replace("txtPin", ""));
-        int sendData = Integer.parseInt(value);
+        
         JSONObject ReqJson = new JSONObject();
         JSONArray ReqJsonArr = new JSONArray();
         JSONObject WritereqItem = new JSONObject();
-
+        
         WritereqItem = new JSONObject();
-        WritereqItem.put("cmd", "set");
-        WritereqItem.put("pin", pin);
-        WritereqItem.put("value", sendData);
+        vName = vName.replace("txtPin", "");
+
+        try {
+            int pin = Integer.parseInt(vName);
+            int sendData = Integer.parseInt(value);
+            
+            WritereqItem.put("cmd", "set");
+            WritereqItem.put("pin", pin);
+            WritereqItem.put("value", sendData);
+        }
+        catch (NumberFormatException e)
+        {
+            if (vName.equalsIgnoreCase("AOUT1") || vName.equalsIgnoreCase("AOUT2")) {
+                Float sendData = Float.parseFloat(value);
+            
+                WritereqItem.put("cmd", "get");
+                WritereqItem.put("ioport", vName);
+                WritereqItem.put("value", sendData);
+            }
+        }
         ReqJsonArr.add(WritereqItem);
+        
+        
+        
         ReqJson.put("commands", ReqJsonArr);
 
         logger.info("tcp request write to pin " + ReqJson.toString());
@@ -944,12 +1040,12 @@ public class UIHelper {
                             int pin = (Integer)interruptJson.get("pin");
                             int value = (Integer)interruptJson.get("value");
 
-                            if (pin == 7) {
-                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin7");    
+                            if (pin == 27) {
+                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin27");    
                                 txtFld.setText(value + "");
                             }
-                            if (pin == 12) {
-                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin12");    
+                            if (pin == 25) {
+                                JTextField txtFld = (JTextField) getComponentByName(frame, "txtPin25");    
                                 txtFld.setText(value + "");
                             }
                         }

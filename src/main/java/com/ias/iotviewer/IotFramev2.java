@@ -74,24 +74,24 @@ public class IotFramev2 extends javax.swing.JFrame {
         btnConnect = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        txtPin13 = new javax.swing.JTextField();
+        txtPin2 = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        txtPin22 = new javax.swing.JTextField();
+        txtPin3 = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
-        txtPin26 = new javax.swing.JTextField();
+        txtPin17 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        txtPin32 = new javax.swing.JTextField();
+        txtPin18 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        txtPin24 = new javax.swing.JTextField();
+        txtPin6 = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        txtPin19 = new javax.swing.JTextField();
+        txtPin11 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        txtPin21 = new javax.swing.JTextField();
+        txtPin10 = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        txtPin23 = new javax.swing.JTextField();
+        txtPin19 = new javax.swing.JTextField();
         serTxt1 = new javax.swing.JTextField();
         serTxt2 = new javax.swing.JTextField();
         btnSendToSerial1 = new javax.swing.JButton();
@@ -99,14 +99,36 @@ public class IotFramev2 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtPin7 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        txtPin12 = new javax.swing.JTextField();
+        txtPin22 = new javax.swing.JTextField();
         serWTxt1 = new javax.swing.JTextField();
         serWTxt2 = new javax.swing.JTextField();
+        txtPin27 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        txtPin25 = new javax.swing.JTextField();
+        txtPin23 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        txtPin21 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        txtPinAIN1 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        txtPinPWMIN2 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        txtPinPWMIN1 = new javax.swing.JTextField();
+        txtPinAIN2 = new javax.swing.JTextField();
+        txtPinAOUT1 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        txtPinPWMOUT = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        txtPinAOUT2 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        txtPinAIN1Range = new javax.swing.JTextField();
+        txtPinAIN2Range = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("IoT Monitor by IAS v1.05");
+        setTitle("IoT Monitor by IAS v1.06");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -138,79 +160,119 @@ public class IotFramev2 extends javax.swing.JFrame {
         });
 
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("#13");
+        jLabel16.setText("2");
 
-        txtPin13.setEditable(false);
-        txtPin13.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin13.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin2.setEditable(false);
+        txtPin2.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin13KeyReleased(evt);
+                txtPin2KeyReleased(evt);
             }
         });
 
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel29.setText("#22");
+        jLabel29.setText("3");
 
-        txtPin22.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin22.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin3.setEditable(false);
+        txtPin3.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin22KeyReleased(evt);
+                txtPin3KeyReleased(evt);
             }
         });
 
         jLabel33.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel33.setText("#26");
+        jLabel33.setText("17");
         jLabel33.setToolTipText("");
 
-        txtPin26.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin26.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin17.setEditable(false);
+        txtPin17.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin17.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin26KeyReleased(evt);
+                txtPin17KeyReleased(evt);
             }
         });
 
         jLabel35.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel35.setText("#32");
+        jLabel35.setText("18");
 
-        txtPin32.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin32.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin18.setEditable(false);
+        txtPin18.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin18.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin32KeyReleased(evt);
+                txtPin18KeyReleased(evt);
             }
         });
 
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel1.setText("OPT");
+        jLabel1.setText("IN");
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("DOUT");
+        jLabel2.setText("OUT");
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("INT");
+        jLabel3.setText("OUT ENABLE");
 
         jLabel31.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel31.setText("#24");
+        jLabel31.setText("6");
 
-        txtPin24.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin24.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtPin24.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtPin6.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin6.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtPin6.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txtPin24FocusGained(evt);
+                txtPin6FocusGained(evt);
             }
         });
-        txtPin24.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPin6ActionPerformed(evt);
+            }
+        });
+        txtPin6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin24KeyReleased(evt);
+                txtPin6KeyReleased(evt);
             }
         });
 
         jLabel22.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel22.setText("#19");
+        jLabel22.setText("11");
+
+        txtPin11.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin11.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPin11FocusGained(evt);
+            }
+        });
+        txtPin11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin11KeyReleased(evt);
+            }
+        });
+
+        jLabel27.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel27.setText("10");
+
+        txtPin10.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin10.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPin10FocusGained(evt);
+            }
+        });
+        txtPin10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin10KeyReleased(evt);
+            }
+        });
+
+        jLabel30.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel30.setText("19");
 
         txtPin19.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
         txtPin19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -225,40 +287,8 @@ public class IotFramev2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel27.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel27.setText("#21");
-
-        txtPin21.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin21.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtPin21FocusGained(evt);
-            }
-        });
-        txtPin21.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin21KeyReleased(evt);
-            }
-        });
-
-        jLabel30.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel30.setText("#23");
-
-        txtPin23.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin23.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtPin23FocusGained(evt);
-            }
-        });
-        txtPin23.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin23KeyReleased(evt);
-            }
-        });
-
         serTxt1.setEditable(false);
-        serTxt1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        serTxt1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         serTxt1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 serTxt1KeyTyped(evt);
@@ -266,7 +296,7 @@ public class IotFramev2 extends javax.swing.JFrame {
         });
 
         serTxt2.setEditable(false);
-        serTxt2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        serTxt2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         serTxt2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 serTxt2KeyTyped(evt);
@@ -296,38 +326,214 @@ public class IotFramev2 extends javax.swing.JFrame {
         jLabel8.setText("Serial #A");
 
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("#7");
+        jLabel10.setText("22");
 
-        txtPin7.setEditable(false);
-        txtPin7.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin7.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPin22.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin22.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin7KeyReleased(evt);
+                txtPin22KeyReleased(evt);
             }
         });
 
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("#12");
-
-        txtPin12.setEditable(false);
-        txtPin12.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        txtPin12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPin12.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPin12KeyReleased(evt);
-            }
-        });
-
+        serWTxt1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         serWTxt1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 serWTxt1KeyTyped(evt);
             }
         });
 
+        serWTxt2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         serWTxt2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 serWTxt2KeyTyped(evt);
+            }
+        });
+
+        txtPin27.setEditable(false);
+        txtPin27.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin27.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin27KeyReleased(evt);
+            }
+        });
+
+        jLabel36.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel36.setText("27");
+
+        jLabel34.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel34.setText("25");
+        jLabel34.setToolTipText("");
+
+        txtPin25.setEditable(false);
+        txtPin25.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin25.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin25KeyReleased(evt);
+            }
+        });
+
+        txtPin23.setEditable(false);
+        txtPin23.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin23KeyReleased(evt);
+            }
+        });
+
+        jLabel32.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel32.setText("23");
+
+        txtPin21.setEditable(false);
+        txtPin21.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPin21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPin21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPin21KeyReleased(evt);
+            }
+        });
+
+        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel17.setText("21");
+
+        jLabel37.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel37.setText("AIN2");
+
+        txtPinAIN1.setEditable(false);
+        txtPinAIN1.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinAIN1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAIN1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAIN1KeyReleased(evt);
+            }
+        });
+
+        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel18.setText("AIN1");
+
+        txtPinPWMIN2.setEditable(false);
+        txtPinPWMIN2.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinPWMIN2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinPWMIN2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinPWMIN2KeyReleased(evt);
+            }
+        });
+
+        jLabel38.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel38.setText("PWM IN 2");
+
+        jLabel39.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel39.setText("PWM IN 1");
+        jLabel39.setToolTipText("");
+
+        txtPinPWMIN1.setEditable(false);
+        txtPinPWMIN1.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinPWMIN1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinPWMIN1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinPWMIN1KeyReleased(evt);
+            }
+        });
+
+        txtPinAIN2.setEditable(false);
+        txtPinAIN2.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinAIN2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAIN2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAIN2KeyReleased(evt);
+            }
+        });
+
+        txtPinAOUT1.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinAOUT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAOUT1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtPinAOUT1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPinAOUT1FocusGained(evt);
+            }
+        });
+        txtPinAOUT1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAOUT1KeyReleased(evt);
+            }
+        });
+
+        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel23.setText("PWM OUT");
+
+        txtPinPWMOUT.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinPWMOUT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinPWMOUT.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPinPWMOUTFocusGained(evt);
+            }
+        });
+        txtPinPWMOUT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinPWMOUTKeyReleased(evt);
+            }
+        });
+
+        jLabel28.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel28.setText("AOUT2");
+
+        txtPinAOUT2.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        txtPinAOUT2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAOUT2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPinAOUT2FocusGained(evt);
+            }
+        });
+        txtPinAOUT2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAOUT2KeyReleased(evt);
+            }
+        });
+
+        jLabel40.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel40.setText("AOUT1");
+
+        txtPinAIN1Range.setFont(new java.awt.Font("Lucida Sans", 0, 8)); // NOI18N
+        txtPinAIN1Range.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAIN1Range.setText("4-20 0-600");
+        txtPinAIN1Range.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtPinAIN1Range.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPinAIN1RangeFocusGained(evt);
+            }
+        });
+        txtPinAIN1Range.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPinAIN1RangeActionPerformed(evt);
+            }
+        });
+        txtPinAIN1Range.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAIN1RangeKeyReleased(evt);
+            }
+        });
+
+        txtPinAIN2Range.setFont(new java.awt.Font("Lucida Sans", 0, 8)); // NOI18N
+        txtPinAIN2Range.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPinAIN2Range.setText("4-20 0-600");
+        txtPinAIN2Range.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtPinAIN2Range.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPinAIN2RangeFocusGained(evt);
+            }
+        });
+        txtPinAIN2Range.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPinAIN2RangeActionPerformed(evt);
+            }
+        });
+        txtPinAIN2Range.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPinAIN2RangeKeyReleased(evt);
             }
         });
 
@@ -338,118 +544,217 @@ public class IotFramev2 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(serTxt2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
-                        .addComponent(serTxt1, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabel35)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel29)
-                                    .addComponent(jLabel33)
-                                    .addComponent(jLabel35))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPin22, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPin32, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPin26, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPin13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(167, 167, 167)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel33))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(serTxt2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(serTxt1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel31)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel30))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(11, 11, 11)
+                                        .addComponent(jLabel1))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtPin3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin18, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin17, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel17)
+                                            .addComponent(jLabel32)
+                                            .addComponent(jLabel34)
+                                            .addComponent(jLabel36))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin27, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin25, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel3))))
+                                .addGap(50, 50, 50)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel31)
+                                    .addComponent(jLabel27)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jLabel30)))
+                            .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPin24, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(txtPin22, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(101, 101, 101))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPin11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPin10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPin6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel39)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel37)
+                                            .addComponent(jLabel18))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtPinAIN1Range, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                                            .addComponent(txtPinAIN2Range))))
+                                .addGap(20, 20, 20)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPinAIN1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                            .addComponent(txtPinAIN2)
+                            .addComponent(txtPinPWMIN1)
+                            .addComponent(txtPinPWMIN2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel40)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel23))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPinAOUT1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                            .addComponent(txtPinAOUT2)
+                            .addComponent(txtPinPWMOUT)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(serWTxt1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
                             .addComponent(serWTxt2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnSendToSerial1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSendToSerial2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel15))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPin7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addContainerGap(261, Short.MAX_VALUE))))
+                            .addComponent(btnSendToSerial2, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPin13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPin24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel31)
-                    .addComponent(txtPin7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel17))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel32))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPin25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel34))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPin27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel36)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jLabel29))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel31))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel27))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel22)
+                                            .addComponent(jLabel33))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPin18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel30)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addComponent(jLabel35))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPinAOUT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel40))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPinAOUT2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel28))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPinPWMOUT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel18)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(txtPinAIN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtPinAIN1Range, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(txtPinAIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPinAIN2Range, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel37))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtPinPWMIN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel39))))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPinPWMIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel38))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPin22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPin21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel27)
-                    .addComponent(txtPin12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPin26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPin19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel33)
-                    .addComponent(jLabel22))
+                    .addComponent(serTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(serWTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSendToSerial1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPin32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPin23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35)
-                    .addComponent(jLabel30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnSendToSerial1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSendToSerial2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(serTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)
-                            .addComponent(serWTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(serTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(serWTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnSendToSerial2, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(jLabel7)
+                    .addComponent(serTxt2)
+                    .addComponent(serWTxt2))
                 .addGap(28, 28, 28))
         );
 
@@ -474,7 +779,7 @@ public class IotFramev2 extends javax.swing.JFrame {
                 .addComponent(btnConnect)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -497,67 +802,11 @@ public class IotFramev2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getAccessibleContext().setAccessibleName("IoT Monitor by IAS v1.07");
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtPin13KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin13KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin13KeyReleased
-
-    private void txtPin22KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin22KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin22KeyReleased
-
-    private void txtPin26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin26KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin26KeyReleased
-
-    private void txtPin32KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin32KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin32KeyReleased
-
-    private void txtPin24KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin24KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin24KeyReleased
-
-    private void txtPin19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin19KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin19KeyReleased
-
-    private void txtPin21KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin21KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin21KeyReleased
-
-    private void txtPin23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin23KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin23KeyReleased
-
-    private void serTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt1KeyTyped
-        if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
-            evt.consume();
-        }
-        char c = evt.getKeyChar();
-        if (!((c >= '0') && (c <= '9')
-                || (c == KeyEvent.VK_BACK_SPACE)
-                || (c == KeyEvent.VK_DELETE))) {
-            getToolkit().beep();
-            evt.consume();
-        }
-    }//GEN-LAST:event_serTxt1KeyTyped
-
-    private void serTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt2KeyTyped
-        if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
-            evt.consume();
-        }
-        char c = evt.getKeyChar();
-        if (!((c >= '0') && (c <= '9')
-                || (c == KeyEvent.VK_BACK_SPACE)
-                || (c == KeyEvent.VK_DELETE))) {
-            getToolkit().beep();
-            evt.consume();
-        }
-    }//GEN-LAST:event_serTxt2KeyTyped
 
     private void showErrorMsg(String message) {
         JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
@@ -628,27 +877,38 @@ public class IotFramev2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConnectActionPerformed
 
-    private void txtPin7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin7KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin7KeyReleased
-
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         if (uiHelper != null) {
             uiHelper.closeConnection();
         }        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
 
-    private void btnSendToSerial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial1ActionPerformed
-        uiHelper.writeToSerialPort(1);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSendToSerial1ActionPerformed
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        jPanel1.requestFocus();
+    }//GEN-LAST:event_jPanel1MouseClicked
 
-    private void btnSendToSerial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial2ActionPerformed
-        uiHelper.writeToSerialPort(2);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSendToSerial2ActionPerformed
+    private void txtPin21KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin21KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin21KeyReleased
 
-    private void txtPin12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin12KeyReleased
-        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPin12KeyReleased
+    private void txtPin23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin23KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin23KeyReleased
+
+    private void txtPin25KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin25KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin25KeyReleased
+
+    private void txtPin27KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin27KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin27KeyReleased
+
+    private void serWTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serWTxt2KeyTyped
+        if ((serWTxt2.getText() + evt.getKeyChar()).length() > 30) {
+            evt.consume();
+        }
+        //         // TODO add your handling code here:
+    }//GEN-LAST:event_serWTxt2KeyTyped
 
     private void serWTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serWTxt1KeyTyped
         if ((serWTxt1.getText() + evt.getKeyChar()).length() > 30) {
@@ -657,41 +917,168 @@ public class IotFramev2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_serWTxt1KeyTyped
 
-    private void serWTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serWTxt2KeyTyped
-if ((serWTxt2.getText() + evt.getKeyChar()).length() > 30) {
+    private void txtPin22KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin22KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin22KeyReleased
+
+    private void btnSendToSerial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial2ActionPerformed
+        uiHelper.writeToSerialPort(2);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSendToSerial2ActionPerformed
+
+    private void btnSendToSerial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendToSerial1ActionPerformed
+        uiHelper.writeToSerialPort(1);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSendToSerial1ActionPerformed
+
+    private void serTxt2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt2KeyTyped
+        if ((serTxt2.getText() + evt.getKeyChar()).length() > 16) {
             evt.consume();
         }
-         //         // TODO add your handling code here:
-    }//GEN-LAST:event_serWTxt2KeyTyped
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+            || (c == KeyEvent.VK_BACK_SPACE)
+            || (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        evt.consume();
+        }
+    }//GEN-LAST:event_serTxt2KeyTyped
 
-    private void txtPin24FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin24FocusGained
-        
-        if (!(evt.getSource() instanceof JTextField)) return;
-            JTextField txt = (JTextField)evt.getSource();
-            txt.selectAll();      
-    }//GEN-LAST:event_txtPin24FocusGained
+    private void serTxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_serTxt1KeyTyped
+        if ((serTxt1.getText() + evt.getKeyChar()).length() > 16) {
+            evt.consume();
+        }
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+            || (c == KeyEvent.VK_BACK_SPACE)
+            || (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        evt.consume();
+        }
+    }//GEN-LAST:event_serTxt1KeyTyped
 
-    private void txtPin21FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin21FocusGained
-        if (!(evt.getSource() instanceof JTextField)) return;
-            JTextField txt = (JTextField)evt.getSource();
-            txt.selectAll();      
-    }//GEN-LAST:event_txtPin21FocusGained
+    private void txtPin19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin19KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin19KeyReleased
 
     private void txtPin19FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin19FocusGained
         if (!(evt.getSource() instanceof JTextField)) return;
-            JTextField txt = (JTextField)evt.getSource();
-            txt.selectAll();      
+        JTextField txt = (JTextField)evt.getSource();
+        txt.selectAll();
     }//GEN-LAST:event_txtPin19FocusGained
 
-    private void txtPin23FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin23FocusGained
-        if (!(evt.getSource() instanceof JTextField)) return;
-            JTextField txt = (JTextField)evt.getSource();
-            txt.selectAll();      
-    }//GEN-LAST:event_txtPin23FocusGained
+    private void txtPin10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin10KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin10KeyReleased
 
-    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
-        jPanel1.requestFocus();
-    }//GEN-LAST:event_jPanel1MouseClicked
+    private void txtPin10FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin10FocusGained
+        if (!(evt.getSource() instanceof JTextField)) return;
+        JTextField txt = (JTextField)evt.getSource();
+        txt.selectAll();
+    }//GEN-LAST:event_txtPin10FocusGained
+
+    private void txtPin11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin11KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin11KeyReleased
+
+    private void txtPin11FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin11FocusGained
+        if (!(evt.getSource() instanceof JTextField)) return;
+        JTextField txt = (JTextField)evt.getSource();
+        txt.selectAll();
+    }//GEN-LAST:event_txtPin11FocusGained
+
+    private void txtPin6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin6KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin6KeyReleased
+
+    private void txtPin6FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPin6FocusGained
+
+        if (!(evt.getSource() instanceof JTextField)) return;
+        JTextField txt = (JTextField)evt.getSource();
+        txt.selectAll();
+    }//GEN-LAST:event_txtPin6FocusGained
+
+    private void txtPin18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin18KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin18KeyReleased
+
+    private void txtPin17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin17KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin17KeyReleased
+
+    private void txtPin3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin3KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin3KeyReleased
+
+    private void txtPin2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPin2KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin2KeyReleased
+
+    private void txtPinAIN1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAIN1KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN1KeyReleased
+
+    private void txtPinPWMIN2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinPWMIN2KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinPWMIN2KeyReleased
+
+    private void txtPinPWMIN1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinPWMIN1KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinPWMIN1KeyReleased
+
+    private void txtPinAIN2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAIN2KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN2KeyReleased
+
+    private void txtPinAOUT1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPinAOUT1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAOUT1FocusGained
+
+    private void txtPinAOUT1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAOUT1KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());   // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAOUT1KeyReleased
+
+    private void txtPinPWMOUTFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPinPWMOUTFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinPWMOUTFocusGained
+
+    private void txtPinPWMOUTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinPWMOUTKeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());   // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinPWMOUTKeyReleased
+
+    private void txtPinAOUT2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPinAOUT2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAOUT2FocusGained
+
+    private void txtPinAOUT2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAOUT2KeyReleased
+        uiHelper.sendWriteOnChange(evt.getSource());   // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAOUT2KeyReleased
+
+    private void txtPin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPin6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPin6ActionPerformed
+
+    private void txtPinAIN2RangeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPinAIN2RangeFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN2RangeFocusGained
+
+    private void txtPinAIN2RangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinAIN2RangeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN2RangeActionPerformed
+
+    private void txtPinAIN2RangeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAIN2RangeKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN2RangeKeyReleased
+
+    private void txtPinAIN1RangeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPinAIN1RangeFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN1RangeFocusGained
+
+    private void txtPinAIN1RangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinAIN1RangeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN1RangeActionPerformed
+
+    private void txtPinAIN1RangeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinAIN1RangeKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPinAIN1RangeKeyReleased
 
     /**
      * @param args the command line arguments
@@ -734,18 +1121,28 @@ if ((serWTxt2.getText() + evt.getKeyChar()).length() > 30) {
     private javax.swing.JButton btnSendToSerial2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -758,15 +1155,27 @@ if ((serWTxt2.getText() + evt.getKeyChar()).length() > 30) {
     private javax.swing.JTextField srvIP;
     private javax.swing.JTextField srvPort;
     private javax.swing.JTextField txtPeriod;
-    private javax.swing.JTextField txtPin12;
-    private javax.swing.JTextField txtPin13;
+    private javax.swing.JTextField txtPin10;
+    private javax.swing.JTextField txtPin11;
+    private javax.swing.JTextField txtPin17;
+    private javax.swing.JTextField txtPin18;
     private javax.swing.JTextField txtPin19;
+    private javax.swing.JTextField txtPin2;
     private javax.swing.JTextField txtPin21;
     private javax.swing.JTextField txtPin22;
     private javax.swing.JTextField txtPin23;
-    private javax.swing.JTextField txtPin24;
-    private javax.swing.JTextField txtPin26;
-    private javax.swing.JTextField txtPin32;
-    private javax.swing.JTextField txtPin7;
+    private javax.swing.JTextField txtPin25;
+    private javax.swing.JTextField txtPin27;
+    private javax.swing.JTextField txtPin3;
+    private javax.swing.JTextField txtPin6;
+    private javax.swing.JTextField txtPinAIN1;
+    private javax.swing.JTextField txtPinAIN1Range;
+    private javax.swing.JTextField txtPinAIN2;
+    private javax.swing.JTextField txtPinAIN2Range;
+    private javax.swing.JTextField txtPinAOUT1;
+    private javax.swing.JTextField txtPinAOUT2;
+    private javax.swing.JTextField txtPinPWMIN1;
+    private javax.swing.JTextField txtPinPWMIN2;
+    private javax.swing.JTextField txtPinPWMOUT;
     // End of variables declaration//GEN-END:variables
 }
